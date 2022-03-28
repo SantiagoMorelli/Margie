@@ -1,0 +1,66 @@
+=============================================
+OFFICE DAYS REIMBURSEMENT:
+2nd, 7th, 14th, 16th, 21st, 23rd, 28th, 30th
+=============================================
+
+Meeting Agenda 9/3/22:
+- Show progress and receive feedback on Homepage/Admin Layouts
+- Getting required information to be placed on pages
+
+Meeting Agenda 16/3/22:
+- Ask about what needs to be displayed on the admin dashboard
+
+
+Testing Email Inbox Details:
+    user: margiemagicverb@gmail.com
+    pass: margie12345
+
+---------------------------------------------------------------------------------------------------------------------------
+
+NOTES
+
+Add flag for able to purchase product individually in products table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hello team,
+We have been trying to integrate the template/theme you have sent us for the Spanish Learning Website but after integration the login functionality seemed to have been broken.
+
+We've tried many things to fix this problem. We've tried the following things.
+
+Using this in auth.php.
+'providers' => [
+'admins' => [ 'driver' => 'eloquent', 'model' => App\Models\Admin::class, ],
+
+Using SESSION_DRIVER=redis in .env.
+
+Regards,
+Justin and Adrian
+
+START FREE TRIAL BUTTON LEADS TO AN INFO PAGE OF WHAT THE FREE TRIAL IS WHICH ALSO HAS A BUTTON "START FREE TRIAL".
+
+Minimum: 10 DAYS
+Maximum: 20 Days
+
+###########################################################################################################################
+EXTRA:
+Fix Laravel Login and Register Page
+Add First Name and Last Name to Register Page
+Work on Homepage redirect with roles
