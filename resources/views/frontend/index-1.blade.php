@@ -134,6 +134,7 @@
         <section id="why-choose-us" class="why-choose-us-section">
             <div class="jarallax  backgroud-style">
                 <div class="container">
+                    
                     @if($sections->reasons->status == 1)
 
                         <div class="section-title mb20 headline text-center ">
@@ -144,7 +145,6 @@
                             <div id="service-slide-item" class="service-slide">
                                 @foreach($reasons as $item)
                                     <div class="service-text-icon ">
-
                                         <div class="service-icon float-left">
                                             <i class="text-gradiant {{$item->icon}}"></i>
                                         </div>
