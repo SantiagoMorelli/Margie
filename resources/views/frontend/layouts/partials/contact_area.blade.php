@@ -1,4 +1,4 @@
-<section id="contact-area" class="contact-area-section backgroud-style">
+{{-- <section id="contact-area" class="contact-area-section backgroud-style">
     <div class="container">
         <div class="contact-area-content">
             <div class="row">
@@ -106,4 +106,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}

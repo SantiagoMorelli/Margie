@@ -52,7 +52,7 @@
                 </div>
             </div>
             <!-- /footer-widget-content -->
-            <div class="footer-social-subscribe mb65">
+            {{-- <div class="footer-social-subscribe mb65">
                 <div class="row">
                     @if(($footer_data->social_links->status == 1) && (count($footer_data->social_links->links) > 0))
                         <div class="col-md-4">
@@ -90,16 +90,16 @@
                         </div>
                     @endif
                 </div>
-            </div>
+            </div> --}}
 
             @if($footer_data->bottom_footer->status == 1)
             <div class="copy-right-menu">
                 <div class="row">
                     @if($footer_data->copyright_text->status == 1)
                     <div class="col-md-6">
-                        <div class="copy-right-text">
-                            <p>Powered By <a href="https://www.neonlms.com/" target="_blank" class="mr-4"> NeonLMS</a>  {!!  $footer_data->copyright_text->text !!}</p>
-                        </div>
+                        {{-- <div class="copy-right-text">
+                            <p>Margie's Magic Verbs,  {!!  $footer_data->copyright_text->text !!}</p>
+                        </div> --}}
                     </div>
                     @endif
                     @if(($footer_data->bottom_footer_links->status == 1) && (count($footer_data->bottom_footer_links->links) > 0))

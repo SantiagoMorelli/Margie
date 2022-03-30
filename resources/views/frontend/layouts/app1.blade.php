@@ -180,7 +180,7 @@
                                                 </div>
                                             </li>
                                         @endif
-                                            @if(count($locales) > 1)
+                                            {{-- @if(count($locales) > 1)
                                             <li class="menu-item-has-children ul-li-block">
                                                 <a href="#">
                                                     <span class="d-md-down-none">@lang('menus.language-picker.language')
@@ -197,7 +197,7 @@
                                                     @endforeach
                                                 </ul>
                                             </li>
-                                        @endif
+                                        @endif --}}
                                     </ul>
                                 </div>
                             </nav>
@@ -258,7 +258,7 @@
                                                 </div>
                                             </li>
                                         @endif
-                                            @if(count($locales) > 1)
+                                            {{-- @if(count($locales) > 1)
                                                 <li class="menu-item-has-children ul-li-block">
                                                     <a href="#">
                                                     <span class="d-md-down-none">@lang('menus.language-picker.language')
@@ -275,7 +275,7 @@
                                                         @endforeach
                                                     </ul>
                                                 </li>
-                                            @endif
+                                            @endif --}}
                                     </ul>
                                 </nav>
 

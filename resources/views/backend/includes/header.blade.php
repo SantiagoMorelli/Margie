@@ -2,7 +2,7 @@
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{{ route('admin.dashboard') }}">
+    <a class="navbar-brand" href="{{ route('frontend.index') }}">
         <img class="navbar-brand-full" src="{{asset('storage/logos/'.config('logo_b_image'))}}"  height="25" alt="Square Logo">
         <img class="navbar-brand-minimized" src="{{asset('storage/logos/'.config('logo_popup'))}}" height="30" alt="Square Logo">
     </a>
@@ -11,11 +11,11 @@
     </button>
 
     <ul class="nav navbar-nav d-md-down-none">
-        <li class="nav-item px-3">
+        {{-- <li class="nav-item px-3">
             <a class="nav-link" href="{{ route('frontend.index') }}"><i class="icon-home"></i></a>
-        </li>
+        </li> --}}
 
-        <li class="nav-item px-3">
+        <li class="nav-item px-5">
             <a class="nav-link" href="{{ route('admin.dashboard') }}">@lang('navs.frontend.dashboard')</a>
         </li>
         {{--@if(config('locale.status') && count(config('locale.languages')) > 1)--}}
@@ -27,7 +27,7 @@
                 {{--@include('includes.partials.lang')--}}
             {{--</li>--}}
         {{--@endif--}}
-        @if(config('locale.status') && count($locales) > 1)
+        {{-- @if(config('locale.status') && count($locales) > 1)
 
             <li class="nav-item px-3 dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -36,7 +36,7 @@
 
                 @include('includes.partials.lang')
             </li>
-        @endif
+        @endif --}}
     </ul>
 
     <ul class="nav navbar-nav ml-auto mr-4">
