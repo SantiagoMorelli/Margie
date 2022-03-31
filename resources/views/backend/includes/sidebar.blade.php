@@ -130,7 +130,7 @@
                         class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['user/reports*']), 'open') }}">
                         <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/*')) }}"
                             href="#">
-                            <i class="nav-icon icon-pie-chart"></i>@lang('menus.backend.sidebar.reports.title')
+                            <i class="nav-icon icon-pie-chart"></i> @lang('menus.backend.sidebar.reports.title')
 
                         </a>
                         <ul class="nav-dropdown-items">
@@ -213,13 +213,13 @@
                                         class="title">@lang('menus.backend.sidebar.testimonials.title')</span>
                                 </a>
                             </li>
-                            <li class="nav-item ">
+                            {{-- <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'forums-category' ? 'active' : '' }}"
                                     href="{{ route('admin.forums-category.index') }}">
                                     <span
                                         class="title">@lang('menus.backend.sidebar.forums-category.title')</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'faqs' ? 'active' : '' }}"
                                     href="{{ route('admin.faqs.index') }}">
@@ -232,13 +232,13 @@
                                     <span class="title">@lang('menus.backend.sidebar.contact.title')</span>
                                 </a>
                             </li>
-                            <li class="nav-item ">
+                            {{-- <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'newsletter' ? 'active' : '' }}"
                                     href="{{ route('admin.newsletter-settings') }}">
                                     <span
                                         class="title">@lang('menus.backend.sidebar.newsletter-configuration.title')</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'footer' ? 'active' : '' }}"
                                     href="{{ route('admin.footer-settings') }}">
