@@ -130,7 +130,8 @@
                         class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['user/reports*']), 'open') }}">
                         <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/*')) }}"
                             href="#">
-                            <i class="nav-icon icon-pie-chart"></i> @lang('menus.backend.sidebar.reports.title')
+                            {{-- <i class="nav-icon icon-pie-chart"></i> @lang('menus.backend.sidebar.reports.title') --}}
+                            <i class="nav-icon icon-pie-chart"></i> @lang('Reports/Statistics')
 
                         </a>
                         <ul class="nav-dropdown-items">

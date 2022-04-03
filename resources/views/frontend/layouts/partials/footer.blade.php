@@ -52,7 +52,7 @@
                 </div>
             </div>
             <!-- /footer-widget-content -->
-            {{-- <div class="footer-social-subscribe mb65">
+            <div class="footer-social-subscribe mb65">
                 <div class="row">
                     @if(($footer_data->social_links->status == 1) && (count($footer_data->social_links->links) > 0))
                         <div class="col-md-4">
@@ -67,8 +67,11 @@
                             </div>
                         </div>
                     @endif
+                </div>
+            </div>
+                
 
-                    @if($footer_data->newsletter_form->status == 1)
+                    {{-- @if($footer_data->newsletter_form->status == 1)
                         <div class="col-md-8">
                             <div class="subscribe-form ml-0 ">
                                 <h2 class="widget-title">@lang('labels.frontend.layouts.partials.subscribe_newsletter')</h2>
@@ -88,9 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endif
-                </div>
-            </div> --}}
+                    @endif --}}
 
             @if($footer_data->bottom_footer->status == 1)
             <div class="copy-right-menu">
@@ -112,7 +113,7 @@
                                 @if(config('show_offers'))
                                     <li><a href="{{route('frontend.offers')}}">@lang('labels.frontend.layouts.partials.offers')</a> </li>
                                 @endif
-                                <li><a href="{{route('frontend.certificates.getVerificationForm')}}">@lang('labels.frontend.layouts.partials.certificate_verification')</a></li>
+                                {{-- <li><a href="{{route('frontend.certificates.getVerificationForm')}}">@lang('labels.frontend.layouts.partials.certificate_verification')</a></li> --}}
                             </ul>
                         </div>
                     </div>

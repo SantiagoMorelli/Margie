@@ -1560,7 +1560,7 @@ return array (
         'search_courses' => 'Search Courses',
         'sponsors' => 'Sponsors.',
         'students_testimonial' => 'Students <span>Testimonial.</span>',
-        'why_choose' => 'Reason Why Choose',
+        'why_choose' => 'Why Choose',
         'certificate_verification' => 'Certificate Verification',
         'offers' => 'Offers',
       ),
