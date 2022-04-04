@@ -388,17 +388,14 @@ return array (
         'secondary_phone' => 'Secondary Phone',
         'primary_email' => 'Primary Email',
         'secondary_email' => 'Secondary Email',
-        'location_on_map' => 'Location on Map',
-        'map_note' => '<h3>How to embed Location for Map?</h3>
+        'location_on_map' => 'Video Embedded',
+        'map_note' => '<h3>How to embed video?</h3>
                                 <p>Do following simple steps and you are good to go:</p>
                                 <ol class="map-guide">
-                                    <li>Go to <a class="text-bold" target="_blank" href="//maps.google.com">Google Map</a> </li>
-                                    <li>Search the place you want to add by Entering address / location in input box located on upper-left corner</li>
-                                    <li>Once you get the place you want. It shows details in left sidebar. Click on <i class="fa fa-share-alt text-primary"></i> button</li>
-                                    <li>A popup will appear which will have two tabs <b>Send a link</b> and <b>Embed a Map</b></li>
-                                    <li>Click on <b>Embed a map</b> It will show you chosen Place on Map</li>
-                                    <li>Now click on the dropdown from the left. By default <b>Medium</b> is selected. Click on it and Select <b>Large</b></li>
-                                    <li>Now Click on <b class="text-primary">COPY HTML</b> link from it and <b>Paste</b> that code here in <b>Location on Map</b>.</li>
+                                    <li>Go to <a class="text-bold" target="_blank" href="//youtube.com">Youtube.</a> </li>
+                                    <li>Search for a video.</li>
+                                    <li>Once you are on a video page, click on Share and select the <b>Embed</b> option.</li>
+                                    <li>Copy the code and paste it in the box to the left.</li>
                                 </ol>',
         'title' => 'Contact',
         'primary_email_note' => 'This email will be used to correspond "Contact Us" emails',

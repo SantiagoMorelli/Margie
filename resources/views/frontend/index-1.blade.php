@@ -137,9 +137,9 @@
                     
                     @if($sections->reasons->status == 1)
 
-                        <div class="section-title mb20 headline text-cewhy-choose-us-sectionwhy-choose-us-sectionnter ">
+                        <div class="section-title mb20 headline text-cewhy-choose-us-sectionwhy-choose-us-sectionnter " style="text-align: center">
                             <span class="subtitle text-uppercase">{{env('APP_NAME')}} @lang('labels.frontend.layouts.partials.advantages')</span>
-                            <h2>@lang('labels.frontend.layouts.partials.why_choose') <span>{{app_name()}}?</span></h2>
+                            <h2 style="text-align: center">@lang('labels.frontend.layouts.partials.why_choose') <span>{{app_name()}}?</span></h2>
                         </div>
                         @if($reasons->count() > 0)
                             <div id="service-slide-item" class="service-slide">
