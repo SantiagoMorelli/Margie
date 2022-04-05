@@ -98,9 +98,9 @@
                 <div class="row">
                     @if($footer_data->copyright_text->status == 1)
                     <div class="col-md-6">
-                        {{-- <div class="copy-right-text">
-                            <p>Margie's Magic Verbs,  {!!  $footer_data->copyright_text->text !!}</p>
-                        </div> --}}
+                        <div class="copy-right-text">
+                            <p>{!!  $footer_data->copyright_text->text !!}</p>
+                        </div>
                     </div>
                     @endif
                     @if(($footer_data->bottom_footer_links->status == 1) && (count($footer_data->bottom_footer_links->links) > 0))
