@@ -246,12 +246,12 @@
                                     <span class="title">@lang('menus.backend.sidebar.footer.title')</span>
                                 </a>
                             </li>
-                            <li class="nav-item ">
+                            {{-- <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'sitemap' ? 'active' : '' }}"
                                     href="{{ route('admin.sitemap.index') }}">
                                     <span class="title">@lang('menus.backend.sidebar.sitemap.title')</span>
                                 </a>
-                            </li>
+                            </li> --}}
                         @endif
 
                     </ul>
