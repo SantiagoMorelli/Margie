@@ -20,7 +20,7 @@ return array (
         'slug' => 'Slug',
         'description' => 'Description',
         'price' => 'Price',
-        'strike' => 'Strike Price',
+        'strike' => 'Strike Price (optional)',
         'course_image' => 'Course Image',
         'start_date' => 'Start Date',
         'meta_title' => 'Meta Title',

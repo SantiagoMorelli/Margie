@@ -202,24 +202,26 @@ class CartController extends Controller
         ])->send();
 
         if ($response->isSuccessful()) {
-            $order->status = 1;
-            $order->payment_type = 1;
-            $order->save();
-            (new EarningHelper)->insert($order);
-            foreach ($order->items as $orderItem) {
-                //Bundle Entries
-                if ($orderItem->item_type == Bundle::class) {
-                    foreach ($orderItem->item->courses as $course) {
-                        $course->students()->attach($order->user_id);
-                    }
-                }
-                $orderItem->item->students()->attach($order->user_id);
-            }
+            //UNCOMMENT, THIS IS FOR ENROLLING BUT IT IS COMMENTED RIGHT NOW FOR TESTING PURPOSES
+            // $order->status = 1;
+            // $order->payment_type = 1;
+            // $order->save();
+            // (new EarningHelper)->insert($order);
+            // foreach ($order->items as $orderItem) {
+            //     //Bundle Entries
+            //     if ($orderItem->item_type == Bundle::class) {
+            //         foreach ($orderItem->item->courses as $course) {
+            //             $course->students()->attach($order->user_id);
+            //         }
+            //     }
+            //     $orderItem->item->students()->attach($order->user_id);
+            // }
 
+            
             //Generating Invoice
-            generateInvoice($order);
-            $this->adminOrderMail($order);
+            // generateInvoice($order); This line creates a 60s timeout, not sure why
 
+            $this->adminOrderMail($order);
             Cart::session(auth()->user()->id)->clear();
             Session::flash('success', trans('labels.frontend.cart.payment_done'));
             return redirect()->route('status');

@@ -3,6 +3,9 @@ OFFICE DAYS REIMBURSEMENT:
 4th, 6th
 =============================================
 
+Stripe Card
+4242424242424242
+
 Meeting Agenda 9/3/22:
 - Show progress and receive feedback on Homepage/Admin Layouts
 - Getting required information to be placed on pages
@@ -15,6 +18,10 @@ Testing Email Inbox Details:
     user: margiemagicverb@gmail.com
     pass: margie12345
 
+Stripe Details:
+    user: margiemagicverb@gmail.com
+    pass: margiesmagicverbs12345
+
 ---------------------------------------------------------------------------------------------------------------------------
 
 NOTES
@@ -22,7 +29,6 @@ NOTES
 - Text is to be added to the backdrop image on the carousel.
 - Latest blogs is to be replaced with popular blogs which are randomly selected.
 - Teachers section is to be changed with Margie and the all teachers button is to be removed.
-- The courses columns are to be removed from the footer.
 - Social media at the bottom should be made more prominent.
 - Work on store functionality.
 

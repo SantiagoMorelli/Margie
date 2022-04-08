@@ -72,8 +72,8 @@
 
             </div>
             <hr>
-            <h4>@lang('labels.backend.reasons.note')</h4>
-            <img src="{{asset('images/reasons.jpg')}}" width="100%"  >
+            {{-- <h4>@lang('labels.backend.reasons.note')</h4>
+            <img src="{{asset('images/reasons.jpg')}}" width="100%"  > --}}
 
 
         </div>
