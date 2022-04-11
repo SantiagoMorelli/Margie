@@ -248,7 +248,7 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.google_analytics_id'))->class('col-md-2 form-control-label')->for('app_name') }}
 
                                 <div class="col-md-10">
@@ -265,8 +265,8 @@
                                            href="https://support.google.com/analytics/answer/1042508">{{__('labels.backend.general_settings.google_analytics_id_note')}}</a>
                                     </span>
 
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div> --}}
 
                             <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.captcha_status'))->class('col-md-2 form-control-label')->for('captcha_status') }}
@@ -313,7 +313,7 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.retest_status'))->class('col-md-2 form-control-label')->for('retest') }}
                                 <div class="col-md-10">
                                     <div class="checkbox">
@@ -325,8 +325,8 @@
                                         }}
                                     </div>
                                     <small><i> {{__('labels.backend.general_settings.retest_note')}}</i></small>
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div> --}}
 
                             <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.lesson_timer'))->class('col-md-2 form-control-label')->for('lesson_timer') }}
@@ -358,7 +358,7 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.one_signal_push_notification'))->class('col-md-2 form-control-label')->for('onesignal_status') }}
                                 <div class="col-md-10">
                                     <div class="checkbox">
@@ -389,12 +389,13 @@
                                                      ->placeholder(__('validation.attributes.backend.settings.general_settings.onesignal_code'))
                                                      ->value(config('onesignal_data'))
                                                      }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
+                                            </div>
+                                        </div>
                                     </div>
 
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div> --}}
+
                             <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.teacher_commission_rate'))->class('col-md-2 form-control-label mb-1')->for('commission_rate') }}
 
@@ -439,7 +440,7 @@
                             </div><!--form-group-->
 
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.custom_css'))->class('col-md-2 form-control-label')->for('custom_css') }}
 
                                 <div class="col-md-10">
@@ -448,8 +449,8 @@
                                         ->placeholder(__('Ex. body{background:blue;}'))
                                         ->value(config('custom_css'))
                                         }}
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div>
 
                             <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.custom_js'))->class('col-md-2 form-control-label')->for('custom_js') }}
@@ -460,8 +461,9 @@
                                         ->placeholder(__("Ex. $('#Demo').on('click',function(){  alert(); })"))
                                         ->value(config('custom_js'))
                                         }}
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div> --}}
+
                         </div>
                         <div class="col-12 text-left">
                             <a href="{{route('admin.troubleshoot')}}"

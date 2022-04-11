@@ -75,24 +75,24 @@
                             </li>
                         @endcan
 
-                        @can('test_access')
+                        {{-- @can('test_access')
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'tests' ? 'active' : '' }}"
                                     href="{{ route('admin.tests.index') }}">
                                     <span class="title">@lang('menus.backend.sidebar.tests.title')</span>
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
 
 
-                        @can('question_access')
+                        {{-- @can('question_access')
                             <li class="nav-item">
                                 <a class="nav-link {{ $request->segment(2) == 'questions' ? 'active' : '' }}"
                                     href="{{ route('admin.questions.index') }}">
                                     <span class="title">@lang('menus.backend.sidebar.questions.title')</span>
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
 
 
                         @can('live_lesson_access')
@@ -125,12 +125,12 @@
                         </a>
                     </li>
                 @endcan
-                @if ($logged_in_user->hasRole('teacher') || $logged_in_user->isAdmin())
+                {{-- @if ($logged_in_user->hasRole('teacher') || $logged_in_user->isAdmin())
                     <li
                         class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['user/reports*']), 'open') }}">
                         <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/*')) }}"
                             href="#">
-                            {{-- <i class="nav-icon icon-pie-chart"></i> @lang('menus.backend.sidebar.reports.title') --}}
+                            <i class="nav-icon icon-pie-chart"></i> @lang('menus.backend.sidebar.reports.title') //Orig statement
                             <i class="nav-icon icon-pie-chart"></i> @lang('Reports/Statistics')
 
                         </a>
@@ -148,7 +148,7 @@
                             </li>
                         </ul>
                     </li>
-                @endif
+                @endif --}}
             @endif
 
 

@@ -1,7 +1,8 @@
 =============================================
 OFFICE DAYS REIMBURSEMENT:
-4th, 6th
+4th, 6th, 11th, 13th
 =============================================
+Comment out href for courses front end navigation menu.
 
 Stripe Card
 4242424242424242

@@ -203,19 +203,19 @@ class CartController extends Controller
 
         if ($response->isSuccessful()) {
             //UNCOMMENT, THIS IS FOR ENROLLING BUT IT IS COMMENTED RIGHT NOW FOR TESTING PURPOSES
-            // $order->status = 1;
-            // $order->payment_type = 1;
-            // $order->save();
-            // (new EarningHelper)->insert($order);
-            // foreach ($order->items as $orderItem) {
-            //     //Bundle Entries
-            //     if ($orderItem->item_type == Bundle::class) {
-            //         foreach ($orderItem->item->courses as $course) {
-            //             $course->students()->attach($order->user_id);
-            //         }
-            //     }
-            //     $orderItem->item->students()->attach($order->user_id);
-            // }
+            $order->status = 1;
+            $order->payment_type = 1;
+            $order->save();
+            (new EarningHelper)->insert($order);
+            foreach ($order->items as $orderItem) {
+                //Bundle Entries
+                if ($orderItem->item_type == Bundle::class) {
+                    foreach ($orderItem->item->courses as $course) {
+                        $course->students()->attach($order->user_id);
+                    }
+                }
+                $orderItem->item->students()->attach($order->user_id);
+            }
 
             
             //Generating Invoice
