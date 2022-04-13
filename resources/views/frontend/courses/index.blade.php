@@ -132,16 +132,21 @@
                                                                     @endfor
                                                                 </ul>
                                                             </div>
-                                                            <div class="course-details-btn">
+
+                                                            <!-- COURSE DETAILS BUTTON -->
+                                                            {{-- <div class="course-details-btn">
                                                                 <a href="{{ route('courses.show', [$course->slug]) }}">@lang('labels.frontend.course.course_detail')
                                                                     <i class="fas fa-arrow-right"></i></a>
-                                                            </div>
+                                                            </div> --}}
+
                                                             <div class="blakish-overlay"></div>
                                                         </div>
                                                         <div class="best-course-text">
                                                             <div class="course-title mb20 headline relative-position">
                                                                 <h3>
-                                                                    <a href="{{ route('courses.show', [$course->slug]) }}">{{$course->title}}</a>
+                                                                    <!-- CLICKABLE BUTTONS -->
+                                                                    {{-- <a href="{{ route('courses.show', [$course->slug]) }}">{{$course->title}}</a> --}}
+                                                                    {{$course->title}}
                                                                 </h3>
                                                             </div>
                                                             <div class="course-meta">

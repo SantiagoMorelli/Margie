@@ -16,7 +16,7 @@
         </li> --}}
 
         <li class="nav-item px-5">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">@lang('navs.frontend.dashboard')</a>
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">@lang('Back to Dashboard')</a>
         </li>
         {{--@if(config('locale.status') && count(config('locale.languages')) > 1)--}}
             {{--<li class="nav-item px-3 dropdown">--}}

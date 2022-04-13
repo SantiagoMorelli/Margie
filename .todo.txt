@@ -2,7 +2,6 @@
 OFFICE DAYS REIMBURSEMENT:
 4th, 6th, 11th, 13th
 =============================================
-Comment out href for courses front end navigation menu.
 
 Stripe Card
 4242424242424242
@@ -24,6 +23,21 @@ Stripe Details:
     pass: margiesmagicverbs12345
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+FRONTEND!
+- frontend > courses > index.blade.php (lines 136, 147)
+
+
+
+
+
+
+
+
+
+
+
+
 
 NOTES
 
