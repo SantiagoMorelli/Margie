@@ -134,10 +134,10 @@
                                                             </div>
 
                                                             <!-- COURSE DETAILS BUTTON -->
-                                                            {{-- <div class="course-details-btn">
+                                                            <div class="course-details-btn">
                                                                 <a href="{{ route('courses.show', [$course->slug]) }}">@lang('labels.frontend.course.course_detail')
                                                                     <i class="fas fa-arrow-right"></i></a>
-                                                            </div> --}}
+                                                            </div>
 
                                                             <div class="blakish-overlay"></div>
                                                         </div>
@@ -145,8 +145,7 @@
                                                             <div class="course-title mb20 headline relative-position">
                                                                 <h3>
                                                                     <!-- CLICKABLE BUTTONS -->
-                                                                    {{-- <a href="{{ route('courses.show', [$course->slug]) }}">{{$course->title}}</a> --}}
-                                                                    {{$course->title}}
+                                                                    <a href="{{ route('courses.show', [$course->slug]) }}">{{$course->title}}</a>
                                                                 </h3>
                                                             </div>
                                                             <div class="course-meta">

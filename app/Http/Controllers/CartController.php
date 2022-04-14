@@ -265,7 +265,6 @@ class CartController extends Controller
             \Session::put('failure', trans('labels.frontend.cart.unknown_error'));
             return Redirect::route('cart.paypal.status');
         }
-
         \Session::put('failure', trans('labels.frontend.cart.unknown_error'));
         return Redirect::route('cart.paypal.status');
     }
@@ -331,7 +330,7 @@ class CartController extends Controller
             }
 
             //Generating Invoice
-            generateInvoice($order);
+            // generateInvoice($order);
             $this->adminOrderMail($order);
             Cart::session(auth()->user()->id)->clear();
             return Redirect::route('status');

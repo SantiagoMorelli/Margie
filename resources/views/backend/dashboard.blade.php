@@ -163,7 +163,9 @@
                                                             {{ $item->progress()  }} %
                                                         </div>
                                                     </div>
-                                                    @if($item->progress() == 100)
+
+                                                    <!-- "You're certified for this course" label removed as we don't use it here -->
+                                                    {{-- @if($item->progress() == 100)
                                                         @if(!$item->isUserCertified())
                                                             <form method="post"
                                                                   action="{{route('admin.certificates.generate')}}">
@@ -178,7 +180,8 @@
                                                                 @lang('labels.frontend.course.certified')
                                                             </div>
                                                         @endif
-                                                    @endif
+                                                    @endif --}}
+
                                                 </div>
                                             </div>
                                         </div>
@@ -249,7 +252,8 @@
                                                                     @lang('labels.backend.dashboard.completed')
                                                                 </div>
                                                             </div>
-                                                            @if($item->progress() == 100)
+
+                                                            {{-- @if($item->progress() == 100)
                                                                 @if(!$item->isUserCertified())
                                                                     <form method="post"
                                                                           action="{{route('admin.certificates.generate')}}">
@@ -264,7 +268,8 @@
                                                                         @lang('labels.frontend.course.certified')
                                                                     </div>
                                                                 @endif
-                                                            @endif
+                                                            @endif --}}
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -324,7 +329,7 @@
                                                             {{ $item->progress()  }} %
                                                         </div>
                                                     </div>
-                                                    @if($item->progress() == 100)
+                                                    {{-- @if($item->progress() == 100)
                                                         @if(!$item->isUserCertified())
                                                             <form method="post"
                                                                   action="{{route('admin.certificates.generate')}}">
@@ -339,7 +344,7 @@
                                                                 @lang('labels.frontend.course.certified')
                                                             </div>
                                                         @endif
-                                                    @endif
+                                                    @endif --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -403,7 +408,7 @@
                                                                     @lang('labels.backend.dashboard.completed')
                                                                 </div>
                                                             </div>
-                                                            @if($item->progress() == 100)
+                                                            {{-- @if($item->progress() == 100)
                                                                 @if(!$item->isUserCertified())
                                                                     <form method="post"
                                                                           action="{{route('admin.certificates.generate')}}">
@@ -418,7 +423,7 @@
                                                                         @lang('labels.frontend.course.certified')
                                                                     </div>
                                                                 @endif
-                                                            @endif
+                                                            @endif --}}
                                                         </div>
                                                     </div>
                                                 </div>

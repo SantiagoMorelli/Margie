@@ -448,9 +448,10 @@
                                                 id="finish">@lang('labels.frontend.course.finish_course')</button>
                                     </form>
                                 @else
-                                    <div class="alert alert-success">
+                                    <!-- Remove the "You're certified" message on the dynamic course page -->
+                                    {{-- <div class="alert alert-success">
                                         @lang('labels.frontend.course.certified')
-                                    </div>
+                                    </div> --}}
                                 @endif
                             @endif
 
