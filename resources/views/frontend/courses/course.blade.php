@@ -197,7 +197,7 @@
                     </div>
                     <!-- /market guide -->
 
-                    <div class="course-review">
+                    {{-- <div class="course-review">
                         <div class="section-title-2 mb20 headline text-left">
                             <h2>@lang('labels.frontend.course.course_reviews')</h2>
                         </div>
@@ -233,7 +233,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- /review overview -->
 
                     <div class="couse-comment">
@@ -275,12 +275,12 @@
                                         </li>
                                     @endforeach
                                 </ul>
-                            @else
-                                <h4> @lang('labels.frontend.course.no_reviews_yet')</h4>
+                            {{-- @else
+                                <h4> @lang('labels.frontend.course.no_reviews_yet')</h4> --}}
                             @endif
 
                             @if ($purchased_course)
-                                @if(isset($review) || ($is_reviewed == false))
+                                {{-- @if(isset($review) || ($is_reviewed == false))
                                     <div class="reply-comment-box">
                                         <div class="review-option">
                                             <div class="section-title-2  headline text-left float-left">
@@ -349,7 +349,7 @@
                                             </form>
                                         </div>
                                     </div>
-                                @endif
+                                @endif --}}
                             @endif
 
 
