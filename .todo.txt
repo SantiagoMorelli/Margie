@@ -4,8 +4,14 @@ OFFICE DAYS REIMBURSEMENT:
 =============================================
 
 
-Stripe Card
-4242424242424242
+--Stripe--
+API Key: pk_test_51KlnVQBBJBOZ2nqUShh9U3n13VfaehcYWJT8xkMFZ4poqlZ3VugLUTRuXM74bZa8YY02O1rMP2SvVn3D1WIqebAY00cSQcLTDG
+API Secret: sk_test_51KlnVQBBJBOZ2nqUSm32JoBXxOeUtlfNVMn0tJEoFPcP5qLEzxRbpshNvTABs8zXx30PvShfPyoXlcS28TaUGgd200rjWoZpWQ
+Card: 4242424242424242
+
+PayPal
+Client ID: AcH_fWyKFVQZ2msF-ejrVAj-YKDLUrmuygv6XOna-48g4cQgmChNFhEuKCTBOGca6_ZdjLOeSHfWdRlG
+Secret: EKMPbAt9abt1nCJVa8F05_K9KJ-mhi2oiT1lRISvhm8fnPmZYNlhdkzEjLMim5xYLfnWSnhedw-V2Wyw
 
 PayPal Account
 email: sb-z43vvs3142849@personal.example.com

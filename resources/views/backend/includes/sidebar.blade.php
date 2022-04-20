@@ -121,7 +121,7 @@
                         <a class="nav-link {{ $request->segment(2) == 'bundles' ? 'active' : '' }}"
                             href="{{ route('admin.bundles.index') }}">
                             <i class="nav-icon icon-layers"></i>
-                            <span class="title">@lang('menus.backend.sidebar.bundles.title')</span>
+                            <span class="title">@lang('Bundles Management')</span>
                         </a>
                     </li>
                 @endcan
