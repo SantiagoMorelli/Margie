@@ -3,6 +3,7 @@ OFFICE DAYS REIMBURSEMENT:
 4th, 6th, 11th, 13th
 =============================================
 
+
 Stripe Card
 4242424242424242
 
@@ -30,6 +31,8 @@ Stripe Details:
 
 FRONTEND!
 - frontend > courses > index.blade.php (lines 136, 147)
+
+- Lines 487-503 in C:\Users\adria\Desktop\LWS\resources\views\frontend\courses\course.blade.php for buy/add to cart buttons
 
 
 

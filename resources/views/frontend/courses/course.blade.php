@@ -468,9 +468,9 @@
                                            data-target="#myModal" href="#">@lang('labels.frontend.course.add_to_cart') <i
                                                     class="fa fa-shopping-bag"></i></a>
 
-                                        <a id="openLoginModal"
+                                        {{-- <a id="openLoginModal"
                                            class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"
-                                           data-target="#myModal" href="#">@lang('labels.frontend.course.subscribe')</a>
+                                           data-target="#myModal" href="#">@lang('labels.frontend.course.subscribe')</a> --}}
                                     @endif
                                 @elseif(auth()->check() && (auth()->user()->hasRole('student')))
 
@@ -528,7 +528,7 @@
                                 @else
                                     <h6 class="alert alert-danger"> @lang('labels.frontend.course.buy_note')</h6>
                                 @endif
-                                @include('frontend.layouts.partials.wishlist',['course' => $course->id, 'price' => $course->price])
+                                {{-- @include('frontend.layouts.partials.wishlist',['course' => $course->id, 'price' => $course->price]) --}}
                             @else
 
                                 @if($continue_course || !empty($checkSubcribePlan))

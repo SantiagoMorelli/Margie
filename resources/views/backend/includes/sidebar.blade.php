@@ -287,13 +287,13 @@
                 </a>
             </li>
             @if ($logged_in_user->hasRole('student'))
-                <li class="nav-item ">
+                {{-- <li class="nav-item ">
                     <a class="nav-link {{ $request->segment(1) == 'invoices' ? 'active' : '' }}"
                         href="{{ route('admin.invoices.index') }}">
                         <i class="nav-icon icon-notebook"></i> <span
                             class="title">@lang('menus.backend.sidebar.invoices.title')</span>
                     </a>
-                </li>
+                </li> --}}
                 {{-- <li class="nav-item ">
                     <a class="nav-link {{ $request->segment(1) == 'certificates' ? 'active' : '' }}"
                         href="{{ route('admin.certificates.index') }}">
@@ -350,13 +350,13 @@
                 </a>
             </li>
             @if ($logged_in_user->hasRole('student'))
-                <li class="nav-item ">
+                {{-- <li class="nav-item ">
                     <a class="nav-link {{ $request->segment(1) == 'subscriptions' ? 'active' : '' }}"
                         href="{{ route('admin.subscriptions') }}">
                         <i class="nav-icon fas fa-briefcase"></i>
                         <span class="title">@lang('menus.backend.sidebar.subscription.title')</span>
                     </a>
-                </li>
+                </li> --}}
                 {{-- <li class="nav-item ">
                     <a class="nav-link {{ $request->segment(1) == 'wishlist' ? 'active' : '' }}"
                         href="{{ route('admin.wishlist.index') }}">
