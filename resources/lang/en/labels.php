@@ -1142,7 +1142,7 @@ return array (
         'fields' => array(
             'course' => 'Course',
             'title' => 'Title',
-            'short_text' => 'Sort Description',
+            'short_text' => 'Short Description',
         ),
 
     ),
@@ -1153,7 +1153,7 @@ return array (
         'edit' => 'Edit Live Lesson Slot',
         'view' => 'View Slot',
         'slot' => 'Slot',
-        'short_description_placeholder' => 'Input short description of slot',
+        'short_description_placeholder' => 'Input short description of live lesson slot',
         'start_url' => 'Start URL',
         'slot_booked_student_list' => 'Slot Booked Student List',
         'student_name' => 'Student Name',
@@ -1168,12 +1168,12 @@ return array (
         'fields' => array(
             'lesson' => 'Lesson',
             'topic' => 'Topic',
-            'short_text' => 'Sort Description',
+            'short_text' => 'Short Description',
             'date_of_slot' => 'Date',
             'duration' => 'Duration(in minutes)',
             'meeting_id' => 'Meeting ID',
             'date' => 'Date',
-            'password' => 'Password',
+            'password' => 'Password (10 characters maximum)',
             'change_default_setting' => 'Change Default Setting',
             'student_limit' => 'Student Limit'
         )
