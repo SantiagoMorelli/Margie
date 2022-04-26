@@ -48,7 +48,7 @@ everyone can see.
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-
+Lines 98 - 115 for Live Lessons options in admin panel C:\Users\adria\Desktop\LWS\resources\views\backend\includes\sidebar.blade.php
 
 
 

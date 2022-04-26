@@ -5480,3 +5480,163 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "} 
+[2022-04-26 23:12:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:13:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:14:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:15:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:16:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:17:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:18:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:19:20] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:25:12] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2022-04-26 23:26:11] local.ERROR: Uncaught ReflectionException: Class App\Policies\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\Policies\\Mo...')
+#1 [internal function]: {closure}('App\\Policies\\Mo...', 'App\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class App\\Policies\\ModelPolicy does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionClass->__construct('App\\\\Policies\\\\Mo...')
+#1 [internal function]: {closure}('App\\\\Policies\\\\Mo...', 'App\\\\Model')
+#2 Command line code(1): array_map(Object(Closure), Array, Array)
+#3 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 

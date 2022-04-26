@@ -95,7 +95,7 @@
                         @endcan --}}
 
 
-                        @can('live_lesson_access')
+                        {{-- @can('live_lesson_access')
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'live-lessons' ? 'active' : '' }}"
                                     href="{{ route('admin.live-lessons.index') }}">
@@ -112,7 +112,7 @@
                                         class="title">@lang('menus.backend.sidebar.live_lesson_slots.title')</span>
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
 
                     </ul>
                 </li>
