@@ -155,7 +155,7 @@
                                                                         @lang('labels.frontend.course.students')</a></span>
 
                                                             </div>
-                                                            @include('frontend.layouts.partials.wishlist',['course' => $course->id, 'price' => $course->price])
+                                                            {{-- @include('frontend.layouts.partials.wishlist',['course' => $course->id, 'price' => $course->price]) --}}
                                                         </div>
                                                     </div>
                                                 </div>

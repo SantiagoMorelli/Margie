@@ -4,6 +4,9 @@ OFFICE DAYS REIMBURSEMENT:
 =============================================
 
 
+*****************REMOVE PDF DISPLAY ON COURSE! KEEP DOWNLOADABLE FILES
+
+
 --Stripe--
 API Key: pk_test_51KlnVQBBJBOZ2nqUShh9U3n13VfaehcYWJT8xkMFZ4poqlZ3VugLUTRuXM74bZa8YY02O1rMP2SvVn3D1WIqebAY00cSQcLTDG
 API Secret: sk_test_51KlnVQBBJBOZ2nqUSm32JoBXxOeUtlfNVMn0tJEoFPcP5qLEzxRbpshNvTABs8zXx30PvShfPyoXlcS28TaUGgd200rjWoZpWQ
@@ -36,6 +39,21 @@ Stripe Details:
     pass: margiesmagicverbs12345
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+ADRIAN NOTES
+- Lesson "short description" is displayed to the user even when they have not purchased the course. This should be a description of the lesson that
+everyone can see.
+- Lesson "long description" is hidden until you buy the course, and it should be the course content.
+- Lessons should be created with a title starting "Lesson (number)" as the store shows each lesson in alphanumerical order.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 FRONTEND!
 - frontend > courses > index.blade.php (lines 136, 147)

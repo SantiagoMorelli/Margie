@@ -21,7 +21,7 @@ return array (
         'description' => 'Description',
         'price' => 'Price',
         'strike' => 'Strike Price (optional)',
-        'course_image' => 'Course Image',
+        'course_image' => 'Course Image (must be in .jpg or .jpeg format)',
         'start_date' => 'Start Date',
         'meta_title' => 'Meta Title',
         'meta_description' => 'Meta Description',

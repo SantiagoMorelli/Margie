@@ -105,11 +105,11 @@
                                 {{ __('labels.backend.general_settings.language_settings.title') }}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#user_registration_settings">
                                 {{ __('labels.backend.general_settings.user_registration_settings.title') }}
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#api_client_settings">
                                 {{ __('labels.backend.general_settings.api_clients.title') }}
@@ -849,7 +849,7 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.payment_settings.flutter'))->class('col-md-3 form-control-label')}}
                                 <div class="col-md-9">
                                     <div class="checkbox">
@@ -899,9 +899,9 @@
                                         </div><!--form-group-->
                                     </div>
                                 </div><!--col-->
-                            </div><!--form-group-->
+                            </div><!--form-group--> --}}
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.payment_settings.instamojo'))->class('col-md-3 form-control-label')}}
                                 <div class="col-md-9">
                                     <div class="checkbox">
@@ -950,8 +950,9 @@
                                         </div><!--form-group-->
                                     </div>
                                 </div><!--col-->
-                            </div><!--form-group-->
-                            <div class="form-group row">
+                            </div><!--form-group--> --}}
+
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.payment_settings.razorpay'))->class('col-md-3 form-control-label')->for('services.razorpay.active') }}
                                 <div class="col-md-9">
                                     <div class="checkbox">
@@ -991,8 +992,9 @@
                                         </div><!--form-group-->
                                     </div>
                                 </div><!--col-->
-                            </div><!--form-group-->
-                            <div class="form-group row">
+                            </div><!--form-group--> --}}
+
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.payment_settings.cashfree'))->class('col-md-3 form-control-label')}}
                                 <div class="col-md-9">
                                     <div class="checkbox">
@@ -1041,8 +1043,9 @@
                                         </div><!--form-group-->
                                     </div>
                                 </div><!--col-->
-                            </div><!--form-group-->
-                            <div class="form-group row">
+                            </div><!--form-group--> --}}
+
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.payment_settings.payu'))->class('col-md-3 form-control-label')}}
                                 <div class="col-md-9">
                                     <div class="checkbox">
@@ -1094,8 +1097,9 @@
                                         </div><!--form-group-->
                                     </div>
                                 </div><!--col-->
-                            </div><!--form-group-->
-                            <div class="form-group row">
+                            </div><!--form-group--> --}}
+
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.payment_settings.offline_mode'))->class('col-md-3 form-control-label')}}
                                 <div class="col-md-9">
                                     <div class="checkbox">
@@ -1115,7 +1119,8 @@
                                         }}
                                 </div>
 
-                            </div>
+                            </div> --}}
+
                         </div>
                     </div>
                 </div>
@@ -1152,7 +1157,7 @@
                     </div>
                 </div>
 
-                <!---User Registration Settings--->
+                {{-- <!---User Registration Settings--->
                 <div id="user_registration_settings" class="tab-pane container fade">
                     <div class="row mt-2 mb-4">
                         <div class="col-12 mb-2">
@@ -1250,7 +1255,7 @@
 
 
                     </div>
-                </div>
+                </div> --}}
 
                 <!---API Client Settings--->
                 <div id="api_client_settings" class="tab-pane container fade">
