@@ -124,9 +124,9 @@
     @endif
 
 
-    @if($sections->popular_courses->status == 1)
+    {{-- @if($sections->popular_courses->status == 1)
         @include('frontend.layouts.partials.popular_courses')
-    @endif
+    @endif --}}
 
     @if(($sections->reasons->status != 0) || ($sections->testimonial->status != 0))
         <!-- Start of why choose us section
@@ -298,13 +298,13 @@
     @endif
 
 
-    @if($sections->faq->status == 1)
+    {{-- @if($sections->faq->status == 1)
         <!-- Start FAQ section
         ============================================= -->
         @include('frontend.layouts.partials.faq')
         <!-- End FAQ section
             ============================================= -->
-    @endif
+    @endif --}}
 
 
     @if($sections->course_by_category->status == 1)

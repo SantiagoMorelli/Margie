@@ -79,7 +79,7 @@
   ),
   'lobster two' => array(
     'normal' => $fontDir . '/lobster-two-normal_0f3165e504dd0088a195b61c24ee05c1',
-    'bold' => $fontDir . '/lobster-two-bold_8198142774ca8135061555a03a230538',
+    'bold' => $fontDir . '/lobster-two-bold_8e67982cbf76fce91dbe5e1d169d5807',
   ),
   'amiri' => array(
     'normal' => $fontDir . '/7065ab98453d16d0654b4a71c0981392',

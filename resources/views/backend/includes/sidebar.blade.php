@@ -95,7 +95,7 @@
                         @endcan --}}
 
 
-                        {{-- @can('live_lesson_access')
+                        @can('live_lesson_access')
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'live-lessons' ? 'active' : '' }}"
                                     href="{{ route('admin.live-lessons.index') }}">
@@ -112,7 +112,7 @@
                                         class="title">@lang('menus.backend.sidebar.live_lesson_slots.title')</span>
                                 </a>
                             </li>
-                        @endcan --}}
+                        @endcan
 
                     </ul>
                 </li>
@@ -201,12 +201,12 @@
                                     <span class="title">@lang('menus.backend.sidebar.hero-slider.title')</span>
                                 </a>
                             </li>
-                            <li class="nav-item ">
+                            {{-- <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'sponsors' ? 'active' : '' }}"
                                     href="{{ route('admin.sponsors.index') }}">
                                     <span class="title">@lang('menus.backend.sidebar.sponsors.title')</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'testimonials' ? 'active' : '' }}"
                                     href="{{ route('admin.testimonials.index') }}">
@@ -221,12 +221,12 @@
                                         class="title">@lang('menus.backend.sidebar.forums-category.title')</span>
                                 </a>
                             </li> --}}
-                            <li class="nav-item ">
+                            {{-- <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'faqs' ? 'active' : '' }}"
                                     href="{{ route('admin.faqs.index') }}">
                                     <span class="title">@lang('menus.backend.sidebar.faqs.title')</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'contact' ? 'active' : '' }}"
                                     href="{{ route('admin.contact-settings') }}">
@@ -334,13 +334,13 @@
                         <span class="title">@lang('menus.backend.sidebar.tax.title')</span>
                     </a>
                 </li> --}}
-                <li class="nav-item ">
+                {{-- <li class="nav-item ">
                     <a class="nav-link {{ $request->segment(1) == 'contact-requests' ? 'active' : '' }}"
                         href="{{ route('admin.payments.requests') }}">
                         <i class="nav-icon icon-people"></i>
                         <span class="title">@lang('menus.backend.sidebar.payments_requests.title')</span>
                     </a>
-                </li>
+                </li> --}}
             @endif
             <li class="nav-item ">
                 <a class="nav-link {{ $request->segment(1) == 'account' ? 'active' : '' }}"
@@ -372,7 +372,7 @@
                     @lang('menus.backend.sidebar.system')
                 </li>
 
-                <li
+                {{-- <li
                     class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/stripe*', 'admin/stripe/plans*']), 'open') }}">
                     <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/stripe*')) }}"
                         href="#">
@@ -386,7 +386,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 {{-- <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/auth*'), 'open') }}">
                     <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/auth*')) }}"
                        href="#">

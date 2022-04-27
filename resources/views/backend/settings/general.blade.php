@@ -85,11 +85,11 @@
                                 {{ __('labels.backend.general_settings.logos.title') }}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#layout">
                                 {{ __('labels.backend.general_settings.layout.title') }}
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#email">
                                 {{ __('labels.backend.general_settings.email.title') }}
@@ -100,21 +100,21 @@
                                 {{ __('labels.backend.general_settings.payment_settings.title') }}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#language_settings">
                                 {{ __('labels.backend.general_settings.language_settings.title') }}
                             </a>
-                        </li>
+                        </li> --}}
                         {{-- <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#user_registration_settings">
                                 {{ __('labels.backend.general_settings.user_registration_settings.title') }}
                             </a>
                         </li> --}}
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#api_client_settings">
                                 {{ __('labels.backend.general_settings.api_clients.title') }}
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                     <h4 class="card-title mb-0">
                         {{--{{ __('labels.backend.general_settings.management') }}--}}
@@ -158,7 +158,7 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.font_color'))->class('col-md-2 form-control-label')->for('font_color') }}
 
                                 <div class="col-md-10">
@@ -216,8 +216,8 @@
                                     </ul>
                                     <input type="hidden" name="font_color" id="font_color" value="default">
                                     <span class="help-text font-italic">This will change frontend theme font colors</span>
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div> --}}
 
 
                             <div class="form-group row">
@@ -343,7 +343,7 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.show_offers'))->class('col-md-2 form-control-label')->for('show_offers') }}
                                 <div class="col-md-10">
                                     <div class="checkbox">
@@ -355,8 +355,8 @@
                                         }}
                                     </div>
                                     <small><i> {{__('labels.backend.general_settings.show_offers_note')}}</i></small>
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div> --}}
 
                             {{-- <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.one_signal_push_notification'))->class('col-md-2 form-control-label')->for('onesignal_status') }}

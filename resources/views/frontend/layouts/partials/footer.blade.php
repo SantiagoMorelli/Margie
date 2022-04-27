@@ -22,7 +22,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    {{-- <div class="col-md-8">
                         <div class="row">
                             @if($footer_data->section1->status == 1)
                                 @php
@@ -48,7 +48,7 @@
                                 @include('frontend.layouts.partials.footer_section',['section_data' => $section_data])
                             @endif
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!-- /footer-widget-content -->
