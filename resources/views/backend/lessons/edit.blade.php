@@ -129,7 +129,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+
+            <!-- Add PDF option for the edit lesson form -->
+            {{-- <div class="row">
                 <div class="col-12 form-group">
                     {!! Form::label('pdf_files', trans('labels.backend.lessons.fields.add_pdf'), ['class' => 'control-label']) !!}
                     {!! Form::file('add_pdf', [
@@ -153,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="row">
                 <div class="col-12 form-group">

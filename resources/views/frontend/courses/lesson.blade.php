@@ -378,13 +378,14 @@
                             </div>
                         @endif
 
-                        @if($lesson->mediaAudio)
+                        @if($lesson->mediaAudio)                        
                             <div class="course-single-text mb-5">
                                 <audio id="audioPlayer" controls>
-                                    <source src="{{$lesson->mediaAudio->url}}" type="audio/mp3"/>
+                                    <source src="{{$lesson->mediaAudio->url}}" type="audio/mpeg"/>
                                 </audio>
                             </div>
                         @endif
+                        
 
 
                         @if(($lesson->downloadableMedia != "") && ($lesson->downloadableMedia->count() > 0))

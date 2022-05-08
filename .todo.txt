@@ -1,6 +1,6 @@
 =============================================
-OFFICE DAYS REIMBURSEMENT:
-4th, 6th, 11th, 13th
+MAY OFFICE DAYS REIMBURSEMENT:
+2nd, 4th,
 =============================================
 
 
@@ -47,6 +47,8 @@ everyone can see.
 - Lessons should be created with a title starting "Lesson (number)" as the store shows each lesson in alphanumerical order.
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+Lines 322 for book a slot button in C:\Users\adria\Desktop\LWS\resources\views\frontend\courses\lesson.blade.php
 
 Lines 98 - 115 for Live Lessons options in admin panel C:\Users\adria\Desktop\LWS\resources\views\backend\includes\sidebar.blade.php
 

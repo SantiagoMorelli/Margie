@@ -255,7 +255,7 @@ return array (
         'media_video' => 'Media Video',
         'media_audio' => 'Media Audio',
         'media_pdf' => 'Media PDF',
-        'add_audio' => 'Add Audio',
+        'add_audio' => 'Add Audio (max file size 6MB)',
       ),
       'max_file_size' => '(max file size 5MB)',
       'short_description_placeholder' => 'Input short description of lesson',
