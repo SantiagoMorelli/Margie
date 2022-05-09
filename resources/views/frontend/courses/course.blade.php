@@ -113,7 +113,6 @@
                     <!-- /course-details -->
 
                     <div class="affiliate-market-guide mb65">
-
                         <div class="affiliate-market-accordion">
                             <div id="accordion" class="panel-group">
                                 @if(count($lessons)  > 0)
@@ -138,11 +137,13 @@
                                                             <span>{{ sprintf("%02d", $count)}}</span>
                                                             {{$lesson->model->title}}
                                                         </button>
-                                                        @if($lesson->model_type == 'App\Models\Test')
+
+                                                        <!-- Test accordian entry, not required -->
+                                                        {{-- @if($lesson->model_type == 'App\Models\Test')
                                                             <div class="leanth-course">
                                                                 <span>@lang('labels.frontend.course.test')</span>
                                                             </div>
-                                                        @endif
+                                                        @endif --}}
                                                         @if($lesson->model->live_lesson)
                                                             <div class="leanth-course">
                                                                 <span>@lang('labels.frontend.course.live_lesson')</span>
@@ -195,6 +196,8 @@
                             </div>
                         </div>
                     </div>
+
+                    
                     <!-- /market guide -->
 
                     {{-- <div class="course-review">

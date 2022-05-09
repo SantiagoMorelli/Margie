@@ -1,6 +1,6 @@
 =============================================
 MAY OFFICE DAYS REIMBURSEMENT:
-2nd, 4th,
+2nd, 4th, 9th,
 =============================================
 
 
@@ -37,6 +37,12 @@ Testing Email Inbox Details:
 Stripe Details:
     user: margiemagicverb@gmail.com
     pass: margiesmagicverbs12345
+
+---------------------------------------------------------------------------------------------------------------------------
+
+TODOS BEFORE SUBMIT TO SERVER:
+- Remove Social Login Settings from admin panel
+- Add payment methods to the footer
 
 ---------------------------------------------------------------------------------------------------------------------------
 

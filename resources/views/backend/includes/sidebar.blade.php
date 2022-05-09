@@ -448,16 +448,16 @@
                                 @lang('menus.backend.sidebar.settings.general')
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link {{ active_class(Active::checkUriPattern('admin/log-viewer/logs*')) }}"
                                 href="{{ route('admin.social-settings') }}">
                                 @lang('menus.backend.sidebar.settings.social-login')
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link {{ active_class(Active::checkUriPattern('admin/settings/zoom-settings*')) }}"
                                 href="{{ route('admin.zoom-settings') }}">
-                                @lang('menus.backend.sidebar.settings.zoom_setting')
+                                Zoom Settings
                             </a>
                         </li>
                     </ul>

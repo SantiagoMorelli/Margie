@@ -156,13 +156,14 @@
                                             </span>
                                                     </div>
 
-                                                    <div class="progress my-2">
+                                                    <!-- Removes completion bar underneath course in user dashboard -->
+                                                    {{-- <div class="progress my-2">
                                                         <div class="progress-bar"
                                                              style="width:{{$item->progress() }}%">
                                                             @lang('labels.backend.dashboard.completed')
                                                             {{ $item->progress()  }} %
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
 
                                                     <!-- "You're certified for this course" label removed as we don't use it here -->
                                                     {{-- @if($item->progress() == 100)

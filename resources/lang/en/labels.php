@@ -1427,7 +1427,7 @@ return array (
       'buy_note' => 'Only Students Can Buy Course',
       'continue_course' => 'Continue Course',
       'enrolled' => 'Enrolled',
-      'chapters' => 'Chapters',
+      'chapters' => 'Lessons',
       'category' => 'Category',
       'author' => 'Author',
       'courses' => 'Courses',

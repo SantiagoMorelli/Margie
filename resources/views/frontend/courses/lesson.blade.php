@@ -440,21 +440,21 @@
                                     @endif
                                 @endif
                             </p>
-                            @if($lesson->course->progress() == 100)
-                                @if(!$lesson->course->isUserCertified())
-                                    <form method="post" action="{{route('admin.certificates.generate')}}">
+                            {{-- @if($lesson->course->progress() == 100)
+                                @if(!$lesson->course->isUserCertified()) --}}
+                                    {{-- <form method="post" action="{{route('admin.certificates.generate')}}">
                                         @csrf
                                         <input type="hidden" value="{{$lesson->course->id}}" name="course_id">
                                         <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold"
                                                 id="finish">@lang('labels.frontend.course.finish_course')</button>
-                                    </form>
-                                @else
+                                    </form> --}}
+                                {{-- @else --}}
                                     <!-- Remove the "You're certified" message on the dynamic course page -->
                                     {{-- <div class="alert alert-success">
                                         @lang('labels.frontend.course.certified')
                                     </div> --}}
-                                @endif
-                            @endif
+                                {{-- @endif
+                            @endif --}}
 
 
                             <span class="float-none">@lang('labels.frontend.course.course_timeline')</span>
@@ -494,8 +494,8 @@
                                         @endforeach
                                     </span>
                                 </li>
-                                <li>@lang('labels.frontend.course.progress') <span> <b> {{ $lesson->course->progress()  }}
-                                            % @lang('labels.frontend.course.completed')</b></span></li>
+                                {{-- <li>@lang('labels.frontend.course.progress') <span> <b> {{ $lesson->course->progress()  }} --}}
+                                            {{-- % @lang('labels.frontend.course.completed')</b></span></li> --}}
                             </ul>
 
                         </div>
@@ -678,11 +678,12 @@
                 @if($next_lesson)
                 $('#nextButton').html("<a class='btn btn-block gradient-bg font-weight-bold text-white'" +
                     " href='{{ route('lessons.show', [$next_lesson->course_id, $next_lesson->model->slug]) }}'>@lang('labels.frontend.course.next')<i class='fa fa-angle-double-right'></i> </a>");
-                @else
-                $('#nextButton').html("<form method='post' action='{{route("admin.certificates.generate")}}'>" +
-                    "<input type='hidden' name='_token' id='csrf-token' value='{{ Session::token() }}' />" +
-                    "<input type='hidden' value='{{$lesson->course->id}}' name='course_id'> " +
-                    "<button class='btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold' id='finish'>@lang('labels.frontend.course.finish_course')</button></form>");
+                //Remove the Finish Course button
+                // @else
+                // $('#nextButton').html("<form method='post' action='{{route("admin.certificates.generate")}}'>" +
+                //     "<input type='hidden' name='_token' id='csrf-token' value='{{ Session::token() }}' />" +
+                //     "<input type='hidden' value='{{$lesson->course->id}}' name='course_id'> " +
+                //     "<button class='btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold' id='finish'>@lang('labels.frontend.course.finish_course')</button></form>");
 
                 @endif
 
@@ -697,17 +698,17 @@
         @endif
         @endif
 
-        function courseCompleted(id, type) {
-            $.ajax({
-                url: "{{route('update.course.progress')}}",
-                method: "POST",
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                    'model_id': parseInt(id),
-                    'model_type': type,
-                },
-            });
-        }
+        // function courseCompleted(id, type) {
+        //     $.ajax({
+        //         url: "{{route('update.course.progress')}}",
+        //         method: "POST",
+        //         data: {
+        //             "_token": "{{ csrf_token() }}",
+        //             'model_id': parseInt(id),
+        //             'model_type': type,
+        //         },
+        //     });
+        // }
 
     </script>
 @endpush

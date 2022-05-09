@@ -2,7 +2,7 @@
   'nav-menu' => 
   array (
     'contact' => 'Contact',
-    'about-us' => 'About Us',
+    'about-margie' => 'About Margie',
     'bundles' => 'Bundles',
     'courses' => 'Courses',
   ),
