@@ -1422,7 +1422,7 @@ return array (
       'ratings' => 'Ratings',
       'stars' => 'Stars',
       'by' => 'By',
-      'no_reviews_yet' => 'No reviews yet.',
+      'no_reviews_yet' => 'No reviews yet',
       'add_to_cart' => 'Add To Cart',
       'buy_note' => 'Only Students Can Buy Course',
       'continue_course' => 'Continue Course',

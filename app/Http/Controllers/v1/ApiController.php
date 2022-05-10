@@ -489,14 +489,14 @@ class ApiController extends Controller
 
         if (\Auth::check()) {
             $completed_lessons = \Auth::user()->chapters()->where('course_id', $course->id)->get()->pluck('model_id')->toArray();
-            $continue_course = $course->courseTimeline()->orderby('sequence', 'asc')->whereNotIn('model_id', $completed_lessons)->first();
+            $continue_course = $course->courseTimeline()->orderby('created_at', 'asc')->whereNotIn('model_id', $completed_lessons)->first();
             if ($continue_course == null) {
-                $continue_course = $course->courseTimeline()->orderby('sequence', 'asc')->first();
+                $continue_course = $course->courseTimeline()->orderby('created_at', 'asc')->first();
             }
         }
 
         if ($course->courseTimeline) {
-            $timeline = $course->courseTimeline()->orderBy('sequence')->get();
+            $timeline = $course->courseTimeline()->orderBy('created_at')->get();
             foreach ($timeline as $item) {
                 $completed = false;
                 if (in_array($item->model_id, $completed_lessons)) {

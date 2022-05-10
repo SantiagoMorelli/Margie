@@ -87,7 +87,9 @@ class CoursesController extends Controller
             $course_rating = $course->reviews->avg('rating');
             $total_ratings = $course->reviews()->where('rating', '!=', "")->get()->count();
         }
-        $lessons = $course->courseTimeline()->orderby('sequence', 'asc')->get();
+        //Temporary method of reordering lesson list
+        // $lessons = $course->courseTimeline()->orderby('sequence', 'asc')->get();
+        $lessons = $course->courseTimeline()->orderby('created_at', 'asc')->get();
         $checkSubcribePlan=[];
         if (\Auth::check()) {
 
@@ -95,13 +97,13 @@ class CoursesController extends Controller
             $course_lessons = $course->lessons->pluck('id')->toArray();
             $continue_course = $course->courseTimeline()
                 ->whereIn('model_id', $course_lessons)
-                ->orderby('sequence', 'asc')
+                ->orderby('created_at', 'asc')
                 ->whereNotIn('model_id', $completed_lessons)
                 ->first();
             if ($continue_course == null) {
                 $continue_course = $course->courseTimeline()
                     ->whereIn('model_id', $course_lessons)
-                    ->orderby('sequence', 'asc')->first();
+                    ->orderby('created_at', 'asc')->first();
             }
             $checkSubcribePlan = auth()->user()->checkPlanSubcribeUser();
         }
@@ -175,7 +177,7 @@ class CoursesController extends Controller
             $purchased_course = \Auth::check() && $course->students()->where('user_id', \Auth::id())->count() > 0;
             $course_rating = 0;
             $total_ratings = 0;
-            $lessons = $course->courseTimeline()->orderby('sequence', 'asc')->get();
+            $lessons = $course->courseTimeline()->orderby('created_at', 'asc')->get();
 
             if ($course->reviews->count() > 0) {
                 $course_rating = $course->reviews->avg('rating');
@@ -184,9 +186,9 @@ class CoursesController extends Controller
             if (\Auth::check()) {
 
                 $completed_lessons = \Auth::user()->chapters()->where('course_id', $course->id)->get()->pluck('model_id')->toArray();
-                $continue_course = $course->courseTimeline()->orderby('sequence', 'asc')->whereNotIn('model_id', $completed_lessons)->first();
+                $continue_course = $course->courseTimeline()->orderby('created_at', 'asc')->whereNotIn('model_id', $completed_lessons)->first();
                 if ($continue_course == "") {
-                    $continue_course = $course->courseTimeline()->orderby('sequence', 'asc')->first();
+                    $continue_course = $course->courseTimeline()->orderby('created_at', 'asc')->first();
                 }
 
             }

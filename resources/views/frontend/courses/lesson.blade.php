@@ -459,7 +459,7 @@
 
                             <span class="float-none">@lang('labels.frontend.course.course_timeline')</span>
                             <ul class="course-timeline-list">
-                                @foreach($lesson->course->courseTimeline()->orderBy('sequence')->get() as $key=>$item)
+                                @foreach($lesson->course->courseTimeline()->orderBy('created_at')->get() as $key=>$item)
                                     @if($item->model && $item->model->published == 1)
                                         {{--@php $key++; @endphp--}}
                                         <li class="@if($lesson->id == $item->model->id) active @endif ">

@@ -180,7 +180,7 @@
                     </div>
                     <!-- /market guide -->
 
-                    <div class="course-review">
+                    {{-- <div class="course-review">
                         <div class="section-title-2 mb20 headline text-left">
                             <h2>@lang('labels.frontend.course.bundle_reviews')</h2>
                         </div>
@@ -216,7 +216,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- /review overview -->
 
                     <div class="couse-comment">
@@ -259,7 +259,7 @@
                                     @endforeach
                                 </ul>
                             @else
-                                <h4> @lang('labels.frontend.course.no_reviews_yet')</h4>
+                                <h4></h4>
                             @endif
 
                             @if ($purchased_bundle)
@@ -350,7 +350,7 @@
                                         <span> {{trans('labels.backend.courses.fields.free')}}</span>
                                     @else
                                         @lang('labels.frontend.course.price')
-                                        <span>   {{$appCurrency['symbol'].' '.$bundle->price}}</span>
+                                        <span>   {{$appCurrency['symbol'].$bundle->price}}</span>
                                     @endif
                                 </h3>
 

@@ -1,4 +1,4 @@
-<section id="best-course" class="best-course-section {{isset($class) ? $class : ''}}">
+{{-- <section id="best-course" class="best-course-section {{isset($class) ? $class : ''}}">
     <div class="container">
         <div class="section-title mb45 headline text-center ">
             <span class="subtitle text-uppercase">@lang('labels.frontend.layouts.partials.search_our_courses')</span>
@@ -74,4 +74,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}

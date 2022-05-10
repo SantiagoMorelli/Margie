@@ -583,7 +583,8 @@
                                             <td>
                                                 {{$item->user->full_name}}
                                             </td>
-                                            <td>{{$item->amount.' '.$appCurrency['symbol']}}</td>
+                                            {{-- <td>{{$item->amount.' '.$appCurrency['symbol']}}</td> --}}
+                                            <td>{{$appCurrency['symbol'].$item->amount}}</td>
                                             <td>{{$item->created_at->diffforhumans()}}</td>
                                             <td><a class="btn btn-sm btn-primary"
                                                    href="{{route('admin.orders.show', $item->id)}}" target="_blank"><i

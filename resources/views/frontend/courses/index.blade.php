@@ -120,7 +120,7 @@
                                                                 @else
                                                                     <span>
                                                                         {!!  $course->strikePrice  !!}
-                                                                        {{$appCurrency['symbol'].' '.$course->price}}
+                                                                        {{$appCurrency['symbol'].$course->price}}
                                                                     </span>
                                                                 @endif
                                                             </div>
@@ -199,7 +199,9 @@
                                                                             {{trans('labels.backend.courses.fields.free')}}
                                                                         @else
                                                                             {!!  $course->strikePrice  !!}
-                                                                            {{$appCurrency['symbol'].' '.$course->price}}
+                                                                            {{-- {{$appCurrency['symbol'].' '.$course->price}} --}}
+                                                                            {{$appCurrency['symbol'].$course->price}}
+                                                                            
                                                                         @endif
                                                                     </a></span>
 

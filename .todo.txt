@@ -25,7 +25,7 @@ API Secret: 3oflCKeVgPa8aWOennHUhxG2wlyry3BL2iep
 Meeting Agenda 9/3/22:
 - Show progress and receive feedback on Homepage/Admin Layouts
 - Getting required information to be placed on pages
-s
+
 Meeting Agenda 16/3/22:
 - Ask about what needs to be displayed on the admin dashboard
 
@@ -40,9 +40,8 @@ Stripe Details:
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-TODOS BEFORE SUBMIT TO SERVER:
-- Remove Social Login Settings from admin panel
-- Add payment methods to the footer
+TODOS:
+
 
 ---------------------------------------------------------------------------------------------------------------------------
 

@@ -159,13 +159,13 @@ $footer_data = json_decode(config('footer_data'));
                                     <div class="copy-right-menu-item float-right ul-li">
                                         <ul>
                                             @foreach ($footer_data->bottom_footer_links->links as $item)
-                                                <li><a href="{{ $item->link }}">{{ $item->label }}</a></li>
+                                                <p><a href="{{ $item->link }}">{{ $item->label }}</a></p>
                                             @endforeach
-                                            @if (config('show_offers'))
+                                            {{-- @if (config('show_offers'))
                                                 <li><a
                                                         href="{{ route('frontend.offers') }}">@lang('labels.frontend.layouts.partials.offers')</a>
                                                 </li>
-                                            @endif
+                                            @endif --}}
                                             {{-- <li><a href="{{route('frontend.certificates.getVerificationForm')}}">@lang('labels.frontend.layouts.partials.certificate_verification')</a></li> --}}
                                         </ul>
                                     </div>
