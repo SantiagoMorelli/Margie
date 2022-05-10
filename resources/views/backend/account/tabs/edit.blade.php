@@ -3,14 +3,14 @@
 <div class="row">
     <div class="col">
         <div class="form-group">
-            {{ html()->label(__('validation.attributes.frontend.avatar'))->for('avatar') }}
+            {{-- {{ html()->label(__('validation.attributes.frontend.avatar'))->for('avatar') }} --}}
 
-            <div>
+            <div hidden>
                 <input type="radio" name="avatar_type"
-                       value="gravatar" {{ $user->avatar_type == 'gravatar' ? 'checked' : '' }} /> {{__('validation.attributes.frontend.gravatar')}}
+                       value="gravatar" selected {{ $user->avatar_type == 'gravatar' ? 'checked' : '' }} /> {{__('validation.attributes.frontend.gravatar')}}
                 &nbsp;&nbsp;
-                <input type="radio" name="avatar_type"
-                       value="storage" {{ $user->avatar_type == 'storage' ? 'checked' : '' }} /> {{__('validation.attributes.frontend.upload')}}
+                {{-- <input type="radio" name="avatar_type"
+                       value="storage" {{ $user->avatar_type == 'storage' ? 'checked' : '' }} /> {{__('validation.attributes.frontend.upload')}} --}}
 
                 @foreach($user->providers as $provider)
                     @if(strlen($provider->avatar))
@@ -19,14 +19,14 @@
                     @endif
                 @endforeach
             </div>
-        </div><!--form-group-->
+        </div>
 
         <div class="form-group hidden" id="avatar_location">
             {{ html()->file('avatar_location')->class('form-control') }}
-        </div><!--form-group-->
+        </div>
 
-    </div><!--col-->
-</div><!--row-->
+    </div>
+</div>
 
 <div class="row">
     <div class="col">
