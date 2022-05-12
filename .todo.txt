@@ -1,7 +1,15 @@
 =============================================
 MAY OFFICE DAYS REIMBURSEMENT:
-2nd, 4th, 9th,
+2nd, 4th, 9th, 10th
 =============================================
+
+Base Site Account Logins:
+admin@mmv.com
+margie@mmv.com
+student@mmv.com
+user@mmv.com
+
+password: margie12345
 
 
 *****************REMOVE PDF DISPLAY ON COURSE! KEEP DOWNLOADABLE FILES
