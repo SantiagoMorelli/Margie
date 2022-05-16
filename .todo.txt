@@ -11,9 +11,8 @@ user@mmv.com
 
 password: margie12345
 
-
-*****************REMOVE PDF DISPLAY ON COURSE! KEEP DOWNLOADABLE FILES
-
+FINAL TOUCHUPS:
+- Remove logs from debug
 
 --Stripe--
 API Key: pk_test_51KlnVQBBJBOZ2nqUShh9U3n13VfaehcYWJT8xkMFZ4poqlZ3VugLUTRuXM74bZa8YY02O1rMP2SvVn3D1WIqebAY00cSQcLTDG
