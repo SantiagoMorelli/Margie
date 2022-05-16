@@ -1,5 +1,5 @@
-LWS is a learning management system created by Adrian Chan and Justin Zhao for BetterCareMarkets. It is an all-inclusive process that includes the following features:
-    ➼ Registration and login
+LWS is a learning management system created by Adrian Chan and Justin Zhao for BetterCareMarkets. It is an all-inclusive process that includes the following features: <br>
+    ➼ Registration and login <br>
     ➼ Backend website management system (statistics, edit pages)
     ➼ Zoom integration for live lessons
     ➼ Online shop to sell courses and bundles (products)
