@@ -1,13 +1,26 @@
-# Laravel 5, 6 & 7 ChatMessenger (+ Pusher)
+# Laravel 5, 6, 7, 8 & 9 ChatMessenger (+ Pusher)
 
 This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel 5/6 chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
 
 [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
+
+## Donating to the project
+If you've found this useful and would like to buy the maintainers a coffee (or a Tesla, we're not picky), feel free to do so.
+
 <a href="https://patreon.com/lexxyungcarter"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Patreon donate button" /> </a>
 
-| Version         | Compatible?   |
+<a href="https://ko-fi.com/acelords" target="_blank" title="Buy me a Coffee"><img width="150" style="border:0px;width:150px;display:block;margin:0 auto" src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
+
+Or by buying products and merchandise at [Marketplace](https://store.acelords.space).
+
+This funding is used for maintaining the project and adding new features into Code Style plus other open-source repositories.
+
+
+| Laravel Version | Compatible?   |
 | --------------- | ------------- |
+| 9.x             | Yes! (^1.3.0) |
+| 8.x             | Yes! (^1.3.0) |
 | 7.x             | Yes! (^1.3.0) |
 | 6.x             | Yes! (^1.2.0) |
 | 5.8             | Yes!          |
@@ -15,7 +28,7 @@ This package will allow you to add a full user messaging system into your Larave
 | 5.6             | Yes!          |
 
 
-| Version         | Compatible Branch  |
+| Laravel Version | Compatible Branch  |
 | --------------- | ------------------ |
 | 5.5             | v1 [1.0.8]         |
 | 5.4             | v1 [1.0.8]         |
@@ -45,10 +58,6 @@ This package will allow you to add a full user messaging system into your Larave
 * Push messages to view without having to refresh the page
 * Have a maximum number of participants in a thread/conversation
 
-## Crowdfunding
-It's also possible to support the project on [Patreon](https://www.patreon.com/lexxyungcarter) or by buying products and merchandise at [Marketplace](https://marketplace.acelords.space).
-
-This funding is used for maintaining the project and adding new features into Code Style plus other open-source repositories.
 
 ## Installation (Laravel 4.x - no longer actively supported)
 Installation instructions for Laravel 4 can be [found here](https://github.com/cmgmyr/laravel-messenger/tree/v1).

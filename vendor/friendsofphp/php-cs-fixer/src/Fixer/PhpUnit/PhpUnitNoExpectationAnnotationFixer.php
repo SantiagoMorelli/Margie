@@ -22,6 +22,7 @@ use PhpCsFixer\FixerConfiguration\FixerOptionBuilder;
 use PhpCsFixer\FixerDefinition\CodeSample;
 use PhpCsFixer\FixerDefinition\FixerDefinition;
 use PhpCsFixer\Preg;
+use PhpCsFixer\Tokenizer\Analyzer\WhitespacesAnalyzer;
 use PhpCsFixer\Tokenizer\Token;
 use PhpCsFixer\Tokenizer\Tokens;
 use PhpCsFixer\Tokenizer\TokensAnalyzer;
@@ -188,7 +189,7 @@ final class MyTest extends \PHPUnit_Framework_TestCase
                 continue;
             }
 
-            $originalIndent = $this->detectIndent($tokens, $docBlockIndex);
+            $originalIndent = WhitespacesAnalyzer::detectIndent($tokens, $docBlockIndex);
 
             $paramList = $this->annotationsToParamList($annotations);
 
@@ -222,22 +223,6 @@ final class MyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @param int $index
-     *
-     * @return string
-     */
-    private function detectIndent(Tokens $tokens, $index)
-    {
-        if (!$tokens[$index - 1]->isWhitespace()) {
-            return ''; // cannot detect indent
-        }
-
-        $explodedContent = explode("\n", $tokens[$index - 1]->getContent());
-
-        return end($explodedContent);
-    }
-
-    /**
      * @return string
      */
     private function extractContentFromAnnotation(Annotation $annotation)
@@ -261,6 +246,10 @@ final class MyTest extends \PHPUnit_Framework_TestCase
     {
         $params = [];
         $exceptionClass = ltrim($annotations['expectedException'], '\\');
+        if (false !== strpos($exceptionClass, '*')) {
+            $exceptionClass = substr($exceptionClass, 0, strpos($exceptionClass, '*'));
+        }
+        $exceptionClass = trim($exceptionClass);
 
         if ($this->configuration['use_class_const']) {
             $params[] = "\\{$exceptionClass}::class";

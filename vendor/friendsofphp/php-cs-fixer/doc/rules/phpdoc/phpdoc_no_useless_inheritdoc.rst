@@ -14,7 +14,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
    -/** {@inheritdoc} */
    +/** */
@@ -29,7 +28,7 @@ Example #2
 
    --- Original
    +++ New
-   @@ -2,9 +2,9 @@
+    <?php
     class Sample
     {
         /**
@@ -46,8 +45,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``phpdoc_no_useless_inheritdoc`` rule.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_no_useless_inheritdoc`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_no_useless_inheritdoc`` rule.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``phpdoc_no_useless_inheritdoc`` rule.

@@ -28,7 +28,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,6 +1,6 @@
     <?php
     /**
    - * @param STRING|String[] $bar
@@ -47,7 +46,6 @@ With configuration: ``['groups' => ['simple', 'alias']]``.
 
    --- Original
    +++ New
-   @@ -1,6 +1,6 @@
     <?php
     /**
    - * @param BOOL $foo
@@ -61,8 +59,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``phpdoc_types`` rule with the default config.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_types`` rule with the default config.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_types`` rule with the default config.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``phpdoc_types`` rule with the default config.

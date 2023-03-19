@@ -20,7 +20,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,6 +1,6 @@
     <?php
    -    $a = intval($b);
    -    $a = floatval($b);
@@ -38,8 +37,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony:risky
-  Using the ``@Symfony:risky`` rule set will enable the ``modernize_types_casting`` rule.
-
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``modernize_types_casting`` rule.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``modernize_types_casting`` rule.
+
+@Symfony:risky
+  Using the `@Symfony:risky <./../../ruleSets/SymfonyRisky.rst>`_ rule set will enable the ``modernize_types_casting`` rule.

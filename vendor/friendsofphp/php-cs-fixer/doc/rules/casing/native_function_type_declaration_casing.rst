@@ -14,7 +14,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,7 +1,7 @@
     <?php
     class Bar {
    -    public function Foo(CALLABLE $bar)
@@ -31,7 +30,6 @@ Example #2
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
    -function Foo(INT $a): Bool
    +function Foo(int $a): bool
@@ -46,7 +44,6 @@ Example #3
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
    -function Foo(Iterable $a): VOID
    +function Foo(iterable $a): void
@@ -61,7 +58,6 @@ Example #4
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
    -function Foo(Object $a)
    +function Foo(object $a)
@@ -74,8 +70,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``native_function_type_declaration_casing`` rule.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``native_function_type_declaration_casing`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``native_function_type_declaration_casing`` rule.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``native_function_type_declaration_casing`` rule.

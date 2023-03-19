@@ -14,7 +14,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,5 +1,2 @@
     <?php
    -throw new Exception(
    -    'Error.',
@@ -28,4 +27,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @Symfony
-  Using the ``@Symfony`` rule set will enable the ``single_line_throw`` rule.
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``single_line_throw`` rule.

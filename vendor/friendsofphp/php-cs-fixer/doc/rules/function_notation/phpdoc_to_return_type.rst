@@ -11,7 +11,7 @@ accordingly the function signature. Requires PHP >= 7.0.
    promise. [2] ``@return`` annotation is mandatory for the fixer to make
    changes, signatures of methods without it (no docblock, inheritdocs) will not
    be fixed. [3] Manual actions are required if inherited signatures are not
-   properly documented. [4] ``@inheritdocs`` support is under construction.
+   properly documented.
 
 Configuration
 -------------
@@ -38,7 +38,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
 
     /** @return \My\Bar */
@@ -55,7 +54,6 @@ Example #2
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
 
     /** @return void */
@@ -72,7 +70,6 @@ Example #3
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
 
     /** @return object */
@@ -89,10 +86,29 @@ With configuration: ``['scalar_types' => false]``.
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
     /** @return Foo */
    -function foo() {}
    +function foo(): Foo {}
     /** @return string */
     function bar() {}
+
+Example #5
+~~~~~~~~~~
+
+*Default* configuration.
+
+.. code-block:: diff
+
+   --- Original
+   +++ New
+    <?php
+    final class Foo {
+        /**
+         * @return static
+         */
+   -    public function create($prototype) {
+   +    public function create($prototype): static {
+            return new static($prototype);
+        }
+    }

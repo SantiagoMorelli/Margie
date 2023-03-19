@@ -25,7 +25,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,6 +1,6 @@
     <?php
     $a = array_keys($b);
    -$a = array_search($b, $c);
@@ -43,4 +42,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``strict_param`` rule.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``strict_param`` rule.

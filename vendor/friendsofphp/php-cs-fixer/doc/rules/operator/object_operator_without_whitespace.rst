@@ -2,7 +2,7 @@
 Rule ``object_operator_without_whitespace``
 ===========================================
 
-There should not be space before or after object ``T_OBJECT_OPERATOR`` ``->``.
+There should not be space before or after object operators ``->`` and ``?->``.
 
 Examples
 --------
@@ -14,7 +14,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1 +1 @@
    -<?php $a  ->  b;
    +<?php $a->b;
 
@@ -23,8 +22,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``object_operator_without_whitespace`` rule.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``object_operator_without_whitespace`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``object_operator_without_whitespace`` rule.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``object_operator_without_whitespace`` rule.

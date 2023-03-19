@@ -2,6 +2,9 @@
 Usage
 =====
 
+The ``fix`` command
+-------------------
+
 The ``fix`` command tries to fix as much coding standards
 problems as possible on a given file or files in a given directory and its subdirectories:
 
@@ -11,8 +14,8 @@ problems as possible on a given file or files in a given directory and its subdi
     $ php php-cs-fixer.phar fix /path/to/file
 
 By default ``--path-mode`` is set to ``override``, which means, that if you specify the path to a file or a directory via
-command arguments, then the paths provided to a ``Finder`` in config file will be ignored. You can use ``--path-mode=intersection``
-to merge paths from the config file and from the argument:
+command arguments, then the paths provided to a ``Finder`` in config file will be ignored. You can also use ``--path-mode=intersection``,
+which will use the intersection of the paths from the config file and from the argument:
 
 .. code-block:: console
 
@@ -20,10 +23,12 @@ to merge paths from the config file and from the argument:
 
 The ``--format`` option for the output format. Supported formats are ``txt`` (default one), ``json``, ``xml``, ``checkstyle``, ``junit`` and ``gitlab``.
 
-NOTE: the output for the following formats are generated in accordance with XML schemas
+NOTE: the output for the following formats are generated in accordance with schemas
 
-* ``checkstyle`` follows the common `"checkstyle" xml schema </doc/report-schema/checkstyle.xsd>`_
-* ``junit`` follows the `JUnit xml schema from Jenkins </doc/report-schema/junit-10.xsd>`_
+* ``checkstyle`` follows the common `"checkstyle" XML schema </doc/schemas/fix/checkstyle.xsd>`_
+* ``json`` follows the `own JSON schema </doc/schemas/fix/schema.json>`_
+* ``junit`` follows the `JUnit XML schema from Jenkins </doc/schemas/fix/junit-10.xsd>`_
+* ``xml`` follows the `own XML schema </doc/schemas/fix/xml.xsd>`_
 
 The ``--quiet`` Do not output any message.
 
@@ -31,10 +36,9 @@ The ``--verbose`` option will show the applied rules. When using the ``txt`` for
 
 NOTE: if there is an error like "errors reported during linting after fixing", you can use this to be even more verbose for debugging purpose
 
-* ``--verbose=0`` or no option: normal
-* ``--verbose``, ``--verbose=1``, ``-v``: verbose
-* ``--verbose=2``, ``-vv``: very verbose
-* ``--verbose=3``, ``-vvv``: debug
+* ``-v``: verbose
+* ``-vv``: very verbose
+* ``-vvv``: debug
 
 The ``--rules`` option limits the rules to apply to the
 project:
@@ -77,7 +81,7 @@ The ``--diff`` flag can be used to let the fixer output all the changes it makes
 The ``--diff-format`` option allows to specify in which format the fixer should output the changes it makes:
 
 * ``udiff``: unified diff format;
-* ``sbd``: Sebastianbergmann/diff format (default when using `--diff` without specifying `diff-format`).
+* ``sbd``: Sebastianbergmann/diff format (default when using ``--diff`` without specifying ``diff-format``).
 
 The ``--allow-risky`` option (pass ``yes`` or ``no``) allows you to set whether risky rules may run. Default value is taken from config file.
 A rule is considered risky if it could change code behaviour. By default no risky rules are run.
@@ -122,6 +126,35 @@ fixed but without actually modifying them:
 By using ``--using-cache`` option with ``yes`` or ``no`` you can set if the caching
 mechanism should be used.
 
+The ``list-files`` command
+--------------------------
+
+The ``list-files`` command will list all files which need fixing.
+
+.. code-block:: console
+
+    $ php php-cs-fixer.phar list-files
+
+The ``--config`` option can be used, like in the ``fix`` command, to tell from which path a config file should be loaded.
+
+.. code-block:: console
+
+    $ php php-cs-fixer.phar list-files --config=.php-cs-fixer.dist.php
+
+The output is build in a form that its easy to use in combination with ``xargs`` command in a linux pipe.
+This can be useful e.g. in situations where the caching mechanism might not be available (CI, Docker) and distribute
+fixing across several processes might speedup the process.
+
+Note: You need to pass the config to the ``fix`` command, in order to make it work with several files being passed by ``list-files``.
+
+.. code-block:: console
+
+    $ php php-cs-fixer.phar list-files --config=.php-cs-fixer.dist.php | xargs -n 10 -P 8 php php-cs-fixer.phar fix --config=.php-cs-fixer.dist.php --path-mode intersection -v
+
+* ``-n`` defines how many files a single subprocess process
+* ``-P`` defines how many subprocesses the shell is allowed to spawn for parallel processing (usually similar to the number of CPUs your system has)
+
+
 Rule descriptions
 -----------------
 
@@ -152,9 +185,8 @@ Cache can be disabled via ``--using-cache`` option or config file:
 
     <?php
 
-    return PhpCsFixer\Config::create()
-        ->setUsingCache(false)
-    ;
+    $config = new PhpCsFixer\Config();
+    return $config->setUsingCache(false);
 
 Cache file can be specified via ``--cache-file`` option or config file:
 
@@ -162,9 +194,8 @@ Cache file can be specified via ``--cache-file`` option or config file:
 
     <?php
 
-    return PhpCsFixer\Config::create()
-        ->setCacheFile(__DIR__.'/.php_cs.cache')
-    ;
+    $config = new PhpCsFixer\Config();
+    return $config->setCacheFile(__DIR__.'/.php_cs.cache');
 
 Using PHP CS Fixer on CI
 ------------------------
@@ -182,10 +213,22 @@ Then, add the following command to your CI:
     $ IFS='
     $ '
     $ CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRTUXB "${COMMIT_RANGE}")
-    $ if ! echo "${CHANGED_FILES}" | grep -qE "^(\\.php_cs(\\.dist)?|composer\\.lock)$"; then EXTRA_ARGS=$(printf -- '--path-mode=intersection\n--\n%s' "${CHANGED_FILES}"); else EXTRA_ARGS=''; fi
-    $ vendor/bin/php-cs-fixer fix --config=.php_cs.dist -v --dry-run --stop-on-violation --using-cache=no ${EXTRA_ARGS}
+    $ if ! echo "${CHANGED_FILES}" | grep -qE "^(\\.php-cs-fixer(\\.dist)?\\.php|composer\\.lock)$"; then EXTRA_ARGS=$(printf -- '--path-mode=intersection\n--\n%s' "${CHANGED_FILES}"); else EXTRA_ARGS=''; fi
+    $ vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php -v --dry-run --stop-on-violation --using-cache=no ${EXTRA_ARGS}
 
 Where ``$COMMIT_RANGE`` is your range of commits, e.g. ``$TRAVIS_COMMIT_RANGE`` or ``HEAD~..HEAD``.
+
+Environment options
+-------------------
+
+The ``PHP_CS_FIXER_IGNORE_ENV`` environment variable can be used to ignore any environment requirements.
+This includes requirements like missing PHP extensions, unsupported PHP versions or by using HHVM.
+
+NOTE: Execution may be unstable when used.
+
+.. code-block:: console
+
+    $ PHP_CS_FIXER_IGNORE_ENV=1 php php-cs-fixer.phar fix /path/to/dir
 
 Exit code
 ---------

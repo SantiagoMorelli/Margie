@@ -143,7 +143,11 @@ class Purifier
                 }
 
                 continue;
-            }
+	    }
+
+	    if (class_exists($validValues)) {
+		$validValues = new $validValues();
+	    }
 
             $definition->addAttribute($onElement, $attrName, $validValues);
         }
@@ -271,6 +275,13 @@ class Purifier
             if ($postCreateConfigHook !== null) {
                 $postCreateConfigHook->call($this, $configObject);
             }
+        }
+
+        //If $dirty is not an explicit string, bypass purification assuming configuration allows this
+        $ignoreNonStrings = $this->config->get('purifier.ignoreNonStrings', false);
+        $stringTest = is_string($dirty);
+        if($stringTest === false && $ignoreNonStrings === true) {
+            return $dirty;
         }
 
         return $this->purifier->purify($dirty, $configObject);

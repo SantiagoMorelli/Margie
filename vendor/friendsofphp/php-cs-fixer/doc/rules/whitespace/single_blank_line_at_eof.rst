@@ -14,7 +14,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,2 +1,2 @@
     <?php
    -$a = 1;
    \ No newline at end of file
@@ -27,7 +26,6 @@ Example #2
 
    --- Original
    +++ New
-   @@ -1,3 +1,2 @@
     <?php
     $a = 1;
    -
@@ -37,11 +35,14 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@PSR2
-  Using the ``@PSR2`` rule set will enable the ``single_blank_line_at_eof`` rule.
+@PSR12
+  Using the `@PSR12 <./../../ruleSets/PSR12.rst>`_ rule set will enable the ``single_blank_line_at_eof`` rule.
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``single_blank_line_at_eof`` rule.
+@PSR2
+  Using the `@PSR2 <./../../ruleSets/PSR2.rst>`_ rule set will enable the ``single_blank_line_at_eof`` rule.
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``single_blank_line_at_eof`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``single_blank_line_at_eof`` rule.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``single_blank_line_at_eof`` rule.

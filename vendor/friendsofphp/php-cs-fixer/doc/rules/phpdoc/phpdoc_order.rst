@@ -15,7 +15,7 @@ Example #1
 
    --- Original
    +++ New
-   @@ -2,9 +2,9 @@
+    <?php
     /**
      * Hello there!
      *
@@ -34,4 +34,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_order`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_order`` rule.

@@ -18,7 +18,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1 +1 @@
    -<?php $x = ereg('[A-Z]');
    +<?php $x = preg_match('/[A-Z]/D');
 
@@ -27,8 +26,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony:risky
-  Using the ``@Symfony:risky`` rule set will enable the ``ereg_to_preg`` rule.
-
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``ereg_to_preg`` rule.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``ereg_to_preg`` rule.
+
+@Symfony:risky
+  Using the `@Symfony:risky <./../../ruleSets/SymfonyRisky.rst>`_ rule set will enable the ``ereg_to_preg`` rule.

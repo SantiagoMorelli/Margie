@@ -16,5 +16,10 @@ Created using various technologies such as Laravel framework, PHP, JS, MySQL.
 
 Documentation for how to use the system and the default login details can be found in the user manual guide included with the system.
 
-# Margie
-# Margie
+Documents to upload:
+
+public/css/frontend.css
+resources/views/frontend/layouts/partials/footer.blade.php
+resources/views/frontend/layouts/partials/slider.blade.php
+resources/views/frontend/index-1.blade.php
+resources/lang/en/custom-menu.php

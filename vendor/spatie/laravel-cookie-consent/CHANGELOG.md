@@ -2,6 +2,18 @@
 
 All notable changes to `cookie-consent` will be documented in this file
 
+## 2.12.13 - 2021-02-26
+
+- add Vietnamese
+
+## 2.12.12 - 2021-01-29
+
+- add Macedonian translation (#139)
+
+## 2.12.11 - 2020-12-11
+
+- add Bulgarian translation (#137)
+
 ## 2.12.10 - 2020-11-28
 
 - add support for PHP 8

@@ -33,7 +33,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,2 +1,2 @@
     <?php
    -$a = fopen($foo, 'rwt');
    +$a = fopen($foo, 'rwb');
@@ -47,7 +46,6 @@ With configuration: ``['b_mode' => false]``.
 
    --- Original
    +++ New
-   @@ -1,2 +1,2 @@
     <?php
    -$a = fopen($foo, 'rwt');
    +$a = fopen($foo, 'rw');
@@ -57,12 +55,12 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony:risky
-  Using the ``@Symfony:risky`` rule set will enable the ``fopen_flags`` rule with the config below:
+@PhpCsFixer:risky
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``fopen_flags`` rule with the config below:
 
   ``['b_mode' => false]``
 
-@PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``fopen_flags`` rule with the config below:
+@Symfony:risky
+  Using the `@Symfony:risky <./../../ruleSets/SymfonyRisky.rst>`_ rule set will enable the ``fopen_flags`` rule with the config below:
 
   ``['b_mode' => false]``

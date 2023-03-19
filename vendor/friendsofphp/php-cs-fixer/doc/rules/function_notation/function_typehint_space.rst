@@ -14,7 +14,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,3 +1,3 @@
     <?php
    -function sample(array$a)
    +function sample(array $a)
@@ -27,7 +26,6 @@ Example #2
 
    --- Original
    +++ New
-   @@ -1,3 +1,3 @@
     <?php
    -function sample(array  $a)
    +function sample(array $a)
@@ -38,8 +36,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``function_typehint_space`` rule.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``function_typehint_space`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``function_typehint_space`` rule.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``function_typehint_space`` rule.

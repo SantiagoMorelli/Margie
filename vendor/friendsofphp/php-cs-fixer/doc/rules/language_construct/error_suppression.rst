@@ -52,7 +52,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,2 +1,2 @@
     <?php
    -trigger_error('Warning.', E_USER_DEPRECATED);
    +@trigger_error('Warning.', E_USER_DEPRECATED);
@@ -66,7 +65,6 @@ With configuration: ``['noise_remaining_usages' => true]``.
 
    --- Original
    +++ New
-   @@ -1,3 +1,3 @@
     <?php
    -@mkdir($dir);
    -@unlink($path);
@@ -82,7 +80,6 @@ With configuration: ``['noise_remaining_usages' => true, 'noise_remaining_usages
 
    --- Original
    +++ New
-   @@ -1,3 +1,3 @@
     <?php
    -@mkdir($dir);
    +mkdir($dir);
@@ -93,8 +90,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony:risky
-  Using the ``@Symfony:risky`` rule set will enable the ``error_suppression`` rule with the default config.
-
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``error_suppression`` rule with the default config.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``error_suppression`` rule with the default config.
+
+@Symfony:risky
+  Using the `@Symfony:risky <./../../ruleSets/SymfonyRisky.rst>`_ rule set will enable the ``error_suppression`` rule with the default config.

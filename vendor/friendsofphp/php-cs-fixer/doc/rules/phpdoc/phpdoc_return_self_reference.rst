@@ -29,7 +29,7 @@ Example #1
 
    --- Original
    +++ New
-   @@ -2,7 +2,7 @@
+    <?php
     class Sample
     {
         /**
@@ -38,13 +38,18 @@ Example #1
          */
         public function test1()
         {
-   @@ -10,5 +10,5 @@
+            return $this;
         }
 
         /**
    -     * @return $self
    +     * @return self
          */
+        public function test2()
+        {
+            return $this;
+        }
+    }
 
 Example #2
 ~~~~~~~~~~
@@ -55,7 +60,7 @@ With configuration: ``['replacements' => ['this' => 'self']]``.
 
    --- Original
    +++ New
-   @@ -2,7 +2,7 @@
+    <?php
     class Sample
     {
         /**
@@ -64,14 +69,25 @@ With configuration: ``['replacements' => ['this' => 'self']]``.
          */
         public function test1()
         {
+            return $this;
+        }
+
+        /**
+         * @return $self
+         */
+        public function test2()
+        {
+            return $this;
+        }
+    }
 
 Rule sets
 ---------
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``phpdoc_return_self_reference`` rule with the default config.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_return_self_reference`` rule with the default config.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_return_self_reference`` rule with the default config.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``phpdoc_return_self_reference`` rule with the default config.

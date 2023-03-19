@@ -33,7 +33,8 @@ Example #1
 
    --- Original
    +++ New
-   @@ -3,9 +3,9 @@
+    <?php
+    final class MyTest extends \PHPUnit_Framework_TestCase
     {
         public function testSomeTest()
         {
@@ -57,7 +58,10 @@ With configuration: ``['assertions' => ['assertEquals']]``.
 
    --- Original
    +++ New
-   @@ -5,7 +5,7 @@
+    <?php
+    final class MyTest extends \PHPUnit_Framework_TestCase
+    {
+        public function testSomeTest()
         {
             $this->assertAttributeEquals(a(), b());
             $this->assertAttributeNotEquals(a(), b());
@@ -73,4 +77,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``php_unit_strict`` rule with the default config.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``php_unit_strict`` rule with the default config.

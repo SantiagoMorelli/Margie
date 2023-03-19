@@ -21,7 +21,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,3 +1,3 @@
     <?php
     $name = 'World';
    -echo "Hello ${name}!";
@@ -34,7 +33,6 @@ Example #2
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
     $name = 'World';
     echo <<<TEST
@@ -48,4 +46,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``simple_to_complex_string_variable`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``simple_to_complex_string_variable`` rule.

@@ -11,7 +11,7 @@ Configuration
 ``types``
 ~~~~~~~~~
 
-A map of types to fix.
+A list of types to fix.
 
 Allowed values: a subset of ``['boolean', 'callback', 'double', 'integer', 'real', 'str']``
 
@@ -29,7 +29,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,12 +1,12 @@
     <?php
     /**
    - * @param integer $a
@@ -56,21 +55,25 @@ With configuration: ``['types' => ['boolean']]``.
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
     /**
      * @param integer $a
    - * @param boolean $b
    + * @param bool $b
      * @param real $c
+     */
+    function sample($a, $b, $c)
+    {
+        return sample2($a, $b, $c);
+    }
 
 Rule sets
 ---------
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``phpdoc_scalar`` rule with the default config.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_scalar`` rule with the default config.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_scalar`` rule with the default config.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``phpdoc_scalar`` rule with the default config.

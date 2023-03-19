@@ -25,14 +25,22 @@ class Thread extends Eloquent
      *
      * @var array
      */
-    protected $fillable = ['subject', 'slug', 'start_date', 'end_date', 'max_participants', 'avatar'];
+    protected $fillable = [
+        'subject', 'slug', 
+        'start_date', 'end_date', 
+        'max_participants', 'avatar',
+    ];
 
     /**
      * The attributes that should be mutated to dates.
      *
      * @var array
      */
-    protected $dates = ['deleted_at'];
+    protected $dates = [
+        'deleted_at',
+        'start_date',
+        'end_date',
+    ];
 
     /**
     * Internal cache for creator.
@@ -328,7 +336,7 @@ class Thread extends Eloquent
      */
     public function activateAllParticipants()
     {
-        $participants = $this->participants()->withTrashed()->get();
+        $participants = $this->participants()->onlyTrashed()->get();
         foreach ($participants as $participant) {
             $participant->restore();
         }

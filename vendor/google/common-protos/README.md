@@ -2,7 +2,9 @@
 
 [![release level](https://img.shields.io/badge/release%20level-general%20availability%20%28GA%29-brightgreen.svg?style&#x3D;flat)](https://cloud.google.com/terms/launch-stages)
 
-[![Build Status](https://api.travis-ci.org/googleapis/common-protos-php.svg?branch=master)](https://travis-ci.org/googleapis/common-protos-php)
+![Build Status](https://github.com/googleapis/common-protos-php/actions/workflows/tests.yml/badge.svg)
+
+- [Documentation](https://googleapis.github.io/common-protos-php)
 
 This repository is a home for the [protocol buffer][protobuf] types which are
 common dependencies throughout the Google API ecosystem, generated for PHP.
@@ -22,7 +24,7 @@ In order to depend on these classes, add the following line to your
 composer.json file in the `requires` section:
 
 ```
-  "google/common-protos": "^1.0"
+  "google/common-protos": "^2.0"
 ```
 
 Or else use composer from the command line:

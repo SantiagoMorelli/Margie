@@ -15,7 +15,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
    -echo $$foo;
    -echo $$foo['bar'];
@@ -32,4 +31,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``explicit_indirect_variable`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``explicit_indirect_variable`` rule.

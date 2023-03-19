@@ -28,7 +28,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,7 +1,8 @@
     <?php
     /**
      * @param int $bar
@@ -47,7 +46,6 @@ With configuration: ``['only_untyped' => true]``.
 
    --- Original
    +++ New
-   @@ -1,7 +1,8 @@
     <?php
     /**
      * @param int $bar
@@ -66,7 +64,6 @@ With configuration: ``['only_untyped' => false]``.
 
    --- Original
    +++ New
-   @@ -1,7 +1,9 @@
     <?php
     /**
      * @param int $bar
@@ -83,4 +80,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_add_missing_param_annotation`` rule with the default config.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_add_missing_param_annotation`` rule with the default config.

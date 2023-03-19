@@ -2,6 +2,10 @@
 Rule ``trailing_comma_in_multiline_array``
 ==========================================
 
+.. warning:: This rule is deprecated and will be removed on next major version.
+
+   You should use ``trailing_comma_in_multiline`` instead.
+
 PHP multi-line arrays should have a trailing comma.
 
 Configuration
@@ -28,7 +32,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,5 +1,5 @@
     <?php
     array(
         1,
@@ -45,21 +48,11 @@ With configuration: ``['after_heredoc' => true]``.
 
    --- Original
    +++ New
-   @@ -3,5 +3,5 @@
+    <?php
+        $x = [
             'foo',
             <<<EOD
                 bar
    -            EOD
    +            EOD,
         ];
-
-Rule sets
----------
-
-The rule is part of the following rule sets:
-
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``trailing_comma_in_multiline_array`` rule with the default config.
-
-@PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``trailing_comma_in_multiline_array`` rule with the default config.

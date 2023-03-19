@@ -15,7 +15,8 @@ Example #1
 
    --- Original
    +++ New
-   @@ -3,6 +3,7 @@
+    <?php
+    namespace Foo;
 
     use Bar;
     use Baz;
@@ -31,7 +32,9 @@ Example #2
 
    --- Original
    +++ New
-   @@ -4,7 +4,6 @@
+    <?php
+    namespace Foo;
+
     use Bar;
     use Baz;
 
@@ -45,11 +48,14 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@PSR2
-  Using the ``@PSR2`` rule set will enable the ``single_line_after_imports`` rule.
+@PSR12
+  Using the `@PSR12 <./../../ruleSets/PSR12.rst>`_ rule set will enable the ``single_line_after_imports`` rule.
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``single_line_after_imports`` rule.
+@PSR2
+  Using the `@PSR2 <./../../ruleSets/PSR2.rst>`_ rule set will enable the ``single_line_after_imports`` rule.
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``single_line_after_imports`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``single_line_after_imports`` rule.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``single_line_after_imports`` rule.

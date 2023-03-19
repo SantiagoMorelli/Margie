@@ -49,7 +49,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,8 +1,6 @@
     <?php
     class Foo {
         /**
@@ -68,7 +67,6 @@ With configuration: ``['allow_mixed' => true]``.
 
    --- Original
    +++ New
-   @@ -1,8 +1,7 @@
     <?php
     class Foo {
         /**
@@ -87,7 +85,6 @@ Example #3
 
    --- Original
    +++ New
-   @@ -1,10 +1,7 @@
     <?php
     class Foo {
         /**
@@ -108,7 +105,6 @@ With configuration: ``['remove_inheritdoc' => true]``.
 
    --- Original
    +++ New
-   @@ -1,7 +1,7 @@
     <?php
     class Foo {
         /**
@@ -127,7 +123,6 @@ With configuration: ``['allow_unused_params' => true]``.
 
    --- Original
    +++ New
-   @@ -1,9 +1,7 @@
     <?php
     class Foo {
         /**
@@ -143,12 +138,12 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``no_superfluous_phpdoc_tags`` rule with the config below:
+@PhpCsFixer
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``no_superfluous_phpdoc_tags`` rule with the config below:
 
   ``['allow_mixed' => true, 'allow_unused_params' => true]``
 
-@PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``no_superfluous_phpdoc_tags`` rule with the config below:
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``no_superfluous_phpdoc_tags`` rule with the config below:
 
   ``['allow_mixed' => true, 'allow_unused_params' => true]``

@@ -15,7 +15,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,3 +1,3 @@
     <?php
     $user->setEmail('voff.web@gmail.com')
    -         ->setPassword('233434');
@@ -27,4 +26,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``method_chaining_indentation`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``method_chaining_indentation`` rule.

@@ -33,7 +33,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,9 +1,9 @@
     <?php
     final class FooTest extends \PHPUnit_Framework_TestCase {
         public function testSomething() {
@@ -57,7 +56,7 @@ With configuration: ``['assertions' => ['assertSame', 'assertNotSame']]``.
 
    --- Original
    +++ New
-   @@ -2,8 +2,8 @@
+    <?php
     final class FooTest extends \PHPUnit_Framework_TestCase {
         public function testSomething() {
             $this->assertEquals(false, $b);
@@ -74,8 +73,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony:risky
-  Using the ``@Symfony:risky`` rule set will enable the ``php_unit_construct`` rule with the default config.
-
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``php_unit_construct`` rule with the default config.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``php_unit_construct`` rule with the default config.
+
+@Symfony:risky
+  Using the `@Symfony:risky <./../../ruleSets/SymfonyRisky.rst>`_ rule set will enable the ``php_unit_construct`` rule with the default config.

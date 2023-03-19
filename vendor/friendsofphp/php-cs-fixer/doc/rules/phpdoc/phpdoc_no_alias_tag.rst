@@ -28,7 +28,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,10 +1,10 @@
     <?php
     /**
      * @property string $foo
@@ -51,7 +50,8 @@ With configuration: ``['replacements' => ['link' => 'website']]``.
 
    --- Original
    +++ New
-   @@ -3,8 +3,8 @@
+    <?php
+    /**
      * @property string $foo
      * @property-read string $bar
      *
@@ -67,8 +67,8 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``phpdoc_no_alias_tag`` rule with the default config.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_no_alias_tag`` rule with the default config.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_no_alias_tag`` rule with the default config.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``phpdoc_no_alias_tag`` rule with the default config.

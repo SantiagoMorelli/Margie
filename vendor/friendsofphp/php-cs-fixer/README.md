@@ -44,7 +44,7 @@ following command to fix the files PHP files in the `src` directory:
 $ tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
 ```
 
-See [usage](./doc/usage.rst), list of [built-in rules](./doc/rules/index.rst)
+See [usage](./doc/usage.rst), list of [built-in rules](./doc/rules/index.rst), list of [rule sets](./doc/ruleSets/index.rst)
 and [configuration file](./doc/config.rst) documentation for more details.
 
 If you need to apply code styles that are not supported by the tool, you can
@@ -55,7 +55,7 @@ If you need to apply code styles that are not supported by the tool, you can
 Dedicated plugins exist for:
 
 * [Atom](https://github.com/Glavin001/atom-beautify)
-* [NetBeans](http://plugins.netbeans.org/plugin/49042/php-cs-fixer)
+* [NetBeans](https://plugins.netbeans.apache.org/catalogue/?id=36)
 * [PhpStorm](https://medium.com/@valeryan/how-to-configure-phpstorm-to-use-php-cs-fixer-1844991e521f)
 * [Sublime Text](https://github.com/benmatselby/sublime-phpcs)
 * [Vim](https://github.com/stephpy/vim-php-cs-fixer)

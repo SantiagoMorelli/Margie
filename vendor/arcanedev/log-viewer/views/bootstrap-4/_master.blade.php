@@ -6,6 +6,7 @@
     <meta name="description" content="LogViewer">
     <meta name="author" content="ARCANEDEV">
     <title>LogViewer - Created by ARCANEDEV</title>
+    {{-- Styles --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
@@ -244,6 +245,8 @@
             @yield('content')
         </main>
     </div>
+
+    {{-- Footer --}}
     <footer class="main-footer">
         <div class="container-fluid">
             <p class="text-muted pull-left">
@@ -254,6 +257,8 @@
             </p>
         </div>
     </footer>
+
+    {{-- Scripts --}}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>

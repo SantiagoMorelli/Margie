@@ -128,6 +128,7 @@ final class Runner
             ? new FileCachingLintingIterator($fileFilteredFileIterator, $this->linter)
             : new FileLintingIterator($fileFilteredFileIterator, $this->linter);
 
+        /** @var \SplFileInfo $file */
         foreach ($collection as $file) {
             $fixInfo = $this->fixFile($file, $collection->currentLintingResult());
 
@@ -135,7 +136,7 @@ final class Runner
             Tokens::clearCache();
 
             if ($fixInfo) {
-                $name = $this->directory->getRelativePathTo($file);
+                $name = $this->directory->getRelativePathTo($file->__toString());
                 $changed[$name] = $fixInfo;
 
                 if ($this->stopOnViolation) {
@@ -181,8 +182,8 @@ final class Runner
                 // for custom fixers we don't know is it safe to run `->fix()` without checking `->supports()` and `->isCandidate()`,
                 // thus we need to check it and conditionally skip fixing
                 if (
-                    !$fixer instanceof AbstractFixer &&
-                    (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
+                    !$fixer instanceof AbstractFixer
+                    && (!$fixer->supports($file) || !$fixer->isCandidate($tokens))
                 ) {
                     continue;
                 }
@@ -281,7 +282,7 @@ final class Runner
                         sprintf('Failed to write file "%s", "%s".', $fileName, $error ? $error['message'] : 'no reason available'),
                         0,
                         null,
-                        $file
+                        $fileName
                     );
                 }
             }

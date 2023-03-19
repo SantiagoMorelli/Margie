@@ -2,8 +2,9 @@
 Rule ``yoda_style``
 ===================
 
-Write conditions in Yoda style (``true``), non-Yoda style (``false``) or ignore
-those conditions (``null``) based on configuration.
+Write conditions in Yoda style (``true``), non-Yoda style (``['equal' => false,
+'identical' => false, 'less_and_greater' => false]``) or ignore those conditions
+(``null``) based on configuration.
 
 Configuration
 -------------
@@ -57,7 +58,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,4 +1,4 @@
     <?php
    -    if ($a === null) {
    +    if (null === $a) {
@@ -73,7 +73,6 @@ With configuration: ``['equal' => true, 'identical' => false, 'less_and_greater'
 
    --- Original
    +++ New
-   @@ -1,4 +1,4 @@
     <?php
    -    $b = $c != 1;  // equal
    -    $a = 1 === $b; // identical
@@ -90,18 +89,33 @@ With configuration: ``['always_move_variable' => true]``.
 
    --- Original
    +++ New
-   @@ -1,2 +1,2 @@
     <?php
    -return $foo === count($bar);
    +return count($bar) === $foo;
+
+Example #4
+~~~~~~~~~~
+
+With configuration: ``['equal' => false, 'identical' => false, 'less_and_greater' => false]``.
+
+.. code-block:: diff
+
+   --- Original
+   +++ New
+    <?php
+        // Enforce non-Yoda style.
+   -    if (null === $a) {
+   +    if ($a === null) {
+            echo "null";
+        }
 
 Rule sets
 ---------
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``yoda_style`` rule with the default config.
-
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``yoda_style`` rule with the default config.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``yoda_style`` rule with the default config.
+
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``yoda_style`` rule with the default config.

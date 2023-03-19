@@ -44,7 +44,8 @@ Example #1
 
    --- Original
    +++ New
-   @@ -3,8 +3,8 @@
+    <?php
+    final class MyTest extends \PHPUnit_Framework_TestCase
     {
         public function testMe()
         {
@@ -65,7 +66,9 @@ With configuration: ``['call_type' => 'this']``.
 
    --- Original
    +++ New
-   @@ -4,7 +4,7 @@
+    <?php
+    final class MyTest extends \PHPUnit_Framework_TestCase
+    {
         public function testMe()
         {
             $this->assertSame(1, 2);
@@ -82,4 +85,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``php_unit_test_case_static_method_calls`` rule with the default config.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``php_unit_test_case_static_method_calls`` rule with the default config.

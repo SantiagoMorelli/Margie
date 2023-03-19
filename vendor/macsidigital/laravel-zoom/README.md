@@ -5,7 +5,7 @@
 ![Header Image](https://github.com/MacsiDigital/repo-design/raw/master/laravel-zoom/header.png)
 
 <p align="center">
- <a href="https://github.com/MacsiDigital/laravel-zoom/actions?query=workflow%3Atests"><img src="https://github.com/MacsiDigital/laravel-zoom/workflows/Run%20tests/badge.svg" style="max-width:100%;"  alt="tests badge"></a>
+ <a href="https://github.com/MacsiDigital/laravel-zoom/actions?query=workflow%3ATests"><img src="https://github.com/MacsiDigital/laravel-zoom/workflows/Tests/badge.svg" style="max-width:100%;"  alt="tests badge"></a>
  <a href="https://packagist.org/packages/macsidigital/laravel-zoom"><img src="https://img.shields.io/packagist/v/macsidigital/laravel-zoom.svg?style=flat-square" alt="version badge"/></a>
  <a href="https://packagist.org/packages/macsidigital/laravel-zoom"><img src="https://img.shields.io/packagist/dt/macsidigital/laravel-zoom.svg?style=flat-square" alt="downloads badge"/></a>
 </p>
@@ -87,7 +87,7 @@ At present we cover the following modules
 - Past Meetings
 - Webinars
 - Past Webinars
-- Recordings (get only)
+- Recordings
 
 Doesn't look like a lot but Meetings and Webinars are the 2 big modules and includes, polls, registration questions, registrants, panelists and various other relationships.
 
@@ -112,6 +112,12 @@ There are 2 main ways to work with models, to call them directly from the access
     
     $zoom = new \MacsiDigital\Zoom\Support\Entry;
     $user = new \MacsiDigital\Zoom\User($zoom);
+```
+
+### Custom settings
+If you would like to use different configuration values than those in your zoom.php config file, you can feed those as parameters to \MacsiDigital\Zoom\Support\Entry as shown below.
+``` php
+    $zoom = new \MacsiDigital\Zoom\Support\Entry($apiKey, $apiSecret, $tokenLife, $maxQueries, $baseUrl);
 ```
 
 ### Working with models
@@ -585,7 +591,7 @@ This is the main access for most models in Zoom.
     $meeting = Zoom::meeting()->make([
       'topic' => 'New meeting',
       'type' => 8,
-      'start_time' => new Carbon('2020-08-12 10:00:00'); // best to use a Carbon instance here.
+      'start_time' => new Carbon('2020-08-12 10:00:00'), // best to use a Carbon instance here.
     ]);
 
     $meeting->recurrence()->make([
@@ -638,7 +644,7 @@ This is the main access for most models in Zoom.
     $meeting->liveStream // hasOne relationship
     $meeting->registrationQuestions // hasMany relationship
     $meeting->trackingFields // hasMany relationship
-    $meeting->recordings // hasOne relationship
+    $meeting->recording // hasOne relationship
 
     // Once we have the meeting we can update registrants
      
@@ -663,10 +669,13 @@ This is the main access for most models in Zoom.
     // Special functions
      
     // End Meeting
-    $meeting->endMeeting()
+    $meeting->endMeeting();
 
     // delete
     $meeting->delete($scheduleForReminder); // Delete (destroy) meeting. ScheduleForReminder true by default
+
+    //Delete Meeting Recording
+    $meeting->recording->delete();  //Delete (destroy) the recording of the meeting.
 ```
 
 #### Webinars
@@ -688,7 +697,7 @@ This is the main access for most models in Zoom.
     $webinar = Zoom::webinar()->make([
       'topic' => 'New webinar',
       'type' => 8,
-      'start_time' => new Carbon('2020-08-12 10:00:00'); // best to use a Carbon instance here.
+      'start_time' => new Carbon('2020-08-12 10:00:00'), // best to use a Carbon instance here.
     ]);
 
     $webinar->recurrence()->make([
@@ -852,11 +861,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security-related issues, please email [info@macsi.co.uk](mailto:info@masi.co.uk) instead of using the issue tracker.
+If you discover any security-related issues, please email [info@macsi.co.uk](mailto:info@macsi.co.uk) instead of using the issue tracker.
 
 ## Credits
 
-- [Colin Hall](https://github.com/ColinHall)
+- [Colin Hall](https://github.com/colinhall17)
 - [MacsiDigital](https://github.com/MacsiDigital)
 - [All Contributors](../../contributors)
 

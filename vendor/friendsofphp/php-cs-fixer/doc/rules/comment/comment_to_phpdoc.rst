@@ -33,7 +33,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1 +1 @@
    -<?php /* header */ $x = true; /* @var bool $isFoo */ $isFoo = true;
    +<?php /* header */ $x = true; /** @var bool $isFoo */ $isFoo = true;
 
@@ -46,7 +45,7 @@ With configuration: ``['ignored_tags' => ['todo']]``.
 
    --- Original
    +++ New
-   @@ -2,5 +2,5 @@
+    <?php
     // @todo do something later
     $foo = 1;
 
@@ -60,4 +59,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer:risky
-  Using the ``@PhpCsFixer:risky`` rule set will enable the ``comment_to_phpdoc`` rule with the default config.
+  Using the `@PhpCsFixer:risky <./../../ruleSets/PhpCsFixerRisky.rst>`_ rule set will enable the ``comment_to_phpdoc`` rule with the default config.

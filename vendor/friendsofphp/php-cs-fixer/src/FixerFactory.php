@@ -16,6 +16,7 @@ use PhpCsFixer\ConfigurationException\InvalidFixerConfigurationException;
 use PhpCsFixer\Fixer\ConfigurableFixerInterface;
 use PhpCsFixer\Fixer\FixerInterface;
 use PhpCsFixer\Fixer\WhitespacesAwareFixerInterface;
+use PhpCsFixer\RuleSet\RuleSetInterface;
 use Symfony\Component\Finder\Finder as SymfonyFinder;
 use Symfony\Component\Finder\SplFileInfo;
 
@@ -52,16 +53,6 @@ final class FixerFactory
     public function __construct()
     {
         $this->nameValidator = new FixerNameValidator();
-    }
-
-    /**
-     * Create instance.
-     *
-     * @return FixerFactory
-     */
-    public static function create()
-    {
-        return new self();
     }
 
     public function setWhitespacesConfig(WhitespacesFixerConfig $config)
@@ -219,6 +210,7 @@ final class FixerFactory
     {
         static $conflictMap = [
             'no_blank_lines_before_namespace' => ['single_blank_line_before_namespace'],
+            'single_import_per_statement' => ['group_import'],
         ];
 
         $fixerName = $fixer->getName();

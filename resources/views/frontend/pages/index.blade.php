@@ -21,12 +21,16 @@
 
 @section('content')
 
+
+
     <!-- Start of breadcrumb section
         ============================================= -->
     <section id="breadcrumb" class="breadcrumb-section relative-position backgroud-style">
         <div class="blakish-overlay"></div>
         <div class="container">
+           
             <div class="page-breadcrumb-content text-center">
+                
                 <div class="page-breadcrumb-title">
                     <h2 class="breadcrumb-head black bold">{{env('APP_NAME')}} <span>{{$page->title}}</span></h2>
                 </div>
@@ -35,7 +39,18 @@
     </section>
     <!-- End of breadcrumb section
         ============================================= -->
-
+        
+     @switch($page->title)
+            @case('About Us')
+                <span class="status">Publish</span>
+                @break
+ 
+            @case('Contact')
+                <span class="status">Draft</span>
+                @break
+ 
+            @default
+                   
     <section id="about-page" class="about-page-section">
         <div class="container">
             <div class="row">
@@ -65,4 +80,10 @@
             </div>
         </div>
     </section>
+        @endswitch
+    
+    
+    
+    
+
 @endsection

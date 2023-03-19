@@ -36,7 +36,7 @@ final class SquareBraceTransformer extends AbstractTransformer
      */
     public function getPriority()
     {
-        // must run after CurlyBraceTransformer
+        // must run after CurlyBraceTransformer and AttributeTransformer
         return -1;
     }
 
@@ -70,7 +70,7 @@ final class SquareBraceTransformer extends AbstractTransformer
     /**
      * {@inheritdoc}
      */
-    protected function getDeprecatedCustomTokens()
+    public function getCustomTokens()
     {
         return [
             CT::T_ARRAY_SQUARE_BRACE_OPEN,

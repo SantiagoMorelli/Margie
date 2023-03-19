@@ -38,7 +38,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,8 +1,8 @@
     <?php
     /**
    - * @param  EngineInterface $templating
@@ -62,7 +61,6 @@ With configuration: ``['align' => 'vertical']``.
 
    --- Original
    +++ New
-   @@ -1,8 +1,8 @@
     <?php
     /**
    - * @param  EngineInterface $templating
@@ -86,7 +84,6 @@ With configuration: ``['align' => 'left']``.
 
    --- Original
    +++ New
-   @@ -1,8 +1,8 @@
     <?php
     /**
    - * @param  EngineInterface $templating
@@ -106,12 +103,12 @@ Rule sets
 
 The rule is part of the following rule sets:
 
-@Symfony
-  Using the ``@Symfony`` rule set will enable the ``phpdoc_align`` rule with the config below:
+@PhpCsFixer
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``phpdoc_align`` rule with the config below:
 
   ``['tags' => ['method', 'param', 'property', 'return', 'throws', 'type', 'var']]``
 
-@PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``phpdoc_align`` rule with the config below:
+@Symfony
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``phpdoc_align`` rule with the config below:
 
   ``['tags' => ['method', 'param', 'property', 'return', 'throws', 'type', 'var']]``

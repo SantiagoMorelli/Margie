@@ -20,7 +20,7 @@ class Input extends BaseElement
     use MinMaxLength;
     use Name;
     use Placeholder;
-    use Readonly;
+    // use Readonly;
     use Required;
     use Type;
     use Value;

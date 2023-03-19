@@ -14,7 +14,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,2 +1,2 @@
     <?php
    -$sample = isset($a) ? $a : $b;
    +$sample = $a ?? $b;
@@ -25,13 +24,16 @@ Rule sets
 The rule is part of the following rule sets:
 
 @PHP70Migration
-  Using the ``@PHP70Migration`` rule set will enable the ``ternary_to_null_coalescing`` rule.
+  Using the `@PHP70Migration <./../../ruleSets/PHP70Migration.rst>`_ rule set will enable the ``ternary_to_null_coalescing`` rule.
 
 @PHP71Migration
-  Using the ``@PHP71Migration`` rule set will enable the ``ternary_to_null_coalescing`` rule.
+  Using the `@PHP71Migration <./../../ruleSets/PHP71Migration.rst>`_ rule set will enable the ``ternary_to_null_coalescing`` rule.
 
 @PHP73Migration
-  Using the ``@PHP73Migration`` rule set will enable the ``ternary_to_null_coalescing`` rule.
+  Using the `@PHP73Migration <./../../ruleSets/PHP73Migration.rst>`_ rule set will enable the ``ternary_to_null_coalescing`` rule.
+
+@PHP74Migration
+  Using the `@PHP74Migration <./../../ruleSets/PHP74Migration.rst>`_ rule set will enable the ``ternary_to_null_coalescing`` rule.
 
 @PHP80Migration
-  Using the ``@PHP80Migration`` rule set will enable the ``ternary_to_null_coalescing`` rule.
+  Using the `@PHP80Migration <./../../ruleSets/PHP80Migration.rst>`_ rule set will enable the ``ternary_to_null_coalescing`` rule.

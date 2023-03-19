@@ -29,7 +29,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,7 +1,7 @@
     <?php
    -/* asterisk comment */
    +// asterisk comment
@@ -38,6 +37,12 @@ Example #1
    -# hash comment
    +// hash comment
     $b = 2;
+
+    /*
+     * multi-line
+     * comment
+     */
+    $c = 3;
 
 Example #2
 ~~~~~~~~~~
@@ -48,7 +53,6 @@ With configuration: ``['comment_types' => ['asterisk']]``.
 
    --- Original
    +++ New
-   @@ -1,9 +1,7 @@
     <?php
    -/* first comment */
    +// first comment
@@ -60,6 +64,12 @@ With configuration: ``['comment_types' => ['asterisk']]``.
    +// second comment
     $b = 2;
 
+    /*
+     * third
+     * comment
+     */
+    $c = 3;
+
 Example #3
 ~~~~~~~~~~
 
@@ -69,7 +79,6 @@ With configuration: ``['comment_types' => ['hash']]``.
 
    --- Original
    +++ New
-   @@ -1 +1 @@
    -<?php # comment
    +<?php // comment
 
@@ -78,10 +87,10 @@ Rule sets
 
 The rule is part of the following rule sets:
 
+@PhpCsFixer
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``single_line_comment_style`` rule with the default config.
+
 @Symfony
-  Using the ``@Symfony`` rule set will enable the ``single_line_comment_style`` rule with the config below:
+  Using the `@Symfony <./../../ruleSets/Symfony.rst>`_ rule set will enable the ``single_line_comment_style`` rule with the config below:
 
   ``['comment_types' => ['hash']]``
-
-@PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``single_line_comment_style`` rule with the default config.

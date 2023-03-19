@@ -17,6 +17,7 @@
     <meta name="description" content="@yield('meta_description', '')">
     <meta name="keywords" content="@yield('meta_keywords', '')">
     @stack('before-styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/meanmenu.css') }}">
@@ -132,6 +133,8 @@
                                                             <a href="{{ asset($menu->link) }}"
                                                                 class="nav-link {{ active_class(Active::checkRoute('frontend.user.dashboard')) }}"
                                                                 id="menu-{{ $menu->id }}">{{ trans('custom-menu.' . $menu_name . '.' . str_slug($menu->label)) }}</a>
+                                                                
+                                                                
                                                         </li>
                                                     @else
                                                         <li class="menu-item-has-children ul-li-block">

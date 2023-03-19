@@ -2,6 +2,7 @@
 
 namespace Laravel\Cashier\Concerns;
 
+use Laravel\Cashier\Cashier;
 use Laravel\Cashier\Subscription;
 use Laravel\Cashier\SubscriptionBuilder;
 
@@ -102,7 +103,7 @@ trait ManagesSubscriptions
      */
     public function subscriptions()
     {
-        return $this->hasMany(Subscription::class, $this->getForeignKey())->orderBy('created_at', 'desc');
+        return $this->hasMany(Cashier::$subscriptionModel, $this->getForeignKey())->orderBy('created_at', 'desc');
     }
 
     /**
@@ -145,7 +146,7 @@ trait ManagesSubscriptions
     }
 
     /**
-     * Determine if the entity has a valid subscription on the given plan.
+     * Determine if the customer has a valid subscription on the given plan.
      *
      * @param  string  $plan
      * @return bool
@@ -161,6 +162,7 @@ trait ManagesSubscriptions
      * Get the tax percentage to apply to the subscription.
      *
      * @return int|float
+     *
      * @deprecated Please migrate to the new Tax Rates API.
      */
     public function taxPercentage()

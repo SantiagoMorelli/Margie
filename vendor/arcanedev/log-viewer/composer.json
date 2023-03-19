@@ -17,12 +17,13 @@
         "php": "^7.3|^8.0",
         "ext-json": "*",
         "arcanedev/support": "^8.0",
-        "psr/log": "^1.1"
+        "psr/log": "^1.1 || ^2.0"
     },
     "require-dev": {
+        "laravel/framework": "^8.74",
         "mockery/mockery": "^1.4.2",
-        "orchestra/testbench": "^6.4",
-        "phpunit/phpunit": "^9.3.3"
+        "orchestra/testbench-core": "^6.27",
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "psr-4": {
@@ -36,8 +37,9 @@
         }
     },
     "scripts": {
-        "test": "phpunit",
-        "coverage": "phpunit --coverage-html build/coverage/html"
+        "test": "phpunit --colors=always",
+        "test:dox": "phpunit --testdox --colors=always",
+        "test:cov": "phpunit --coverage-html coverage"
     },
     "extra": {
         "branch-alias": {

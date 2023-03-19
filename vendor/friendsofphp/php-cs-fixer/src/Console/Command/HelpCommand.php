@@ -24,7 +24,8 @@ use PhpCsFixer\FixerConfiguration\DeprecatedFixerOption;
 use PhpCsFixer\FixerConfiguration\FixerOptionInterface;
 use PhpCsFixer\FixerFactory;
 use PhpCsFixer\Preg;
-use PhpCsFixer\RuleSet;
+use PhpCsFixer\RuleSet\RuleSet;
+use PhpCsFixer\RuleSet\RuleSets;
 use PhpCsFixer\Utils;
 use Symfony\Component\Console\Command\HelpCommand as BaseHelpCommand;
 use Symfony\Component\Console\Formatter\OutputFormatter;
@@ -41,6 +42,9 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 final class HelpCommand extends BaseHelpCommand
 {
+    /**
+     * @var string
+     */
     protected static $defaultName = 'help';
 
     /**
@@ -66,10 +70,12 @@ to merge paths from the config file and from the argument:
 
 The <comment>--format</comment> option for the output format. Supported formats are `txt` (default one), `json`, `xml`, `checkstyle`, `junit` and `gitlab`.
 
-NOTE: the output for the following formats are generated in accordance with XML schemas
+NOTE: the output for the following formats are generated in accordance with schemas
 
-* `checkstyle` follows the common `"checkstyle" xml schema </doc/report-schema/checkstyle.xsd>`_
-* `junit` follows the `JUnit xml schema from Jenkins </doc/report-schema/junit-10.xsd>`_
+* `checkstyle` follows the common `"checkstyle" XML schema </doc/schemas/fix/checkstyle.xsd>`_
+* `json` follows the `own JSON schema </doc/schemas/fix/schema.json>`_
+* `junit` follows the `JUnit XML schema from Jenkins </doc/schemas/fix/junit-10.xsd>`_
+* `xml` follows the `own XML schema </doc/schemas/fix/xml.xsd>`_
 
 The <comment>--quiet</comment> Do not output any message.
 
@@ -77,10 +83,9 @@ The <comment>--verbose</comment> option will show the applied rules. When using 
 
 NOTE: if there is an error like "errors reported during linting after fixing", you can use this to be even more verbose for debugging purpose
 
-* `--verbose=0` or no option: normal
-* `--verbose`, `--verbose=1`, `-v`: verbose
-* `--verbose=2`, `-vv`: very verbose
-* `--verbose=3`, `-vvv`: debug
+* `-v`: verbose
+* `-vv`: very verbose
+* `-vvv`: debug
 
 The <comment>--rules</comment> option limits the rules to apply to the
 project:
@@ -167,14 +172,14 @@ Config file
 -----------
 
 Instead of using command line options to customize the rule, you can save the
-project configuration in a <comment>.php_cs.dist</comment> file in the root directory of your project.
+project configuration in a <comment>.php-cs-fixer.dist.php</comment> file in the root directory of your project.
 The file must return an instance of `PhpCsFixer\ConfigInterface` (<url>%%%CONFIG_INTERFACE_URL%%%</url>)
 which lets you configure the rules, the files and directories that
-need to be analyzed. You may also create <comment>.php_cs</comment> file, which is
+need to be analyzed. You may also create <comment>.php-cs-fixer.php</comment> file, which is
 the local configuration that will be used instead of the project configuration. It
 is a good practice to add that file into your <comment>.gitignore</comment> file.
 With the <comment>--config</comment> option you can specify the path to the
-<comment>.php_cs</comment> file.
+<comment>.php-cs-fixer.php</comment> file.
 
 The example below will add two rules to the default list of PSR2 set rules:
 
@@ -186,7 +191,9 @@ The example below will add two rules to the default list of PSR2 set rules:
         ->in(__DIR__)
     ;
 
-    return PhpCsFixer\Config::create()
+    $config = new Config();
+
+    return $config
         ->setRules([
             '@PSR2' => true,
             'strict_param' => true,
@@ -213,7 +220,9 @@ The following example shows how to use all `Symfony` rules but the `full_opening
         ->in(__DIR__)
     ;
 
-    return PhpCsFixer\Config::create()
+    $config = new Config();
+
+    return $config
         ->setRules([
             '@Symfony' => true,
             'full_opening_tag' => false,
@@ -228,7 +237,9 @@ configure them in your config file.
 
     <?php
 
-    return PhpCsFixer\Config::create()
+    $config = new Config();
+
+    return $config
         ->setIndent("\t")
         ->setLineEnding("\r\n")
     ;
@@ -251,9 +262,9 @@ Cache can be disabled via `--using-cache` option or config file:
 
     <?php
 
-    return PhpCsFixer\Config::create()
-        ->setUsingCache(false)
-    ;
+    $config = new Config();
+
+    return $config->setUsingCache(false);
 
     ?>
 
@@ -261,9 +272,9 @@ Cache file can be specified via `--cache-file` option or config file:
 
     <?php
 
-    return PhpCsFixer\Config::create()
-        ->setCacheFile(__DIR__.'/.php_cs.cache')
-    ;
+    $config = new Config();
+
+    return $config->setCacheFile(__DIR__.'/.php_cs.cache');
 
     ?>
 
@@ -442,7 +453,7 @@ EOF
         );
 
         $ruleSets = [];
-        foreach (RuleSet::create()->getSetDefinitionNames() as $setName) {
+        foreach (RuleSets::getSetDefinitionNames() as $setName) {
             $ruleSets[$setName] = new RuleSet([$setName => true]);
         }
 

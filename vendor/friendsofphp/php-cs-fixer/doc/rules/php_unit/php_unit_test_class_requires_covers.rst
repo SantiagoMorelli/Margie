@@ -15,7 +15,6 @@ Example #1
 
    --- Original
    +++ New
-   @@ -1,3 +1,7 @@
     <?php
    +
    +/**
@@ -23,6 +22,11 @@ Example #1
    + */
     final class MyTest extends \PHPUnit_Framework_TestCase
     {
+        public function testSomeTest()
+        {
+            $this->assertSame(a(), b());
+        }
+    }
 
 Rule sets
 ---------
@@ -30,4 +34,4 @@ Rule sets
 The rule is part of the following rule set:
 
 @PhpCsFixer
-  Using the ``@PhpCsFixer`` rule set will enable the ``php_unit_test_class_requires_covers`` rule.
+  Using the `@PhpCsFixer <./../../ruleSets/PhpCsFixer.rst>`_ rule set will enable the ``php_unit_test_class_requires_covers`` rule.

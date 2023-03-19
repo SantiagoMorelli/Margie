@@ -1,8 +1,8 @@
-<?php return array (
-  'nav-menu' => 
-  array (
+<?php return array(
+  'nav-menu' =>
+  array(
     'contact' => 'Contact',
-    'about-us' => 'About Us',
+    'about-margie' => 'About Margie',
     'bundles' => 'Bundles',
     'courses' => 'Courses',
     'learn-spanish' => 'Learn Spanish',

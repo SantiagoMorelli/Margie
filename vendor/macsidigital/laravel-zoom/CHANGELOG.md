@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-zoom` will be documented in this file
 
+## 4.1.5 - 2021-01-06
+
+Allow override of config API key and secret in Entry Model
+
+## 4.1.4 - 2021-01-05
+
+PHP 8.0
+
 ## 4.1.0 - 2020-09-08
 
 Laravel 8.0
