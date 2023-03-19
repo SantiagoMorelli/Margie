@@ -21,21 +21,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="table-responsive">
-                        {{--<div class="d-block">--}}
-                            {{--<ul class="list-inline">--}}
-                                {{--<li class="list-inline-item">--}}
-                                    {{--<a href="{{ route('admin.reasons.index') }}"--}}
-                                       {{--style="{{ request('show_deleted') == 1 ? '' : 'font-weight: 700' }}">{{trans('labels.general.all')}}</a>--}}
-                                {{--</li>--}}
-                                {{--|--}}
-                                {{--<li class="list-inline-item">--}}
-                                    {{--<a href="{{ route('admin.reasons.index') }}?show_deleted=1"--}}
-                                       {{--style="{{ request('show_deleted') == 1 ? 'font-weight: 700' : '' }}">{{trans('labels.general.trash')}}</a>--}}
-                                {{--</li>--}}
-                            {{--</ul>--}}
-                        {{--</div>--}}
-
-
                         <table id="myTable"
                                class="table table-bordered table-striped @can('category_delete') @if ( request('show_deleted') != 1 ) dt-select @endif @endcan">
                             <thead>
@@ -72,10 +57,6 @@
 
             </div>
             <hr>
-            {{-- <h4>@lang('labels.backend.reasons.note')</h4>
-            <img src="{{asset('images/reasons.jpg')}}" width="100%"  > --}}
-
-
         </div>
     </div>
 

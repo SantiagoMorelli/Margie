@@ -62,7 +62,6 @@
                                         </a>
                                     </li>
                                     <li><a href=""><i class="fas fa-comment-dots"></i> {{count($item->reviews) }}</a></li>
-                                    {{--<li><a href="">125k Unrolled</a></li>--}}
                                 </ul>
                             </div>
                             @include('frontend.layouts.partials.wishlist',['course' => $item->id, 'price' => $item->price])

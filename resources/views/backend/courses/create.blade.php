@@ -100,13 +100,6 @@
                         {!! Form::file('video_file', ['class' => 'form-control mt-3 d-none', 'placeholder' => trans('labels.backend.lessons.enter_video_url'),'id'=>'video_file'  ]) !!}
 
                     </div>
-                    {{--<div class="col-md-12 form-group d-none" id="video_subtitle_box">--}}
-
-                        {{--{!! Form::label('add_subtitle', trans('labels.backend.lessons.fields.add_subtitle'), ['class' => 'control-label']) !!}--}}
-
-                        {{--{!! Form::file('video_subtitle', ['class' => 'form-control', 'placeholder' => trans('labels.backend.lessons.video_subtitle'),'id'=>'video_subtitle'  ]) !!}--}}
-
-                    {{--</div>--}}
                     <div class="col-md-12 form-group">
 
                     @lang('labels.backend.lessons.video_guide')

@@ -23,11 +23,6 @@
             <div class="row">
                 <div class="col-12">
                     <table class="table table-bordered table-striped">
-                        {{-- <tr>
-                            <th>@lang('labels.backend.access.users.tabs.content.overview.avatar')</th>
-                            <td><img height="100px" src="{{ $teacher->picture }}" class="user-profile-image" /></td>
-                        </tr> --}}
-
                         <tr>
                             <th>@lang('labels.backend.access.users.tabs.content.overview.name')</th>
                             <td>{{ $teacher->name }}</td>

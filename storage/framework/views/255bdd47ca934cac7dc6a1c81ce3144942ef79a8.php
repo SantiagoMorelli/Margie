@@ -159,7 +159,6 @@
                                                                         <?php echo app('translator')->get('labels.frontend.course.students'); ?></a></span>
 
                                                             </div>
-                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -203,10 +202,7 @@
                                                                             <?php echo e(trans('labels.backend.courses.fields.free')); ?>
 
                                                                         <?php else: ?>
-                                                                            <?php echo $course->strikePrice; ?>
-
-                                                                            
-                                                                            <?php echo e($appCurrency['symbol'].$course->price); ?>
+                                                                            <?php echo $course->strikePrice; ?>                                                                            <?php echo e($appCurrency['symbol'].$course->price); ?>
 
                                                                             
                                                                         <?php endif; ?>

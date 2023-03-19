@@ -83,11 +83,6 @@
                                             html()->label(html()->checkbox('')->id($item->id)
                 ->checked(($item->status == 1) ? true : false)->class('switch-input')->attribute('data-id', $item->id)->value(($item->status == 1) ? 1 : 0).'<span class="switch-label"></span><span class="switch-handle"></span>')->class('switch switch-lg switch-3d switch-primary')
                                         }}
-                                        {{-- @if($item->status == 1)
-                                            @lang('labels.backend.hero_slider.on')
-                                        @else
-                                            @lang('labels.backend.hero_slider.off')
-                                        @endif --}}
                                     </td>
                                     <td>
 

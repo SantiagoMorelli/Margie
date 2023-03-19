@@ -155,34 +155,8 @@
                                                             @lang('labels.backend.dashboard.students')
                                             </span>
                                                     </div>
-
                                                     <!-- Removes completion bar underneath course in user dashboard -->
-                                                    {{-- <div class="progress my-2">
-                                                        <div class="progress-bar"
-                                                             style="width:{{$item->progress() }}%">
-                                                            @lang('labels.backend.dashboard.completed')
-                                                            {{ $item->progress()  }} %
-                                                        </div>
-                                                    </div> --}}
-
                                                     <!-- "You're certified for this course" label removed as we don't use it here -->
-                                                    {{-- @if($item->progress() == 100)
-                                                        @if(!$item->isUserCertified())
-                                                            <form method="post"
-                                                                  action="{{route('admin.certificates.generate')}}">
-                                                                @csrf
-                                                                <input type="hidden" value="{{$item->id}}"
-                                                                       name="course_id">
-                                                                <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold"
-                                                                        id="finish">@lang('labels.frontend.course.finish_course')</button>
-                                                            </form>
-                                                        @else
-                                                            <div class="alert alert-success px-1 text-center mb-0">
-                                                                @lang('labels.frontend.course.certified')
-                                                            </div>
-                                                        @endif
-                                                    @endif --}}
-
                                                 </div>
                                             </div>
                                         </div>
@@ -245,32 +219,6 @@
                                                                     @lang('labels.backend.dashboard.students')
                                                                 </span>
                                                             </div>
-
-                                                            <div class="progress my-2">
-                                                                <div class="progress-bar"
-                                                                     style="width:{{$item->progress() }}%">{{ $item->progress()  }}
-                                                                    %
-                                                                    @lang('labels.backend.dashboard.completed')
-                                                                </div>
-                                                            </div>
-
-                                                            {{-- @if($item->progress() == 100)
-                                                                @if(!$item->isUserCertified())
-                                                                    <form method="post"
-                                                                          action="{{route('admin.certificates.generate')}}">
-                                                                        @csrf
-                                                                        <input type="hidden" value="{{$item->id}}"
-                                                                               name="course_id">
-                                                                        <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold"
-                                                                                id="finish">@lang('labels.frontend.course.finish_course')</button>
-                                                                    </form>
-                                                                @else
-                                                                    <div class="alert alert-success px-1 text-center mb-0">
-                                                                        @lang('labels.frontend.course.certified')
-                                                                    </div>
-                                                                @endif
-                                                            @endif --}}
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -330,22 +278,6 @@
                                                             {{ $item->progress()  }} %
                                                         </div>
                                                     </div>
-                                                    {{-- @if($item->progress() == 100)
-                                                        @if(!$item->isUserCertified())
-                                                            <form method="post"
-                                                                  action="{{route('admin.certificates.generate')}}">
-                                                                @csrf
-                                                                <input type="hidden" value="{{$item->id}}"
-                                                                       name="course_id">
-                                                                <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold"
-                                                                        id="finish">@lang('labels.frontend.course.finish_course')</button>
-                                                            </form>
-                                                        @else
-                                                            <div class="alert alert-success px-1 text-center mb-0">
-                                                                @lang('labels.frontend.course.certified')
-                                                            </div>
-                                                        @endif
-                                                    @endif --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -409,22 +341,6 @@
                                                                     @lang('labels.backend.dashboard.completed')
                                                                 </div>
                                                             </div>
-                                                            {{-- @if($item->progress() == 100)
-                                                                @if(!$item->isUserCertified())
-                                                                    <form method="post"
-                                                                          action="{{route('admin.certificates.generate')}}">
-                                                                        @csrf
-                                                                        <input type="hidden" value="{{$item->id}}"
-                                                                               name="course_id">
-                                                                        <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold"
-                                                                                id="finish">@lang('labels.frontend.course.finish_course')</button>
-                                                                    </form>
-                                                                @else
-                                                                    <div class="alert alert-success px-1 text-center mb-0">
-                                                                        @lang('labels.frontend.course.certified')
-                                                                    </div>
-                                                                @endif
-                                                            @endif --}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -583,7 +499,6 @@
                                             <td>
                                                 {{$item->user->full_name}}
                                             </td>
-                                            {{-- <td>{{$item->amount.' '.$appCurrency['symbol']}}</td> --}}
                                             <td>{{$appCurrency['symbol'].$item->amount}}</td>
                                             <td>{{$item->created_at->diffforhumans()}}</td>
                                             <td><a class="btn btn-sm btn-primary"

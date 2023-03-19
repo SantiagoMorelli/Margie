@@ -15,7 +15,6 @@
             @include('log-viewer::_partials.menu')
         </div>
         <div class="col-md-10">
-            {{-- Log Details --}}
             <div class="card">
                 <div class="card-header">
                     Log info :
@@ -57,8 +56,6 @@
                     </li>
                 </ul>
             </div>
-
-            {{-- Log Entries --}}
             <div class="card mt-4">
                 @if($entries->hasPages())
                     <div class="card-header">

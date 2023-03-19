@@ -2,8 +2,9 @@
   'nav-menu' => 
   array (
     'contact' => 'Contact',
-    'about-margie' => 'About Margie',
+    'about-us' => 'About Us',
     'bundles' => 'Bundles',
     'courses' => 'Courses',
+    'learn-spanish' => 'Learn Spanish',
   ),
 );

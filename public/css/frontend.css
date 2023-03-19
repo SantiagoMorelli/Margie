@@ -1,9 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,700i,900,900i);
 
 /*----------------------------------------------------
-@File: Default Styles
-@Author: Team HTMLMATE
-@URL: https://www.htmlmate.com
 
 This file contains the styling for the actual theme, this
 is the file you need to edit to change the look of the
@@ -335,14 +332,16 @@ h6 {
 }
 
 .section-title .subtitle {
-    color: #a9a3a3;
-    letter-spacing: 7px;
+    color: #e0ddd3;
+    letter-spacing: 4px;
     position: relative;
+    font-size: 24px;
+    font-weight: bold; 
 }
 
 .section-title .subtitle:before,
 .section-title .subtitle:after {
-    content: ".";
+    /* content: "."; */
     font-size: 70px;
     left: -45px;
     pointer-events: none;

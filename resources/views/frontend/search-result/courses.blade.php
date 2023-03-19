@@ -230,7 +230,6 @@
                         </div>
                     </div>
                 </div>
-                {{--@include('frontend.layouts.partials.right-sidebar')--}}
                 <div class="col-md-3">
                     <div class="side-bar">
 

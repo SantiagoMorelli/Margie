@@ -53,8 +53,6 @@
                                 <th>@lang('labels.backend.coupons.fields.type')</th>
                                 <th>@lang('labels.backend.coupons.fields.amount')</th>
                                 <th>@lang('labels.backend.coupons.fields.expires_at')</th>
-                                {{--<th>@lang('labels.backend.coupons.fields.per_user_limit')</th>--}}
-                                {{--<th>@lang('labels.backend.coupons.fields.total')</th>--}}
                                 <th>@lang('labels.backend.coupons.fields.status')</th>
                                 @if( request('show_deleted') == 1 )
                                     <th>&nbsp; @lang('strings.backend.general.actions')</th>
@@ -97,12 +95,6 @@
                                             @lang('labels.backend.coupons.unlimited')
                                         @endif
                                     </td>
-                                    {{--<td>--}}
-                                        {{--{{$item->per_user_limit}}--}}
-                                    {{--</td>--}}
-                                    {{--<td>--}}
-                                        {{--{{$item->total}}--}}
-                                    {{--</td>--}}
                                     <td>
                                         {{
                                             html()->label(html()->checkbox('')->id($item->id)

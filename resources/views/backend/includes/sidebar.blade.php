@@ -44,8 +44,6 @@
                 </li>
             @endcan
             @if (!$logged_in_user->hasRole('student') && ($logged_in_user->hasRole('teacher') || $logged_in_user->isAdmin() || $logged_in_user->hasAnyPermission(['course_access', 'lesson_access', 'test_access', 'question_access', 'bundle_access'])))
-                {{-- @if ($logged_in_user->hasRole('teacher') || $logged_in_user->isAdmin() || $logged_in_user->hasAnyPermission(['course_access', 'lesson_access', 'test_access', 'question_access', 'bundle_access'])) --}}
-
                 <li
                     class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['user/courses*','user/lessons*','user/tests*','user/questions*','user/live-lessons*','user/live-lesson-slots*']),'open') }}">
                     <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/*')) }}"
@@ -74,27 +72,6 @@
                                 </a>
                             </li>
                         @endcan
-
-                        {{-- @can('test_access')
-                            <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(2) == 'tests' ? 'active' : '' }}"
-                                    href="{{ route('admin.tests.index') }}">
-                                    <span class="title">@lang('menus.backend.sidebar.tests.title')</span>
-                                </a>
-                            </li>
-                        @endcan --}}
-
-
-                        {{-- @can('question_access')
-                            <li class="nav-item">
-                                <a class="nav-link {{ $request->segment(2) == 'questions' ? 'active' : '' }}"
-                                    href="{{ route('admin.questions.index') }}">
-                                    <span class="title">@lang('menus.backend.sidebar.questions.title')</span>
-                                </a>
-                            </li>
-                        @endcan --}}
-
-
                         @can('live_lesson_access')
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'live-lessons' ? 'active' : '' }}"
@@ -125,30 +102,6 @@
                         </a>
                     </li>
                 @endcan
-                {{-- @if ($logged_in_user->hasRole('teacher') || $logged_in_user->isAdmin())
-                    <li
-                        class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['user/reports*']), 'open') }}">
-                        <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/*')) }}"
-                            href="#">
-                            <i class="nav-icon icon-pie-chart"></i> @lang('menus.backend.sidebar.reports.title') //Orig statement
-                            <i class="nav-icon icon-pie-chart"></i> @lang('Reports/Statistics')
-
-                        </a>
-                        <ul class="nav-dropdown-items">
-                            <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(1) == 'sales' ? 'active' : '' }}"
-                                    href="{{ route('admin.reports.sales') }}">
-                                    @lang('menus.backend.sidebar.reports.sales')
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(1) == 'students' ? 'active' : '' }}"
-                                    href="{{ route('admin.reports.students') }}">@lang('menus.backend.sidebar.reports.students')
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endif --}}
             @endif
 
 
@@ -171,14 +124,6 @@
                                 </a>
                             </li>
                         @endcan
-                        {{-- @can('blog_access')
-                            <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(2) == 'blogs' ? 'active' : '' }}"
-                                    href="{{ route('admin.blogs.index') }}">
-                                    <span class="title">@lang('menus.backend.sidebar.blogs.title')</span>
-                                </a>
-                            </li>
-                        @endcan --}}
                         @can('reason_access')
                             <li class="nav-item">
                                 <a class="nav-link {{ $request->segment(2) == 'reasons' ? 'active' : '' }}"
@@ -201,12 +146,6 @@
                                     <span class="title">@lang('menus.backend.sidebar.hero-slider.title')</span>
                                 </a>
                             </li>
-                            {{-- <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(2) == 'sponsors' ? 'active' : '' }}"
-                                    href="{{ route('admin.sponsors.index') }}">
-                                    <span class="title">@lang('menus.backend.sidebar.sponsors.title')</span>
-                                </a>
-                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'testimonials' ? 'active' : '' }}"
                                     href="{{ route('admin.testimonials.index') }}">
@@ -214,44 +153,18 @@
                                         class="title">@lang('menus.backend.sidebar.testimonials.title')</span>
                                 </a>
                             </li>
-                            {{-- <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(2) == 'forums-category' ? 'active' : '' }}"
-                                    href="{{ route('admin.forums-category.index') }}">
-                                    <span
-                                        class="title">@lang('menus.backend.sidebar.forums-category.title')</span>
-                                </a>
-                            </li> --}}
-                            {{-- <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(2) == 'faqs' ? 'active' : '' }}"
-                                    href="{{ route('admin.faqs.index') }}">
-                                    <span class="title">@lang('menus.backend.sidebar.faqs.title')</span>
-                                </a>
-                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'contact' ? 'active' : '' }}"
                                     href="{{ route('admin.contact-settings') }}">
                                     <span class="title">@lang('menus.backend.sidebar.contact.title')</span>
                                 </a>
                             </li>
-                            {{-- <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(2) == 'newsletter' ? 'active' : '' }}"
-                                    href="{{ route('admin.newsletter-settings') }}">
-                                    <span
-                                        class="title">@lang('menus.backend.sidebar.newsletter-configuration.title')</span>
-                                </a>
-                            </li> --}}
                             <li class="nav-item ">
                                 <a class="nav-link {{ $request->segment(2) == 'footer' ? 'active' : '' }}"
                                     href="{{ route('admin.footer-settings') }}">
                                     <span class="title">@lang('menus.backend.sidebar.footer.title')</span>
                                 </a>
                             </li>
-                            {{-- <li class="nav-item ">
-                                <a class="nav-link {{ $request->segment(2) == 'sitemap' ? 'active' : '' }}"
-                                    href="{{ route('admin.sitemap.index') }}">
-                                    <span class="title">@lang('menus.backend.sidebar.sitemap.title')</span>
-                                </a>
-                            </li> --}}
                         @endif
 
                     </ul>
@@ -259,15 +172,6 @@
 
                 </li>
             @else
-                {{-- @can('blog_access')
-                    <li class="nav-item ">
-                        <a class="nav-link {{ $request->segment(2) == 'blogs' ? 'active' : '' }}"
-                            href="{{ route('admin.blogs.index') }}">
-                            <i class="nav-icon icon-note"></i>
-                            <span class="title">@lang('menus.backend.sidebar.blogs.title')</span>
-                        </a>
-                    </li>
-                @endcan --}}
                 @can('reason_access')
                     <li class="nav-item">
                         <a class="nav-link {{ $request->segment(2) == 'reasons' ? 'active' : '' }}"
@@ -287,29 +191,6 @@
                 </a>
             </li>
             @if ($logged_in_user->hasRole('student'))
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'invoices' ? 'active' : '' }}"
-                        href="{{ route('admin.invoices.index') }}">
-                        <i class="nav-icon icon-notebook"></i> <span
-                            class="title">@lang('menus.backend.sidebar.invoices.title')</span>
-                    </a>
-                </li> --}}
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'certificates' ? 'active' : '' }}"
-                        href="{{ route('admin.certificates.index') }}">
-                        <i class="nav-icon icon-badge"></i> <span
-                            class="title">@lang('menus.backend.sidebar.certificates.title')</span>
-                    </a>
-                </li> --}}
-            @endif
-            @if ($logged_in_user->hasRole('teacher'))
-                <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'reviews' ? 'active' : '' }}"
-                        href="{{ route('admin.reviews.index') }}">
-                        <i class="nav-icon icon-speech"></i> <span
-                            class="title">@lang('menus.backend.sidebar.reviews.title')</span>
-                    </a>
-                </li>
             @endif
 
             @if ($logged_in_user->isAdmin())
@@ -327,20 +208,6 @@
                         <span class="title">@lang('menus.backend.sidebar.coupons.title')</span>
                     </a>
                 </li>
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'contact-requests' ? 'active' : '' }}"
-                        href="{{ route('admin.tax.index') }}">
-                        <i class="nav-icon icon-credit-card"></i>
-                        <span class="title">@lang('menus.backend.sidebar.tax.title')</span>
-                    </a>
-                </li> --}}
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'contact-requests' ? 'active' : '' }}"
-                        href="{{ route('admin.payments.requests') }}">
-                        <i class="nav-icon icon-people"></i>
-                        <span class="title">@lang('menus.backend.sidebar.payments_requests.title')</span>
-                    </a>
-                </li> --}}
             @endif
             <li class="nav-item ">
                 <a class="nav-link {{ $request->segment(1) == 'account' ? 'active' : '' }}"
@@ -350,20 +217,6 @@
                 </a>
             </li>
             @if ($logged_in_user->hasRole('student'))
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'subscriptions' ? 'active' : '' }}"
-                        href="{{ route('admin.subscriptions') }}">
-                        <i class="nav-icon fas fa-briefcase"></i>
-                        <span class="title">@lang('menus.backend.sidebar.subscription.title')</span>
-                    </a>
-                </li> --}}
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'wishlist' ? 'active' : '' }}"
-                        href="{{ route('admin.wishlist.index') }}">
-                        <i class="nav-icon fas fa-heart"></i>
-                        <span class="title">@lang('menus.backend.sidebar.wishlist.title')</span>
-                    </a>
-                </li> --}}
             @endif
             @if ($logged_in_user->isAdmin())
 
@@ -371,34 +224,6 @@
                 <li class="nav-title">
                     @lang('menus.backend.sidebar.system')
                 </li>
-
-                {{-- <li
-                    class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern(['admin/stripe*', 'admin/stripe/plans*']), 'open') }}">
-                    <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/stripe*')) }}"
-                        href="#">
-                        <i class="nav-icon fab fa-stripe"></i> @lang('menus.backend.stripe.title')
-                    </a>
-                    <ul class="nav-dropdown-items">
-                        <li class="nav-item">
-                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/stripe/plans*')) }}"
-                                href="{{ route('admin.stripe.plans.index') }}">
-                                @lang('menus.backend.stripe.plan')
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
-                {{-- <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/auth*'), 'open') }}">
-                    <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/auth*')) }}"
-                       href="#">
-                        <i class="nav-icon icon-user"></i> @lang('menus.backend.access.title')
-
-                        @if ($pending_approval > 0)
-                            <span class="badge badge-danger">{{ $pending_approval }}</span>
-                        @endif
-                    </a> --}}
-
-
-
                 <li class="nav-item">
                     <a class="nav-link {{ active_class(Active::checkUriPattern('admin/auth/user*')) }}"
                         href="{{ route('admin.auth.user.index') }}">
@@ -421,18 +246,7 @@
                             @endif
                         </a>
                     </li>
-
-                    {{-- <li class="nav-item">
-                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/auth/role*')) }}"
-                               href="{{ route('admin.auth.role.index') }}">
-                                @lang('labels.backend.access.roles.management')
-                            </a>
-                        </li> --}}
                 </ul>
-
-
-
-                <!--==================================================================-->
                 <li class="divider"></li>
 
                 <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/*'), 'open') }}">
@@ -448,12 +262,6 @@
                                 @lang('menus.backend.sidebar.settings.general')
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/log-viewer/logs*')) }}"
-                                href="{{ route('admin.social-settings') }}">
-                                @lang('menus.backend.sidebar.settings.social-login')
-                            </a>
-                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link {{ active_class(Active::checkUriPattern('admin/settings/zoom-settings*')) }}"
                                 href="{{ route('admin.zoom-settings') }}">
@@ -485,33 +293,7 @@
                         </li>
                     </ul>
                 </li>
-
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'translation-manager' ? 'active' : '' }}"
-                        href="{{ asset('user/translations') }}">
-                        <i class="nav-icon icon-docs"></i>
-                        <span class="title">@lang('menus.backend.sidebar.translations.title')</span>
-                    </a>
-                </li> --}}
-
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'backup' ? 'active' : '' }}"
-                        href="{{ route('admin.backup') }}">
-                        <i class="nav-icon icon-shield"></i>
-                        <span class="title">@lang('menus.backend.sidebar.backup.title')</span>
-                    </a>
-                </li> --}}
-
-                {{-- <li class="nav-item ">
-                    <a class="nav-link {{ $request->segment(1) == 'update-theme' ? 'active' : '' }}"
-                        href="{{ route('admin.update-theme') }}">
-                        <i class="nav-icon icon-refresh"></i>
-                        <span class="title">@lang('menus.backend.sidebar.update.title')</span>
-                    </a>
-                </li> --}}
-                
             @endif
-
             @if ($logged_in_user->hasRole('teacher'))
                 <li class="nav-item ">
                     <a class="nav-link {{ $request->segment(2) == 'payments' ? 'active' : '' }}"

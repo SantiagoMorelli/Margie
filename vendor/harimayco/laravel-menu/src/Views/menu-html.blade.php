@@ -22,7 +22,7 @@ $currentUrl = url()->current();
 									<span class="submit-btn">
 										<input type="submit" class="button-secondary" value="Choose">
 									</span>
-									<span class="add-new-menu-action"> or <a href="{{ $currentUrl }}?action=edit&menu=0">Create new menu</a>. </span>
+									
 								</form>
 							</div>
 							<div id="nav-menus-frame">

@@ -70,9 +70,6 @@
                   {{ str_limit($item->name, $limit = 20, $end = '...') }}
                 </a>
                 &nbsp;&nbsp;
-                {{-- <a href="javascript:rename('{{ $item->name }}')">
-                  <i class="fa fa-edit"></i>
-                </a> --}}
               </p>
             </div>
             <p style="color: #aaa;font-weight: 400">{{ $item->time }}</p>

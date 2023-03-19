@@ -15,34 +15,6 @@ class UpdateController extends Controller
         return view('backend.update.index');
     }
 
-    public function listFiles(Request $request)
-    {
-        $this->validate($request, [
-            'file' => 'required|mimes:zip'
-        ]);
-        $file = $request->file('file');
-        $file_name = time() . '_' . $file->getClientOriginalName();
-        $file->move(public_path() . '/updates/', $file_name);
-        $is_verified = false;
-        $zipper = new Madzipper();
-        $checkFiles = $zipper->make(public_path() . '/updates/' . $file_name)->listFiles();
-        foreach ($checkFiles as $item) {
-            $item = Arr::last(explode('/', $item));
-            if ($item == md5('NeonLMSUpdate') . '.key') {
-                $is_verified = true;
-            }
-        }
-        if ($is_verified == true) {
-            $zipper = new Madzipper();
-            $files = $zipper->make(public_path() . '/updates/' . $file_name)->listFiles();
-            return view('backend.update.file-list', compact('files', 'file_name'));
-        } else {
-            unlink(public_path() . '/updates/' . $file_name);
-            return redirect(route('admin.update-theme'))->withFlashDanger(__('alerts.backend.general.unverified'));
-        }
-
-    }
-
     public function updateTheme(Request $request)
     {
         ini_set('max_execution_time', 1000);

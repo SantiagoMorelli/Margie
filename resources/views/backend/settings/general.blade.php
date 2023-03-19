@@ -85,11 +85,6 @@
                                 {{ __('labels.backend.general_settings.logos.title') }}
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a data-toggle="tab" class="nav-link" href="#layout">
-                                {{ __('labels.backend.general_settings.layout.title') }}
-                            </a>
-                        </li> --}}
                         <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#email">
                                 {{ __('labels.backend.general_settings.email.title') }}
@@ -100,30 +95,13 @@
                                 {{ __('labels.backend.general_settings.payment_settings.title') }}
                             </a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a data-toggle="tab" class="nav-link" href="#language_settings">
-                                {{ __('labels.backend.general_settings.language_settings.title') }}
-                            </a>
-                        </li> --}}
-                        {{-- <li class="nav-item">
-                            <a data-toggle="tab" class="nav-link" href="#user_registration_settings">
-                                {{ __('labels.backend.general_settings.user_registration_settings.title') }}
-                            </a>
-                        </li> --}}
-                        {{-- <li class="nav-item">
-                            <a data-toggle="tab" class="nav-link" href="#api_client_settings">
-                                {{ __('labels.backend.general_settings.api_clients.title') }}
-                            </a>
-                        </li> --}}
                     </ul>
                     <h4 class="card-title mb-0">
-                        {{--{{ __('labels.backend.general_settings.management') }}--}}
                     </h4>
-                </div><!--col-->
-            </div><!--row-->
+                </div>
+            </div>
 
             <div class="tab-content">
-                <!---General Tab--->
                 <div id="general" class="tab-pane container active">
                     <div class="row mt-4 mb-4">
                         <div class="col ">
@@ -155,71 +133,8 @@
                                         ->value(config('app.url'))
                                         }}
 
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.font_color'))->class('col-md-2 form-control-label')->for('font_color') }}
-
-                                <div class="col-md-10">
-                                    <ul class="d-inline-block list-inline w-100 mb-0 color-list list-style-none">
-                                        <li>
-                                            <a data-color="default" class="color-default"
-                                               href="#!"><i
-                                                        class="fas fa-circle"></i></a>
-                                            <p class="mb-0" style="font-size: 10px">(Default)</p>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-2" class="color-2"
-                                               onclick="setActiveStyleSheet('color-2'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i></a>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-3" class="color-3"
-                                               onclick="setActiveStyleSheet('color-3'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i></a>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-4" class="color-4"
-                                               onclick="setActiveStyleSheet('color-4'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i></a>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-5" class="color-5"
-                                               onclick="setActiveStyleSheet('color-5'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i></a>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-6" class="color-6"
-                                               onclick="setActiveStyleSheet('color-6'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-7" class="color-7"
-                                               onclick="setActiveStyleSheet('color-7'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-8" class="color-8"
-                                               onclick="setActiveStyleSheet('color-8'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a data-color="color-9" class="color-9"
-                                               onclick="setActiveStyleSheet('color-9'); return true;" href="#!"><i
-                                                        class="fas fa-circle"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <input type="hidden" name="font_color" id="font_color" value="default">
-                                    <span class="help-text font-italic">This will change frontend theme font colors</span>
                                 </div>
-                            </div> --}}
-
-
+                            </div>
                             <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.counter'))->class('col-md-2 form-control-label')->for('counter') }}
 
@@ -245,29 +160,8 @@
                                                placeholder="{{__('labels.backend.general_settings.total_teachers')}}">
                                     </div>
 
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.google_analytics_id'))->class('col-md-2 form-control-label')->for('app_name') }}
-
-                                <div class="col-md-10">
-                                    {{ html()->text('google_analytics_id')
-                                        ->class('form-control')
-                                        ->placeholder('Ex. UA-34XXXXX23-3')
-                                        ->attribute('maxlength', 191)
-
-                                        ->value(config('google_analytics_id'))
-                                        ->autofocus()
-                                        }}
-                                    <span class="float-right">
-                                        <a target="_blank" class="font-weight-bold font-italic"
-                                           href="https://support.google.com/analytics/answer/1042508">{{__('labels.backend.general_settings.google_analytics_id_note')}}</a>
-                                    </span>
-
                                 </div>
-                            </div> --}}
-
+                            </div>
                             <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.captcha_status'))->class('col-md-2 form-control-label')->for('captcha_status') }}
                                 <div class="col-md-10">
@@ -306,28 +200,12 @@
                                                      ->placeholder(__('validation.attributes.backend.settings.general_settings.captcha_site_secret'))
                                                      ->value(config('no-captcha.secret'))
                                                      }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
+                                            </div>
+                                        </div>
                                     </div>
 
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('validation.attributes.backend.settings.general_settings.retest_status'))->class('col-md-2 form-control-label')->for('retest') }}
-                                <div class="col-md-10">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('retest', config('retest') ? true : false,1)->id('retest')
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                    </div>
-                                    <small><i> {{__('labels.backend.general_settings.retest_note')}}</i></small>
                                 </div>
-                            </div> --}}
-
+                            </div>
                             <div class="form-group row">
                                 {{ html()->label(__('validation.attributes.backend.settings.general_settings.lesson_timer'))->class('col-md-2 form-control-label')->for('lesson_timer') }}
                                 <div class="col-md-10">
@@ -340,74 +218,8 @@
                                         }}
                                     </div>
                                     <small><i> {{__('labels.backend.general_settings.lesson_note')}}</i></small>
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('validation.attributes.backend.settings.general_settings.show_offers'))->class('col-md-2 form-control-label')->for('show_offers') }}
-                                <div class="col-md-10">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('show_offers', config('show_offers') ? true : false,1)->id('retest')
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                    </div>
-                                    <small><i> {{__('labels.backend.general_settings.show_offers_note')}}</i></small>
                                 </div>
-                            </div> --}}
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('validation.attributes.backend.settings.general_settings.one_signal_push_notification'))->class('col-md-2 form-control-label')->for('onesignal_status') }}
-                                <div class="col-md-10">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('onesignal_status', config('onesignal_status') ? true : false,1)->id('onesignal_status')
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                    </div>
-                                    <span class="float-right">
-                                        <a target="_blank" class="font-weight-bold font-italic"
-                                           href="https://documentation.onesignal.com/docs/web-push-quickstart">{{__('labels.backend.general_settings.how_to_onesignal')}}</a><br>
-                                         <a target="_blank" class="font-weight-bold font-italic"
-                                            href="https://documentation.onesignal.com/docs/web-push-custom-code-setup#section--span-class-step-step-3-span-upload-onesignal-sdk">{{__('labels.backend.general_settings.setup_onesignal')}}</a>
-                                    </span>
-                                    <small><i>{{__('labels.backend.general_settings.onesignal_note')}}</i></small>
-                                    <div id="onesignal-configuration"
-                                         class="@if(config('onesignal_status') == 0 || config('onesignal_status') == false) d-none @endif">
-                                        <br>
-
-                                        <div class="form-group row">
-
-                                            <div class="col-md-12">
-                                                {{ html()->textarea('onesignal_data')
-                                                     ->class('form-control')
-                                                     ->placeholder(__('validation.attributes.backend.settings.general_settings.onesignal_code'))
-                                                     ->value(config('onesignal_data'))
-                                                     }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div> --}}
-
-                            <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.teacher_commission_rate'))->class('col-md-2 form-control-label mb-1')->for('commission_rate') }}
-
-                                <div class="col-md-10">
-                                    {{ html()->input('number','commission_rate')
-                                        ->class('form-control')
-                                        ->attributes(['pattern' => '[0-9]'])
-                                        ->placeholder(__('labels.backend.general_settings.teacher_commission_rate'))
-                                        ->value(config('commission_rate'))
-                                        }}
-                                </div><!--col-->
-                            </div><!--form-group-->
+                            </div>
 
                             <div class="form-group row">
                                 {{ html()->label(__('labels.backend.general_settings.admin_registration_mail'))->class('col-md-2 form-control-label')->for('admin_registration_mail') }}
@@ -436,38 +248,8 @@
                                         }}
                                     </div>
                                     <small><i> {{__('labels.backend.general_settings.admin_order_mail_note')}}</i></small>
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.custom_css'))->class('col-md-2 form-control-label')->for('custom_css') }}
-
-                                <div class="col-md-10">
-                                    {{ html()->textarea('custom_css')
-                                        ->class('form-control')
-                                        ->placeholder(__('Ex. body{background:blue;}'))
-                                        ->value(config('custom_css'))
-                                        }}
                                 </div>
                             </div>
-
-                            <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.custom_js'))->class('col-md-2 form-control-label')->for('custom_js') }}
-
-                                <div class="col-md-10">
-                                    {{ html()->textarea('custom_js')
-                                        ->class('form-control')
-                                        ->placeholder(__("Ex. $('#Demo').on('click',function(){  alert(); })"))
-                                        ->value(config('custom_js'))
-                                        }}
-                                </div>
-                            </div> --}}
-
-                        </div>
-                        <div class="col-12 text-left">
-                            <a href="{{route('admin.troubleshoot')}}"
-                               class="btn btn-lg btn-warning">{{__('labels.backend.general_settings.troubleshoot')}}</a>
                         </div>
                     </div>
                 </div>
@@ -849,278 +631,6 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.payment_settings.flutter'))->class('col-md-3 form-control-label')}}
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('flutter__active', config('flutter.active') ? true : false,1)
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                        <a target="_blank" href="https://developer.flutterwave.com/docs/api-keys"
-                                           class="float-right font-italic font-weight-bold">{{ __('labels.backend.general_settings.payment_settings.how_to_flutter')}}</a>
-                                    </div>
-                                    <small>
-                                        <i> {{ __('labels.backend.general_settings.payment_settings.flutter_note')}}</i>
-                                    </small>
-                                    <div class="switch-content @if(config('flutter.active') == 0 || config('flutter.active') == false) d-none @endif">
-                                        <br>
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.mode'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                <select class="form-control" id="rave__env"
-                                                        name="rave__env">
-                                                    <option selected
-                                                            value="staging">{{__('labels.backend.general_settings.payment_settings.sandbox')}}</option>
-                                                    <option value="live">{{__('labels.backend.general_settings.payment_settings.live')}}</option>
-                                                </select>
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.key'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('rave__publicKey')
-                                                     ->class('form-control')
-                                                     ->value(config('rave.publicKey'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.secret'))->class('col-md-2 form-control-label')->for('rave__secretKey') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('rave__secretKey')
-                                                     ->class('form-control')
-                                                     ->value(config('rave.secretKey'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                    </div>
-                                </div><!--col-->
-                            </div><!--form-group--> --}}
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.payment_settings.instamojo'))->class('col-md-3 form-control-label')}}
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('services__instamojo__active', config('services.instamojo.active') ? true : false,1)
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                    </div>
-                                    <small>
-                                        <i> {{ __('labels.backend.general_settings.payment_settings.instamojo_note')}}</i>
-                                    </small>
-                                    <div class="switch-content @if(config('services.instamojo.active') == 0 || config('services.instamojo.active') == false) d-none @endif">
-                                        <br>
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.mode'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                <select class="form-control" id="instamojo_settings_mode"
-                                                        name="services__instamojo__mode">
-                                                    <option selected
-                                                            value="sandbox">{{__('labels.backend.general_settings.payment_settings.sandbox')}}</option>
-                                                    <option value="live">{{__('labels.backend.general_settings.payment_settings.live')}}</option>
-                                                </select>
-                                                <span class="help-text font-italic">{!!  __('labels.backend.general_settings.payment_settings.instamojo_mode_note') !!}</span>
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.key'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__instamojo__key')
-                                                     ->class('form-control')
-                                                     ->value(config('services.instamojo.key'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.instamojo_token'))->class('col-md-2 form-control-label')->for('paypal.paypal.secret') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__instamojo__secret')
-                                                     ->class('form-control')
-                                                     ->value(config('services.instamojo.secret'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                    </div>
-                                </div><!--col-->
-                            </div><!--form-group--> --}}
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.payment_settings.razorpay'))->class('col-md-3 form-control-label')->for('services.razorpay.active') }}
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('services__razorpay__active', config('services.razorpay.active') ? true : false,1)
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                        <a class="float-right font-weight-bold font-italic"
-                                           href="https://dashboard.razorpay.com/"
-                                           target="_blank">{{ __('labels.backend.general_settings.payment_settings.how_to_razorpay')}}</a>
-                                    </div>
-                                    <small>
-                                        <i> {{ __('labels.backend.general_settings.payment_settings.razorpay_note')}}</i>
-                                    </small>
-                                    <div class="switch-content @if(config('services.razorpay.active') == 0 || config('services.razorpay.active') == false) d-none @endif">
-                                        <br>
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.key'))->class('col-md-2 form-control-label')->for('services.razorpay.key') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__razorpay__key')
-                                                     ->class('form-control')
-                                                     ->value(config('services.razorpay.key'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.secret'))->class('col-md-2 form-control-label')->for('services.razorpay.secret') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__razorpay__secret')
-                                                     ->class('form-control')
-                                                     ->value(config('services.razorpay.secret'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                    </div>
-                                </div><!--col-->
-                            </div><!--form-group--> --}}
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.payment_settings.cashfree'))->class('col-md-3 form-control-label')}}
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('services__cashfree__active', config('services.cashfree.active') ? true : false,1)
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                    </div>
-                                    <small>
-                                        <i> {{ __('labels.backend.general_settings.payment_settings.cashfree_note')}}</i>
-                                    </small>
-                                    <div class="switch-content @if(config('services.cashfree.active') == 0 || config('services.cashfree.active') == false) d-none @endif">
-                                        <br>
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.mode'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                <select class="form-control" id="cashfree_settings_mode"
-                                                        name="services__cashfree__mode">
-                                                    <option selected
-                                                            value="sandbox">{{__('labels.backend.general_settings.payment_settings.sandbox')}}</option>
-                                                    <option value="live">{{__('labels.backend.general_settings.payment_settings.live')}}</option>
-                                                </select>
-                                                <span class="help-text font-italic">{!!  __('labels.backend.general_settings.payment_settings.cashfree_mode_note') !!}</span>
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.cashfree_app_id'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__cashfree__app_id')
-                                                     ->class('form-control')
-                                                     ->value(config('services.cashfree.app_id'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.cashfree_secret'))->class('col-md-2 form-control-label')->for('paypal.paypal.secret') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__cashfree__secret')
-                                                     ->class('form-control')
-                                                     ->value(config('services.cashfree.secret'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                    </div>
-                                </div><!--col-->
-                            </div><!--form-group--> --}}
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.payment_settings.payu'))->class('col-md-3 form-control-label')}}
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('services__payu__active', config('services.payu.active') ? true : false,1)
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                        <a class="float-right font-weight-bold font-italic"
-                                           href="//www.payumoney.com/merchant-dashboard/#/integration"
-                                           target="_blank">{{ __('labels.backend.general_settings.payment_settings.how_to_payu')}}</a>
-                                    </div>
-                                    <small>
-                                        <i> {{ __('labels.backend.general_settings.payment_settings.payu_note')}}</i>
-                                    </small>
-                                    <div class="switch-content @if(config('services.payu.active') == 0 || config('services.payu.active') == false) d-none @endif">
-                                        <br>
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.mode'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                <select class="form-control" id="payu_settings_mode"
-                                                        name="services__payu__mode">
-                                                    <option selected
-                                                            value="sandbox">{{__('labels.backend.general_settings.payment_settings.sandbox')}}</option>
-                                                    <option value="live">{{__('labels.backend.general_settings.payment_settings.live')}}</option>
-                                                </select>
-                                                <span class="help-text font-italic">{!!  __('labels.backend.general_settings.payment_settings.payu_mode_note') !!}</span>
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.key'))->class('col-md-2 form-control-label') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__payu__key')
-                                                     ->class('form-control')
-                                                     ->value(config('services.payu.key'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                        <div class="form-group row">
-                                            {{ html()->label(__('labels.backend.general_settings.payment_settings.payu_salt'))->class('col-md-2 form-control-label')->for('services__payu__salt') }}
-                                            <div class="col-md-8 col-xs-12">
-                                                {{ html()->text('services__payu__salt')
-                                                     ->class('form-control')
-                                                     ->value(config('services.payu.salt'))
-                                                     }}
-                                            </div><!--col-->
-                                        </div><!--form-group-->
-                                    </div>
-                                </div><!--col-->
-                            </div><!--form-group--> --}}
-
-                            {{-- <div class="form-group row">
-                                {{ html()->label(__('labels.backend.general_settings.payment_settings.offline_mode'))->class('col-md-3 form-control-label')}}
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        {{ html()->label(
-                                                html()->checkbox('payment_offline_active', config('payment_offline_active') ? true : false,1)
-                                                      ->class('switch-input')->value(1)
-                                                . '<span class="switch-label"></span><span class="switch-handle"></span>')
-
-                                            ->class('switch switch-sm switch-3d switch-primary')
-                                        }}
-                                    </div>
-                                    <small>
-                                        <i> {{ __('labels.backend.general_settings.payment_settings.offline_mode_note')}}</i>
-                                    </small>
-                                    {{ html()->textarea('payment_offline_instruction',config('payment_offline_instruction'))
-                                            ->class('form-control')->placeholder(__('labels.backend.general_settings.payment_settings.offline_mode_instruction'))
-                                        }}
-                                </div>
-
-                            </div> --}}
-
                         </div>
                     </div>
                 </div>
@@ -1156,108 +666,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{-- <!---User Registration Settings--->
-                <div id="user_registration_settings" class="tab-pane container fade">
-                    <div class="row mt-2 mb-4">
-                        <div class="col-12 mb-2">
-                            <h4>{{__('labels.backend.general_settings.user_registration_settings.desc')}}</h4>
-                        </div>
-                        <input type="hidden" id="registration_fields" name="registration_fields">
-
-                        <div class="col-lg-9 input-boxes col-12">
-                            <div class="form-group">
-                                <input type="text" readonly
-                                       placeholder="{{__('labels.backend.general_settings.user_registration_settings.fields.first_name')}}"
-                                       class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" readonly
-                                       placeholder="{{__('labels.backend.general_settings.user_registration_settings.fields.last_name')}}"
-                                       class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" readonly
-                                       placeholder="{{__('labels.backend.general_settings.user_registration_settings.fields.email')}}"
-                                       class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" readonly
-                                       placeholder="{{__('labels.backend.general_settings.user_registration_settings.fields.password')}}"
-                                       class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 border-left col-12">
-                            <div class="form-group input-list">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" checked disabled
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.first_name')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" checked disabled
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.last_name')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" checked disabled
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.email')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" checked disabled
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.password')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="phone" data-type="number"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.phone')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="dob" data-type="date"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.dob')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="gender" data-type="radio"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.gender')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="address"
-                                                  data-type="textarea"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.address')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="city" data-type="text"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.city')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="pincode" data-type="text"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.pincode')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="state" data-type="text"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.state')}}
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input class="option" type="checkbox" data-name="country" data-type="text"
-                                                  value=""> {{__('labels.backend.general_settings.user_registration_settings.fields.country')}}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div> --}}
-
-                <!---API Client Settings--->
                 <div id="api_client_settings" class="tab-pane container fade">
                     <div class="row mb-4">
                         <div class="col-lg-8 col-12">

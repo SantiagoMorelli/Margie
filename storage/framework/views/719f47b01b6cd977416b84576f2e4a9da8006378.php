@@ -11,21 +11,9 @@
     </button>
 
     <ul class="nav navbar-nav d-md-down-none">
-        
-
         <li class="nav-item px-5">
             <a class="nav-link" href="<?php echo e(route('admin.dashboard')); ?>"><?php echo app('translator')->get('Back to Dashboard'); ?></a>
         </li>
-        
-            
-                
-                    
-                
-
-                
-            
-        
-        
     </ul>
 
     <ul class="nav navbar-nav ml-auto mr-4">
@@ -75,12 +63,5 @@
           </div>
         </li>
     </ul>
-
-    
-        
-    
-    
-        
-    
 </header>
 <?php /**PATH C:\Users\adria\Desktop\LWS\resources\views/backend/includes/header.blade.php ENDPATH**/ ?>

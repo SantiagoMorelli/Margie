@@ -124,14 +124,8 @@
 
 
                 <div class="col-md-8 col-8">
-                    {{--{{ html()->input('number','buttons')--}}
-                    {{--->class('form-control')--}}
-                    {{--->placeholder(__('labels.backend.hero_slider.fields.buttons.placeholder'))--}}
-                    {{--->attributes(['max'=>4,'pattern'=>'[0-9]','min'=>1])--}}
-                    {{--->id('buttons')--}}
-                    {{--}}--}}
                     <p class="help-text mb-0 font-italic">{!!  __('labels.backend.hero_slider.fields.buttons.note')!!}</p>
-                </div><!--col-->
+                </div>
                 <div class="col-12 col-md-10 ml-auto button-container mt-2">
 
                 </div>

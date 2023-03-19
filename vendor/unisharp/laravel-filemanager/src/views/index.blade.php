@@ -9,7 +9,6 @@
   <meta name="theme-color" content="#333844">
   <!-- Windows Phone -->
   <meta name="msapplication-navbutton-color" content="#333844">
-  <!-- iOS Safari -->
   <meta name="apple-mobile-web-app-status-bar-style" content="#333844">
 
   <title>{{ trans('laravel-filemanager::lfm.title-page') }}</title>
@@ -21,8 +20,6 @@
   <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/dropzone.min.css') }}">
   <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/mime-icons.min.css') }}">
   <style>{!! \File::get(base_path('vendor/unisharp/laravel-filemanager/public/css/lfm.css')) !!}</style>
-  {{-- Use the line below instead of the above if you need to cache the css. --}}
-  {{-- <link rel="stylesheet" href="{{ asset('/vendor/laravel-filemanager/css/lfm.css') }}"> --}}
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="nav">
@@ -261,8 +258,6 @@
     ];
   </script>
   <script>{!! \File::get(base_path('vendor/unisharp/laravel-filemanager/public/js/script.js')) !!}</script>
-  {{-- Use the line below instead of the above if you need to cache the script. --}}
-  {{-- <script src="{{ asset('vendor/laravel-filemanager/js/script.js') }}"></script> --}}
   <script>
     Dropzone.options.uploadForm = {
       paramName: "upload[]", // The name that will be used to transfer the file

@@ -1,9 +1,5 @@
 <div class="table-responsive">
     <table class="table table-striped table-hover table-bordered">
-        {{-- <tr>
-            <th>@lang('labels.frontend.user.profile.avatar')</th>
-            <td><img src="{{ $user->picture }}" height="100px" class="user-profile-image" /></td>
-        </tr> --}}
         <tr>
             <th>@lang('labels.frontend.user.profile.name')</th>
             <td>{{ $user->name }}</td>

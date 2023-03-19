@@ -44,8 +44,6 @@
                 </li>
             <?php endif; ?>
             <?php if(!$logged_in_user->hasRole('student') && ($logged_in_user->hasRole('teacher') || $logged_in_user->isAdmin() || $logged_in_user->hasAnyPermission(['course_access', 'lesson_access', 'test_access', 'question_access', 'bundle_access']))): ?>
-                
-
                 <li
                     class="nav-item nav-dropdown <?php echo e(active_class(Active::checkUriPattern(['user/courses*','user/lessons*','user/tests*','user/questions*','user/live-lessons*','user/live-lesson-slots*']),'open')); ?>">
                     <a class="nav-link nav-dropdown-toggle <?php echo e(active_class(Active::checkUriPattern('admin/*'))); ?>"
@@ -74,13 +72,6 @@
                                 </a>
                             </li>
                         <?php endif; ?>
-
-                        
-
-
-                        
-
-
                         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('live_lesson_access')): ?>
                             <li class="nav-item ">
                                 <a class="nav-link <?php echo e($request->segment(2) == 'live-lessons' ? 'active' : ''); ?>"
@@ -111,7 +102,6 @@
                         </a>
                     </li>
                 <?php endif; ?>
-                
             <?php endif; ?>
 
 
@@ -134,7 +124,6 @@
                                 </a>
                             </li>
                         <?php endif; ?>
-                        
                         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('reason_access')): ?>
                             <li class="nav-item">
                                 <a class="nav-link <?php echo e($request->segment(2) == 'reasons' ? 'active' : ''); ?>"
@@ -157,7 +146,6 @@
                                     <span class="title"><?php echo app('translator')->get('menus.backend.sidebar.hero-slider.title'); ?></span>
                                 </a>
                             </li>
-                            
                             <li class="nav-item ">
                                 <a class="nav-link <?php echo e($request->segment(2) == 'testimonials' ? 'active' : ''); ?>"
                                     href="<?php echo e(route('admin.testimonials.index')); ?>">
@@ -165,22 +153,18 @@
                                         class="title"><?php echo app('translator')->get('menus.backend.sidebar.testimonials.title'); ?></span>
                                 </a>
                             </li>
-                            
-                            
                             <li class="nav-item ">
                                 <a class="nav-link <?php echo e($request->segment(2) == 'contact' ? 'active' : ''); ?>"
                                     href="<?php echo e(route('admin.contact-settings')); ?>">
                                     <span class="title"><?php echo app('translator')->get('menus.backend.sidebar.contact.title'); ?></span>
                                 </a>
                             </li>
-                            
                             <li class="nav-item ">
                                 <a class="nav-link <?php echo e($request->segment(2) == 'footer' ? 'active' : ''); ?>"
                                     href="<?php echo e(route('admin.footer-settings')); ?>">
                                     <span class="title"><?php echo app('translator')->get('menus.backend.sidebar.footer.title'); ?></span>
                                 </a>
                             </li>
-                            
                         <?php endif; ?>
 
                     </ul>
@@ -188,7 +172,6 @@
 
                 </li>
             <?php else: ?>
-                
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('reason_access')): ?>
                     <li class="nav-item">
                         <a class="nav-link <?php echo e($request->segment(2) == 'reasons' ? 'active' : ''); ?>"
@@ -208,8 +191,6 @@
                 </a>
             </li>
             <?php if($logged_in_user->hasRole('student')): ?>
-                
-                
             <?php endif; ?>
             <?php if($logged_in_user->hasRole('teacher')): ?>
                 <li class="nav-item ">
@@ -236,8 +217,6 @@
                         <span class="title"><?php echo app('translator')->get('menus.backend.sidebar.coupons.title'); ?></span>
                     </a>
                 </li>
-                
-                
             <?php endif; ?>
             <li class="nav-item ">
                 <a class="nav-link <?php echo e($request->segment(1) == 'account' ? 'active' : ''); ?>"
@@ -247,8 +226,6 @@
                 </a>
             </li>
             <?php if($logged_in_user->hasRole('student')): ?>
-                
-                
             <?php endif; ?>
             <?php if($logged_in_user->isAdmin()): ?>
 
@@ -256,12 +233,6 @@
                 <li class="nav-title">
                     <?php echo app('translator')->get('menus.backend.sidebar.system'); ?>
                 </li>
-
-                
-                
-
-
-
                 <li class="nav-item">
                     <a class="nav-link <?php echo e(active_class(Active::checkUriPattern('admin/auth/user*'))); ?>"
                         href="<?php echo e(route('admin.auth.user.index')); ?>">
@@ -284,13 +255,7 @@
                             <?php endif; ?>
                         </a>
                     </li>
-
-                    
                 </ul>
-
-
-
-                <!--==================================================================-->
                 <li class="divider"></li>
 
                 <li class="nav-item nav-dropdown <?php echo e(active_class(Active::checkUriPattern('admin/*'), 'open')); ?>">
@@ -306,7 +271,6 @@
                                 <?php echo app('translator')->get('menus.backend.sidebar.settings.general'); ?>
                             </a>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link <?php echo e(active_class(Active::checkUriPattern('admin/settings/zoom-settings*'))); ?>"
                                 href="<?php echo e(route('admin.zoom-settings')); ?>">
@@ -338,15 +302,7 @@
                         </li>
                     </ul>
                 </li>
-
-                
-
-                
-
-                
-                
             <?php endif; ?>
-
             <?php if($logged_in_user->hasRole('teacher')): ?>
                 <li class="nav-item ">
                     <a class="nav-link <?php echo e($request->segment(2) == 'payments' ? 'active' : ''); ?>"

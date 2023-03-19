@@ -128,13 +128,6 @@
 
 
                     </div>
-                    
-
-                        
-
-                        
-
-                    
                     <div class="col-md-12 form-group">
 
                     <?php echo app('translator')->get('labels.backend.lessons.video_guide'); ?>

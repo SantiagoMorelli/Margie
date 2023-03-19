@@ -137,13 +137,6 @@
                                                             <span>{{ sprintf("%02d", $count)}}</span>
                                                             {{$lesson->model->title}}
                                                         </button>
-
-                                                        <!-- Test accordian entry, not required -->
-                                                        {{-- @if($lesson->model_type == 'App\Models\Test')
-                                                            <div class="leanth-course">
-                                                                <span>@lang('labels.frontend.course.test')</span>
-                                                            </div>
-                                                        @endif --}}
                                                         @if($lesson->model->live_lesson)
                                                             <div class="leanth-course">
                                                                 <span>@lang('labels.frontend.course.live_lesson')</span>
@@ -197,48 +190,6 @@
                         </div>
                     </div>
 
-                    
-                    <!-- /market guide -->
-
-                    {{-- <div class="course-review">
-                        <div class="section-title-2 mb20 headline text-left">
-                            <h2>@lang('labels.frontend.course.course_reviews')</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="ratting-preview">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="avrg-rating ul-li">
-                                                <b>@lang('labels.frontend.course.average_rating')</b>
-                                                <span class="avrg-rate">{{$course_rating}}</span>
-                                                <ul>
-                                                    @for($r=1; $r<=$course_rating; $r++)
-                                                        <li><i class="fas fa-star"></i></li>
-                                                    @endfor
-                                                </ul>
-                                                <b>{{$total_ratings}} @lang('labels.frontend.course.ratings')</b>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="avrg-rating ul-li">
-                                                <span><b>@lang('labels.frontend.course.details')</b></span>
-                                                @for($r=5; $r>=1; $r--)
-                                                    <div class="rating-overview">
-                                                        <span class="start-item">{{$r}} @lang('labels.frontend.course.stars')</span>
-                                                        <span class="start-bar"></span>
-                                                        <span class="start-count">{{$course->reviews()->where('rating','=',$r)->get()->count()}}</span>
-                                                    </div>
-                                                @endfor
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    <!-- /review overview -->
-
                     <div class="couse-comment">
                         <div class="blog-comment-area ul-li about-teacher-2">
                             @if(count($course->reviews) > 0)
@@ -278,81 +229,9 @@
                                         </li>
                                     @endforeach
                                 </ul>
-                            {{-- @else
-                                <h4> @lang('labels.frontend.course.no_reviews_yet')</h4> --}}
                             @endif
 
                             @if ($purchased_course)
-                                {{-- @if(isset($review) || ($is_reviewed == false))
-                                    <div class="reply-comment-box">
-                                        <div class="review-option">
-                                            <div class="section-title-2  headline text-left float-left">
-                                                <h2>@lang('labels.frontend.course.add_reviews')</h2>
-                                            </div>
-                                            <div class="review-stars-item float-right mt15">
-                                                <span>@lang('labels.frontend.course.your_rating'): </span>
-                                                <div class="rating">
-                                                    <label>
-                                                        <input type="radio" name="stars" value="1"/>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="2"/>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="3"/>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="4"/>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="stars" value="5"/>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                        <span class="icon"><i class="fas fa-star"></i></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="teacher-faq-form">
-                                            @php
-                                                if(isset($review)){
-                                                    $route = route('courses.review.update',['id'=>$review->id]);
-                                                }else{
-                                                   $route = route('courses.review',['id'=> $course->id]);
-                                                }
-                                            @endphp
-
-                                            <form method="POST"
-                                                  action="{{$route}}"
-                                                  data-lead="Residential">
-                                                @csrf
-                                                <input type="hidden" name="rating" id="rating">
-                                                <label for="review">@lang('labels.frontend.course.message')</label>
-                                                <textarea name="review" class="mb-2" id="review" rows="2"
-                                                          cols="20">@if(isset($review)){{$review->content}} @endif</textarea>
-                                                <span class="help-block text-danger">{{ $errors->first('review', ':message') }}</span>
-                                                <div class="nws-button text-center  gradient-bg text-uppercase">
-                                                    <button type="submit"
-                                                            value="Submit">@lang('labels.frontend.course.add_review_now')
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                @endif --}}
                             @endif
 
 
@@ -470,10 +349,6 @@
                                            class="genius-btn btn-block my-2 bg-dark text-center text-white text-uppercase "
                                            data-target="#myModal" href="#">@lang('labels.frontend.course.add_to_cart') <i
                                                     class="fa fa-shopping-bag"></i></a>
-
-                                        {{-- <a id="openLoginModal"
-                                           class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"
-                                           data-target="#myModal" href="#">@lang('labels.frontend.course.subscribe')</a> --}}
                                     @endif
                                 @elseif(auth()->check() && (auth()->user()->hasRole('student')))
 
@@ -508,30 +383,12 @@
                                             <a class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"
                                            href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>
                                         @endif
-
-{{--                                        @if(auth()->user()->subscription('default'))--}}
-{{--                                        <form action="{{ route('subscription.course_subscribe') }}" method="POST">--}}
-{{--                                            @csrf--}}
-{{--                                            <input type="hidden" name="course_id" value="{{ $course->id }}"/>--}}
-{{--                                            <input type="hidden" name="amount" value="{{($course->free == 1) ? 0 : $course->price}}"/>--}}
-{{--                                            <button type="submit"--}}
-{{--                                                    class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font">--}}
-{{--                                                Course @lang('labels.frontend.course.subscribe')</button>--}}
-{{--                                        </form>--}}
-{{--                                        <br/>--}}
-{{--                                        <a class="genius-btn btn-block text-white  bg-dark text-center text-uppercase  bold-font"--}}
-{{--                                               href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>--}}
-{{--                                        @else--}}
-{{--                                        <a class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-{{--                                           href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>--}}
-{{--                                        @endif--}}
                                     @endif
 
 
                                 @else
                                     <h6 class="alert alert-danger"> @lang('labels.frontend.course.buy_note')</h6>
                                 @endif
-                                {{-- @include('frontend.layouts.partials.wishlist',['course' => $course->id, 'price' => $course->price]) --}}
                             @else
 
                                 @if($continue_course || !empty($checkSubcribePlan))
@@ -562,7 +419,6 @@
                             <ul>
                                 <li > @lang('labels.frontend.course.chapters')
                                     <span>  {{$course->chapterCount()}} </span></li>
-                                {{--<li>Language <span>English</span></li>--}}
                                 <li class="d-inline-block w-100">@lang('labels.frontend.course.category')<span class="text-right"><a
                                                 href="{{route('courses.category',['category'=>$course->category->slug])}}"
                                                 target="_blank">{{$course->category->name}}</a> </span></li>

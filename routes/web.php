@@ -16,11 +16,6 @@ Route::get('lang/{lang}', [LanguageController::class, 'swap']);
 
 Route::get('/sitemap-' .str_slug(config('app.name')) . '/{file?}', 'SitemapController@index');
 
-
-//============ Remove this  while creating zip for Envato ===========//
-
-/*This command is useful in demo site you can go to https://demo.neonlms.com/reset-demo and it will refresh site from this URL. */
-
 Route::get('reset-demo',function (){
     ini_set('memory_limit', '-1');
     ini_set('max_execution_time', 1000);

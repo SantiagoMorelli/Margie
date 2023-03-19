@@ -168,7 +168,6 @@
                             </div>
                             <div class="type_msg">
                                 <div class="input_msg_write">
-                                    {{--<input type="text" class="write_msg" placeholder="Type a message"/>--}}
                                     <textarea type="text" name="message" class="write_msg"
                                               placeholder="{{trans('labels.backend.messages.type_a_message')}}"></textarea>
                                     <button class="msg_send_btn" type="submit">

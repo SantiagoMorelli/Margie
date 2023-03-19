@@ -160,13 +160,8 @@
                                                             <?php echo app('translator')->get('labels.backend.dashboard.students'); ?>
                                             </span>
                                                     </div>
-
                                                     <!-- Removes completion bar underneath course in user dashboard -->
-                                                    
-
                                                     <!-- "You're certified for this course" label removed as we don't use it here -->
-                                                    
-
                                                 </div>
                                             </div>
                                         </div>
@@ -239,9 +234,6 @@
                                                                     <?php echo app('translator')->get('labels.backend.dashboard.completed'); ?>
                                                                 </div>
                                                             </div>
-
-                                                            
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -302,7 +294,6 @@
                                                             <?php echo e($item->progress()); ?> %
                                                         </div>
                                                     </div>
-                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -368,7 +359,6 @@
                                                                     <?php echo app('translator')->get('labels.backend.dashboard.completed'); ?>
                                                                 </div>
                                                             </div>
-                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -528,7 +518,6 @@
                                                 <?php echo e($item->user->full_name); ?>
 
                                             </td>
-                                            
                                             <td><?php echo e($appCurrency['symbol'].$item->amount); ?></td>
                                             <td><?php echo e($item->created_at->diffforhumans()); ?></td>
                                             <td><a class="btn btn-sm btn-primary"

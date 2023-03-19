@@ -1,5 +1,3 @@
-{{-- THIS IS OBVIOUSLY ALL FOR DEMONSTRATION --}}
-
 <aside class="aside-menu">
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
@@ -18,7 +16,6 @@
         </a>
         </li>
     </ul>
-    <!-- Tab panes-->
     <div class="tab-content">
         <div class="tab-pane active" id="timeline" role="tabpanel">
             <div class="list-group list-group-accent">

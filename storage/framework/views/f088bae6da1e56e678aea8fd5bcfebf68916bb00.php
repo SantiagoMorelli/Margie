@@ -12,7 +12,6 @@
 
         </div>
         <div class="card-body">
-            
             <div class="table-responsive">
                 <table id="myTable" class="table table-bordered table-striped">
                     <thead>

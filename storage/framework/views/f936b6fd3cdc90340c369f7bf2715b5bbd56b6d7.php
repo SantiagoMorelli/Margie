@@ -130,7 +130,6 @@
                                   method="post">
                                 <?php echo csrf_field(); ?>
 
-                                
                                 <div class="contact-info mb-2">
 
                                     <?php echo e(html()->text('first_name')
@@ -228,9 +227,6 @@
 
                                 <a href="#"
                                 class="go-login float-right text-info pr-0"><?php echo app('translator')->get('labels.frontend.modal.already_user_note'); ?></a>
-
-
-                                
                             </form>
                         </div>
                     </div>

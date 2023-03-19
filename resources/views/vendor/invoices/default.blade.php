@@ -44,7 +44,6 @@
                     @endif
 
                     @if($contact_data["primary_phone"]["status"] == 1)
-                        {{--{{dd($contact_data["primary_phone"]["value"])}}--}}
                         <span style="font-family: Helvetica, Arial, sans-serif;">Contact No.: {{ $contact_data["primary_phone"]["value"]}}</span>
                         <br>
                     @endif
@@ -92,11 +91,6 @@
         </tbody>
     </table>
     <div style="clear:both; position:relative;">
-
-        {{--<div style="float: right;">--}}
-        {{--<h4>Total: <b>{{ $invoice->totalPriceFormatted() }} {{ $invoice->formatCurrency()->symbol }}</b></h4>--}}
-
-        {{--</div>--}}
         <div style="margin-left: 300pt;">
             <h4>Total:</h4>
             <table class="table table-bordered">

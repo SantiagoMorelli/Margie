@@ -1,6 +1,5 @@
 <div class="table-responsive">
     <table class="table table-striped table-hover table-bordered">
-        
         <tr>
             <th><?php echo app('translator')->get('labels.frontend.user.profile.name'); ?></th>
             <td><?php echo e($user->name); ?></td>

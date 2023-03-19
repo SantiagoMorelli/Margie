@@ -155,7 +155,6 @@
                                                                         @lang('labels.frontend.course.students')</a></span>
 
                                                             </div>
-                                                            {{-- @include('frontend.layouts.partials.wishlist',['course' => $course->id, 'price' => $course->price]) --}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -198,9 +197,7 @@
                                                                         @if($course->free == 1)
                                                                             {{trans('labels.backend.courses.fields.free')}}
                                                                         @else
-                                                                            {!!  $course->strikePrice  !!}
-                                                                            {{-- {{$appCurrency['symbol'].' '.$course->price}} --}}
-                                                                            {{$appCurrency['symbol'].$course->price}}
+                                                                            {!!  $course->strikePrice  !!}                                                                            {{$appCurrency['symbol'].$course->price}}
                                                                             
                                                                         @endif
                                                                     </a></span>

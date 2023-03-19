@@ -114,23 +114,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /counter -->
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End of Search Courses
-            ============================================= -->
     @endif
-
-
-    {{-- @if($sections->popular_courses->status == 1)
-        @include('frontend.layouts.partials.popular_courses')
-    @endif --}}
-
     @if(($sections->reasons->status != 0) || ($sections->testimonial->status != 0))
-        <!-- Start of why choose us section
-        ============================================= -->
         <section id="why-choose-us" class="why-choose-us-section">
             <div class="jarallax  backgroud-style">
                 <div class="container">
@@ -221,24 +210,13 @@
                     </div>
                 </div>
             </section>
-            <!-- End of sponsor section
-       ============================================= -->
         @endif
     @endif
 
-
     @if($sections->featured_courses->status == 1)
-        <!-- Start of best course
-        ============================================= -->
-        {{--@include('frontend.layouts.partials.browse_courses')--}}
-        <!-- End of best course
-            ============================================= -->
     @endif
 
-
     @if($sections->teachers->status == 1)
-        <!-- Start of course teacher
-        ============================================= -->
         <section id="course-teacher" class="course-teacher-section">
             <div class="jarallax">
                 <div class="container">
@@ -246,10 +224,8 @@
                         <span class="subtitle text-uppercase">@lang('labels.frontend.home.our_professionals')</span>
                         <h2>{{env('APP_NAME')}} <span>@lang('labels.frontend.home.teachers').</span></h2>
                     </div>
-
                     <div class="teacher-list">
                         <div class="row justify-content-center">
-                            <!-- /teacher -->
                             @if(count($teachers)> 0)
                                 @foreach($teachers as $item)
                                     <div class="col-md-3">
@@ -284,44 +260,23 @@
                                 @endforeach
                             @endif
                         </div>
-
                         <div class="genius-btn gradient-bg text-center text-uppercase ul-li-block bold-font ">
-                            <a href="{{route('teachers.index')}}">@lang('labels.frontend.home.all_teachers')<i
+                            <a href="https://margiesmagicalverbs.com/about-teachers">More Information<i
                                         class="fas fa-caret-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End of course teacher
-            ============================================= -->
     @endif
 
-
-    {{-- @if($sections->faq->status == 1)
-        <!-- Start FAQ section
-        ============================================= -->
-        @include('frontend.layouts.partials.faq')
-        <!-- End FAQ section
-            ============================================= -->
-    @endif --}}
-
-
     @if($sections->course_by_category->status == 1)
-        <!-- Start Course category
-        ============================================= -->
         @include('frontend.layouts.partials.course_by_category')
-        <!-- End Course category
-            ============================================= -->
     @endif
 
 
     @if($sections->contact_us->status == 1)
-        <!-- Start of contact area
-        ============================================= -->
         @include('frontend.layouts.partials.contact_area')
-        <!-- End of contact area
-            ============================================= -->
     @endif
 
 

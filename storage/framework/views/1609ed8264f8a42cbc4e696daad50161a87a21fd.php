@@ -16,13 +16,7 @@
     <title><?php echo $__env->yieldContent('title', app_name()); ?></title>
     <meta name="description" content="<?php echo $__env->yieldContent('meta_description', ''); ?>">
     <meta name="keywords" content="<?php echo $__env->yieldContent('meta_keywords', ''); ?>">
-
-    
     <?php echo $__env->yieldPushContent('before-styles'); ?>
-
-    <!-- Check if the language is set to RTL, so apply the RTL layouts -->
-    <!-- Otherwise apply the normal LTR layouts -->
-
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/owl.carousel.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/flaticon.css')); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/meanmenu.css')); ?>">
@@ -31,7 +25,6 @@
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/lightbox.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/progess.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/animate.min.css')); ?>">
-    
     <link rel="stylesheet" href="<?php echo e(asset('css/frontend.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/fontawesome-all.css')); ?>">
 
@@ -99,7 +92,6 @@
 <body class="<?php echo e(config('layout_type')); ?>">
 
     <div id="app">
-        
         <?php echo $__env->make('frontend.layouts.modals.loginModal', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
@@ -112,7 +104,6 @@
                         <div class="navbar-default">
                             <div class="navbar-header float-left">
                                 <a class="navbar-brand text-uppercase" href="<?php echo e(url('/')); ?>">
-                                    
                                     <img src="<?php echo e(asset('storage/logos/' . config('logo_w_image'))); ?>" alt="logo">
                                 </a>
                             </div><!-- /.navbar-header -->
@@ -137,8 +128,6 @@
                                     <ul>
                                         <?php if(count($custom_menus) > 0): ?>
                                             <?php $__currentLoopData = $custom_menus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                
-                                                
                                                 <?php if($menu['id'] == $menu['parent']): ?>
                                                     <?php if(count($menu->subs) == 0): ?>
                                                         <li class="">
@@ -169,7 +158,6 @@
                                                 <li>
                                                     <a
                                                         href="<?php echo e(route('admin.dashboard')); ?>"><?php echo app('translator')->get('My Dashboard'); ?></a>
-                                                        
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo e(route('frontend.auth.logout')); ?>"><i
@@ -198,12 +186,10 @@
                                                 <div class="log-in mt-0">
                                                     <a id="openLoginModal" data-target="#myModal"
                                                         href="#"><?php echo app('translator')->get('navs.general.login'); ?></a>
-                                                    
-
                                                 </div>
                                             </li>
                                         <?php endif; ?>
-                                        
+                                      
                                     </ul>
                                 </div>
                             </nav>
@@ -269,7 +255,6 @@
                                                 </div>
                                             </li>
                                         <?php endif; ?>
-                                        
                                     </ul>
                                 </nav>
 

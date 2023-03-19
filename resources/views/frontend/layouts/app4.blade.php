@@ -13,7 +13,6 @@
         <meta name="keywords" content="@yield('meta_keywords', '')">
 
 
-    {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
     @stack('before-styles')
 
     <!-- Check if the language is set to RTL, so apply the RTL layouts -->
@@ -28,7 +27,6 @@
         <link rel="stylesheet" href="{{asset('assets/css/lightbox.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/progess.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
-        {{--<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">--}}
         <link rel="stylesheet" href="{{ asset('css/frontend.css') }}">
 
         <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
@@ -83,7 +81,6 @@
     <body class="{{config('layout_type')}}">
 
     <div id="app">
-    {{--<div id="preloader"></div>--}}
     @include('frontend.layouts.modals.loginModal')
 
 
@@ -207,30 +204,10 @@
                                             <div class="login">
                                                 <a data-toggle="modal" data-target="#myModal"
                                                    href="#">@lang('navs.general.login')</a>
-                                                {{--@include('frontend.layouts.modals.loginModal')--}}
 
                                             </div>
                                         </li>
                                     @endif
-
-                                        {{-- @if(count($locales) > 1)
-                                            <li class="menu-item-has-children ul-li-block">
-                                                <a href="#">
-                                                    <span class="d-md-down-none">@lang('menus.language-picker.language')
-                                                        ({{ strtoupper(app()->getLocale()) }})</span>
-                                                </a>
-                                                <ul class="sub-menu">
-                                                    @foreach($locales as $lang)
-                                                        @if($lang != app()->getLocale())
-                                                            <li>
-                                                                <a href="{{ '/lang/'.$lang }}"
-                                                                   class=""> @lang('menus.language-picker.langs.'.$lang)</a>
-                                                            </li>
-                                                        @endif
-                                                    @endforeach
-                                                </ul>
-                                            </li>
-                                        @endif --}}
                                 </ul>
                             </div>
                         </nav>
@@ -240,7 +217,6 @@
         </header>
         <div class="altranative-header ul-li-block">
             <div id="menu-container">
-
                 <div class="menu-wrapper">
                     <div class="row">
 

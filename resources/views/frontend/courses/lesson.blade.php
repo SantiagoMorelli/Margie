@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app'.config('theme_layout'))
 
 @push('after-styles')
-    {{--<link rel="stylesheet" href="{{asset('plugins/YouTube-iFrame-API-Wrapper/css/main.css')}}">--}}
     <link rel="stylesheet" href="https://cdn.plyr.io/3.5.3/plyr.css"/>
     <link href="{{asset('plugins/touchpdf-master/jquery.touchPDF.css')}}" rel="stylesheet">
 
@@ -341,9 +340,6 @@
 
                         @if($lesson->mediaPDF)
                             <div class="course-single-text mb-5">
-                                {{--<iframe src="{{asset('storage/uploads/'.$lesson->mediaPDF->name)}}" width="100%"--}}
-                                {{--height="500px">--}}
-                                {{--</iframe>--}}
                                 <div id="myPDF"></div>
 
                             </div>
@@ -440,28 +436,10 @@
                                     @endif
                                 @endif
                             </p>
-                            {{-- @if($lesson->course->progress() == 100)
-                                @if(!$lesson->course->isUserCertified()) --}}
-                                    {{-- <form method="post" action="{{route('admin.certificates.generate')}}">
-                                        @csrf
-                                        <input type="hidden" value="{{$lesson->course->id}}" name="course_id">
-                                        <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold"
-                                                id="finish">@lang('labels.frontend.course.finish_course')</button>
-                                    </form> --}}
-                                {{-- @else --}}
-                                    <!-- Remove the "You're certified" message on the dynamic course page -->
-                                    {{-- <div class="alert alert-success">
-                                        @lang('labels.frontend.course.certified')
-                                    </div> --}}
-                                {{-- @endif
-                            @endif --}}
-
-
                             <span class="float-none">@lang('labels.frontend.course.course_timeline')</span>
                             <ul class="course-timeline-list">
                                 @foreach($lesson->course->courseTimeline()->orderBy('created_at')->get() as $key=>$item)
                                     @if($item->model && $item->model->published == 1)
-                                        {{--@php $key++; @endphp--}}
                                         <li class="@if($lesson->id == $item->model->id) active @endif ">
                                             <a @if(in_array($item->model->id,$completed_lessons))href="{{route('lessons.show',['course_id' => $lesson->course->id,'slug'=>$item->model->slug])}}"@endif>
                                                 {{$item->model->title}}
@@ -494,8 +472,6 @@
                                         @endforeach
                                     </span>
                                 </li>
-                                {{-- <li>@lang('labels.frontend.course.progress') <span> <b> {{ $lesson->course->progress()  }} --}}
-                                            {{-- % @lang('labels.frontend.course.completed')</b></span></li> --}}
                             </ul>
 
                         </div>
@@ -510,7 +486,6 @@
 @endsection
 
 @push('after-scripts')
-    {{--<script src="//www.youtube.com/iframe_api"></script>--}}
     <script src="{{asset('plugins/sticky-kit/sticky-kit.js')}}"></script>
     <script src="https://cdn.plyr.io/3.5.3/plyr.polyfilled.js"></script>
     <script src="{{asset('plugins/touchpdf-master/pdf.compatibility.js')}}"></script>

@@ -4,15 +4,11 @@
 <div class="row">
     <div class="col">
         <div class="form-group">
-            
-
             <div hidden>
                 <input type="radio" name="avatar_type"
                        value="gravatar" selected <?php echo e($user->avatar_type == 'gravatar' ? 'checked' : ''); ?> /> <?php echo e(__('validation.attributes.frontend.gravatar')); ?>
 
                 &nbsp;&nbsp;
-                
-
                 <?php $__currentLoopData = $user->providers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $provider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if(strlen($provider->avatar)): ?>
                         <input type="radio" name="avatar_type"

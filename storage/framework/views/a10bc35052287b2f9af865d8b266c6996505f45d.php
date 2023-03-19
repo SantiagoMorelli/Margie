@@ -1,9 +1,6 @@
 <section id="latest-area" class="latest-area-section <?php echo e(isset($pt) ? $pt : ''); ?>">
     <div class="container">
         <div class="row">
-            
-
-
             <div class="col-md-6">
                 <div class="latest-area-content  ">
                     <div class="section-title-2 mb65 headline text-left">
@@ -17,7 +14,6 @@
                                         <div class="latest-news-thumbnile relative-position"
                                              style="background-image: url('<?php echo e(asset("storage/uploads/".$item->course_image)); ?>');">
                                             <div class="hover-search">
-                                                
                                             </div>
                                             <div class="blakish-overlay"></div>
                                         </div>
@@ -69,7 +65,6 @@
                                         <div class="latest-news-thumbnile relative-position"
                                              style="background-image: url('<?php echo e(asset("storage/uploads/".$item->course_image)); ?>');">
                                             <div class="hover-search">
-                                                
                                             </div>
                                             <div class="blakish-overlay"></div>
                                         </div>

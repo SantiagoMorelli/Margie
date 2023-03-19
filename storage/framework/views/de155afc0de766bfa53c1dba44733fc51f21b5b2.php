@@ -23,8 +23,6 @@
             <div class="row">
                 <div class="col-12">
                     <table class="table table-bordered table-striped">
-                        
-
                         <tr>
                             <th><?php echo app('translator')->get('labels.backend.access.users.tabs.content.overview.name'); ?></th>
                             <td><?php echo e($teacher->name); ?></td>

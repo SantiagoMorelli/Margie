@@ -12,19 +12,6 @@
 
         </div>
         <div class="card-body">
-            {{-- <div class="d-block">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a href="{{ route('admin.orders.index') }}"
-                           style="{{ request('offline_requests') == 1 ? '' : 'font-weight: 700' }}">{{trans('labels.general.all')}}</a>
-                    </li>
-                    |
-                    <li class="list-inline-item">
-                        <a href="{{ route('admin.orders.index') }}?offline_requests=1"
-                           style="{{ request('offline_requests') == 1 ? 'font-weight: 700' : '' }}">{{trans('labels.backend.orders.offline_requests')}}</a>
-                    </li>
-                </ul>
-            </div> --}}
             <div class="table-responsive">
                 <table id="myTable" class="table table-bordered table-striped">
                     <thead>

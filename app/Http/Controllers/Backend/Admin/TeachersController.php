@@ -88,7 +88,7 @@ class TeachersController extends Controller
             })
             ->addColumn('status', function ($q) {
                 $html = html()->label(html()->checkbox('')->id($q->id)
-                ->checked(($q->active == 1) ? true : false)->class('switch-input')->attribute('data-id', $q->id)->value(($q->active == 1) ? 1 : 0).'<span class="switch-label"></span><span class="switch-handle"></span>')->class('switch switch-lg switch-3d switch-primary');
+                    ->checked(($q->active == 1) ? true : false)->class('switch-input')->attribute('data-id', $q->id)->value(($q->active == 1) ? 1 : 0) . '<span class="switch-label"></span><span class="switch-handle"></span>')->class('switch switch-lg switch-3d switch-primary');
                 return $html;
                 // return ($q->active == 1) ? "Enabled" : "Disabled";
             })
@@ -114,7 +114,7 @@ class TeachersController extends Controller
      */
     public function store(StoreTeachersRequest $request)
     {
-//        $request = $this->saveFiles($request);
+        //        $request = $this->saveFiles($request);
 
         $teacher = User::create($request->all());
         $teacher->confirmed = 1;
@@ -122,16 +122,16 @@ class TeachersController extends Controller
             $teacher->avatar_type = 'storage';
             $teacher->avatar_location = $request->image->store('/avatars', 'public');
         }
-        $teacher->active = isset($request->active)?1:0;
+        $teacher->active = isset($request->active) ? 1 : 0;
         $teacher->save();
         $teacher->assignRole('teacher');
 
         $payment_details = [
-            'bank_name'         => request()->payment_method == 'bank'?request()->bank_name:'',
-            'ifsc_code'         => request()->payment_method == 'bank'?request()->ifsc_code:'',
-            'account_number'    => request()->payment_method == 'bank'?request()->account_number:'',
-            'account_name'      => request()->payment_method == 'bank'?request()->account_name:'',
-            'paypal_email'      => request()->payment_method == 'paypal'?request()->paypal_email:'',
+            'bank_name'         => request()->payment_method == 'bank' ? request()->bank_name : '',
+            'ifsc_code'         => request()->payment_method == 'bank' ? request()->ifsc_code : '',
+            'account_number'    => request()->payment_method == 'bank' ? request()->account_number : '',
+            'account_name'      => request()->payment_method == 'bank' ? request()->account_name : '',
+            'paypal_email'      => request()->payment_method == 'paypal' ? request()->paypal_email : '',
         ];
         $data = [
             'user_id'           => $teacher->id,
@@ -170,7 +170,7 @@ class TeachersController extends Controller
      */
     public function update(UpdateTeachersRequest $request, $id)
     {
-//        $request = $this->saveFiles($request);
+        //        $request = $this->saveFiles($request);
 
         $teacher = User::findOrFail($id);
         $teacher->update($request->except('email'));
@@ -178,15 +178,15 @@ class TeachersController extends Controller
             $teacher->avatar_type = 'storage';
             $teacher->avatar_location = $request->image->store('/avatars', 'public');
         }
-        $teacher->active = isset($request->active)?1:0;
+        $teacher->active = isset($request->active) ? 1 : 0;
         $teacher->save();
 
         $payment_details = [
-            'bank_name'         => request()->payment_method == 'bank'?request()->bank_name:'',
-            'ifsc_code'         => request()->payment_method == 'bank'?request()->ifsc_code:'',
-            'account_number'    => request()->payment_method == 'bank'?request()->account_number:'',
-            'account_name'      => request()->payment_method == 'bank'?request()->account_name:'',
-            'paypal_email'      => request()->payment_method == 'paypal'?request()->paypal_email:'',
+            'bank_name'         => request()->payment_method == 'bank' ? request()->bank_name : '',
+            'ifsc_code'         => request()->payment_method == 'bank' ? request()->ifsc_code : '',
+            'account_number'    => request()->payment_method == 'bank' ? request()->account_number : '',
+            'account_name'      => request()->payment_method == 'bank' ? request()->account_name : '',
+            'paypal_email'      => request()->payment_method == 'paypal' ? request()->paypal_email : '',
         ];
         $data = [
             // 'user_id'           => $user->id,
@@ -293,7 +293,7 @@ class TeachersController extends Controller
     public function updateStatus()
     {
         $teacher = User::find(request('id'));
-        $teacher->active = $teacher->active == 1? 0 : 1;
+        $teacher->active = $teacher->active == 1 ? 0 : 1;
         $teacher->save();
     }
 }

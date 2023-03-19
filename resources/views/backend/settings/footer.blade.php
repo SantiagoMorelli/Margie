@@ -84,7 +84,7 @@
                 </div>
             </div>
             @for($i=1; $i<=3; $i++)
-                <div class="form-group row">
+                <div class="form-group row" style="visibility: hidden; height: 1px">
                     {{ html()->label(__('labels.backend.general_settings.footer.section_'.$i))->class('col-md-2 form-control-label')->for('section'.$i) }}
                     <div class="col-md-8 options">
                         <div class="row">

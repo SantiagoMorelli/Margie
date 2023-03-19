@@ -830,7 +830,6 @@ class CartController extends Controller
             'lastname' => auth()->user()->last_name,
             'metadata' => '',
             'phonenumber' => $request->user_phone,
-//            'logo' => 'https://demo.neonlms.com/storage/logos/popup-logo.png',
             'logo' => asset('storage/logos/'.config('logo_popup')),
             'title' =>  config('app.name'),
         ]);

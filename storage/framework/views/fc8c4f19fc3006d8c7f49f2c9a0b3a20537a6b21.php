@@ -88,7 +88,6 @@
 
                             </a>
                         </li>
-                        
                         <li class="nav-item">
                             <a data-toggle="tab" class="nav-link" href="#email">
                                 <?php echo e(__('labels.backend.general_settings.email.title')); ?>
@@ -101,18 +100,13 @@
 
                             </a>
                         </li>
-                        
-                        
-                        
                     </ul>
                     <h4 class="card-title mb-0">
-                        
                     </h4>
-                </div><!--col-->
-            </div><!--row-->
+                </div>
+            </div>
 
             <div class="tab-content">
-                <!---General Tab--->
                 <div id="general" class="tab-pane container active">
                     <div class="row mt-4 mb-4">
                         <div class="col ">
@@ -146,12 +140,8 @@
                                         ->value(config('app.url'))); ?>
 
 
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            
-
-
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <?php echo e(html()->label(__('labels.backend.general_settings.counter'))->class('col-md-2 form-control-label')->for('counter')); ?>
 
@@ -178,11 +168,8 @@
                                                placeholder="<?php echo e(__('labels.backend.general_settings.total_teachers')); ?>">
                                     </div>
 
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            
-
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <?php echo e(html()->label(__('validation.attributes.backend.settings.general_settings.captcha_status'))->class('col-md-2 form-control-label')->for('captcha_status')); ?>
 
@@ -224,15 +211,12 @@
                                                      ->placeholder(__('validation.attributes.backend.settings.general_settings.captcha_site_secret'))
                                                      ->value(config('no-captcha.secret'))); ?>
 
-                                            </div><!--col-->
-                                        </div><!--form-group-->
+                                            </div>
+                                        </div>
                                     </div>
 
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            
-
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <?php echo e(html()->label(__('validation.attributes.backend.settings.general_settings.lesson_timer'))->class('col-md-2 form-control-label')->for('lesson_timer')); ?>
 
@@ -246,13 +230,8 @@
 
                                     </div>
                                     <small><i> <?php echo e(__('labels.backend.general_settings.lesson_note')); ?></i></small>
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-                            
-
-                            
-
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <?php echo e(html()->label(__('labels.backend.general_settings.teacher_commission_rate'))->class('col-md-2 form-control-label mb-1')->for('commission_rate')); ?>
 
@@ -264,8 +243,8 @@
                                         ->placeholder(__('labels.backend.general_settings.teacher_commission_rate'))
                                         ->value(config('commission_rate'))); ?>
 
-                                </div><!--col-->
-                            </div><!--form-group-->
+                                </div>
+                            </div>
 
                             <div class="form-group row">
                                 <?php echo e(html()->label(__('labels.backend.general_settings.admin_registration_mail'))->class('col-md-2 form-control-label')->for('admin_registration_mail')); ?>
@@ -296,12 +275,8 @@
 
                                     </div>
                                     <small><i> <?php echo e(__('labels.backend.general_settings.admin_order_mail_note')); ?></i></small>
-                                </div><!--col-->
-                            </div><!--form-group-->
-
-
-                            
-
+                                </div>
+                            </div>
                         </div>
                         <div class="col-12 text-left">
                             <a href="<?php echo e(route('admin.troubleshoot')); ?>"
@@ -715,18 +690,6 @@
                                 </div><!--col-->
                             </div><!--form-group-->
 
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
                         </div>
                     </div>
                 </div>
@@ -764,10 +727,6 @@
                         </div>
                     </div>
                 </div>
-
-                
-
-                <!---API Client Settings--->
                 <div id="api_client_settings" class="tab-pane container fade">
                     <div class="row mb-4">
                         <div class="col-lg-8 col-12">

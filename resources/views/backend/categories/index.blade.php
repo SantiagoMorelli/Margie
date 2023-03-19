@@ -52,7 +52,7 @@
                                 <th>@lang('labels.backend.categories.fields.slug')</th>
                                 <th>@lang('labels.backend.categories.fields.icon')</th>
                                 <th>@lang('labels.backend.categories.fields.courses')</th>
-                                <th>@lang('labels.backend.categories.fields.blog')</th>
+                                
                                 @if( request('show_deleted') == 1 )
                                     <th>&nbsp; @lang('strings.backend.general.actions')</th>
                                 @else
@@ -120,7 +120,6 @@
                     {data: "slug", name: 'slug'},
                     {data: "icon", name: 'icon'},
                     {data: "courses", name: "courses"},
-                    {data: "blogs", name: "blogs"},
                     {data: "actions", name: "actions"}
                 ],
                 @if(request('show_deleted') != 1)

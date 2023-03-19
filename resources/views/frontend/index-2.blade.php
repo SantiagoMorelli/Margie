@@ -281,7 +281,6 @@
                             </div>
                             <div class="teacher-name-designation mt15">
                                 <span class="teacher-name">{{$item->full_name}}</span>
-                                {{--<span class="teacher-designation">Mobile Apps</span>--}}
                             </div>
                         </div>
                     @endforeach

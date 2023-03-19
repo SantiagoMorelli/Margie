@@ -1,11 +1,6 @@
 <div class="col">
     <div class="table-responsive">
         <table class="table table-hover">
-            {{-- <tr>
-                <th>@lang('labels.backend.access.users.tabs.content.overview.avatar')</th>
-                <td><img src="{{ $user->picture }}" class="user-profile-image" /></td>
-            </tr> --}}
-
             <tr>
                 <th>@lang('labels.backend.access.users.tabs.content.overview.name')</th>
                 <td>{{ $user->name }}</td>

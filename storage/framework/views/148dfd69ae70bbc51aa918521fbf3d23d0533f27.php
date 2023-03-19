@@ -53,8 +53,6 @@
                                 <th><?php echo app('translator')->get('labels.backend.coupons.fields.type'); ?></th>
                                 <th><?php echo app('translator')->get('labels.backend.coupons.fields.amount'); ?></th>
                                 <th><?php echo app('translator')->get('labels.backend.coupons.fields.expires_at'); ?></th>
-                                
-                                
                                 <th><?php echo app('translator')->get('labels.backend.coupons.fields.status'); ?></th>
                                 <?php if( request('show_deleted') == 1 ): ?>
                                     <th>&nbsp; <?php echo app('translator')->get('strings.backend.general.actions'); ?></th>
@@ -103,12 +101,6 @@
                                             <?php echo app('translator')->get('labels.backend.coupons.unlimited'); ?>
                                         <?php endif; ?>
                                     </td>
-                                    
-                                        
-                                    
-                                    
-                                        
-                                    
                                     <td>
                                         <?php echo e(html()->label(html()->checkbox('')->id($item->id)
                 ->checked(($item->status == 1) ? true : false)->class('switch-input')->attribute('data-id', $item->id)->value(($item->status == 1) ? 1 : 0).'<span class="switch-label"></span><span class="switch-handle"></span>')->class('switch switch-lg switch-3d switch-primary')); ?>

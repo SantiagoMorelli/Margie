@@ -114,21 +114,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- /counter -->
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End of Search Courses
-            ============================================= -->
     <?php endif; ?>
-
-
-    
-
     <?php if(($sections->reasons->status != 0) || ($sections->testimonial->status != 0)): ?>
-        <!-- Start of why choose us section
-        ============================================= -->
         <section id="why-choose-us" class="why-choose-us-section">
             <div class="jarallax  backgroud-style">
                 <div class="container">
@@ -219,24 +210,15 @@
                     </div>
                 </div>
             </section>
-            <!-- End of sponsor section
-       ============================================= -->
         <?php endif; ?>
     <?php endif; ?>
 
 
     <?php if($sections->featured_courses->status == 1): ?>
-        <!-- Start of best course
-        ============================================= -->
-        
-        <!-- End of best course
-            ============================================= -->
     <?php endif; ?>
 
 
     <?php if($sections->teachers->status == 1): ?>
-        <!-- Start of course teacher
-        ============================================= -->
         <section id="course-teacher" class="course-teacher-section">
             <div class="jarallax">
                 <div class="container">
@@ -247,7 +229,6 @@
 
                     <div class="teacher-list">
                         <div class="row justify-content-center">
-                            <!-- /teacher -->
                             <?php if(count($teachers)> 0): ?>
                                 <?php $__currentLoopData = $teachers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="col-md-3">
@@ -268,13 +249,6 @@
                                                 <div class="teacher-img-category">
                                                     <div class="teacher-img">
                                                         <img src="<?php echo e($item->picture); ?>" style="height: 100%" alt="">
-                                                        
-                                                        
-                                                        
-                                                    </div>
-                                                    
-                                                    
-                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -291,29 +265,16 @@
                 </div>
             </div>
         </section>
-        <!-- End of course teacher
-            ============================================= -->
     <?php endif; ?>
 
 
-    
-
-
     <?php if($sections->course_by_category->status == 1): ?>
-        <!-- Start Course category
-        ============================================= -->
         <?php echo $__env->make('frontend.layouts.partials.course_by_category', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-        <!-- End Course category
-            ============================================= -->
     <?php endif; ?>
 
 
     <?php if($sections->contact_us->status == 1): ?>
-        <!-- Start of contact area
-        ============================================= -->
         <?php echo $__env->make('frontend.layouts.partials.contact_area', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-        <!-- End of contact area
-            ============================================= -->
     <?php endif; ?>
 
 

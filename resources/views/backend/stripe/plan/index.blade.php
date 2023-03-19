@@ -42,7 +42,6 @@
                             <th>@lang('labels.backend.stripe.plan.fields.amount')</th>
                             <th>@lang('labels.backend.stripe.plan.fields.interval')</th>
                             <th>@lang('labels.backend.stripe.plan.fields.expire')</th>
-{{--                            <th>Recurring</th>--}}
                             @if( request('show_deleted') == 1 )
                                 <th>@lang('strings.backend.general.actions') &nbsp;</th>
                             @else

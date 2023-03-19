@@ -3,15 +3,10 @@
 <div class="row">
     <div class="col">
         <div class="form-group">
-            {{-- {{ html()->label(__('validation.attributes.frontend.avatar'))->for('avatar') }} --}}
-
             <div hidden>
                 <input type="radio" name="avatar_type"
                        value="gravatar" selected {{ $user->avatar_type == 'gravatar' ? 'checked' : '' }} /> {{__('validation.attributes.frontend.gravatar')}}
                 &nbsp;&nbsp;
-                {{-- <input type="radio" name="avatar_type"
-                       value="storage" {{ $user->avatar_type == 'storage' ? 'checked' : '' }} /> {{__('validation.attributes.frontend.upload')}} --}}
-
                 @foreach($user->providers as $provider)
                     @if(strlen($provider->avatar))
                         <input type="radio" name="avatar_type"

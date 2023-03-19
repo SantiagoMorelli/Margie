@@ -27,8 +27,6 @@ if (config('nav_menu') != 0) {
                                     <span class="submit-btn">
 										<input type="submit" class="button-secondary" value="Choose">
 									</span>
-                                    <span class="add-new-menu-action"> or <a
-                                                href="{{ $currentUrl }}?action=edit&menu=0">{{ __('strings.backend.menu_manager.create_new') }}</a>. </span>
                                 </form>
                             </div>
                             <div id="nav-menus-frame" class="row">
@@ -147,40 +145,6 @@ if (config('nav_menu') != 0) {
                                               enctype="multipart/form-data">
                                             <div class="menu-edit ">
                                                 <div id="nav-menu-header">
-                                                    <div class="major-publishing-actions">
-                                                        <label class="menu-name-label howto open-label"
-                                                               for="menu-name">
-                                                            <span>{{ __('strings.backend.menu_manager.name') }}</span>
-                                                            <input name="menu-name" id="menu-name" type="text"
-                                                                   class="menu-name regular-text menu-item-textbox"
-                                                                   title="Enter menu name"
-                                                                   value="@if(isset($indmenu)){{$indmenu->name}}@endif">
-                                                            <input type="hidden" id="idmenu"
-                                                                   value="@if(isset($indmenu)){{$indmenu->id}}@endif"/>
-                                                        </label>
-
-                                                        @if(request()->has('action'))
-                                                            <div class="publishing-action">
-                                                                <a onclick="createnewmenu()" name="save_menu"
-                                                                   id="save_menu_header"
-                                                                   class="btn btn-primary menu-save">{{ __('strings.backend.menu_manager.create_menu') }}</a>
-                                                            </div>
-                                                        @elseif(request()->has("menu"))
-                                                            <div class="publishing-action">
-                                                                <a onclick="getmenus()" name="save_menu"
-                                                                   id="save_menu_header"
-                                                                   class="btn btn-primary menu-save">{{ __('strings.backend.menu_manager.save_menu') }}</a>
-                                                                <span class="spinner" id="spincustomu2"></span>
-                                                            </div>
-
-                                                        @else
-                                                            <div class="publishing-action">
-                                                                <a onclick="createnewmenu()" name="save_menu"
-                                                                   id="save_menu_header"
-                                                                   class="btn btn-primary menu-save">{{ __('strings.backend.menu_manager.create_menu') }}</a>
-                                                            </div>
-                                                        @endif
-                                                    </div>
                                                 </div>
                                                 <div id="post-body">
                                                     <div id="post-body-content">
@@ -195,12 +159,8 @@ if (config('nav_menu') != 0) {
                                                             </div>
 
                                                         @else
-                                                            <h3>{{ __('strings.backend.menu_manager.menu_creation') }}</h3>
                                                             <div class="drag-instructions post-body-plain"
                                                                  style="">
-                                                                <p>
-                                                                    {{ __('strings.backend.menu_manager.drag_instruction_2') }}
-                                                                </p>
                                                             </div>
                                                         @endif
 
@@ -346,9 +306,6 @@ if (config('nav_menu') != 0) {
                                                     <div class="major-publishing-actions">
                                                         @if(request()->has('action'))
                                                             <div class="publishing-action">
-                                                                <a onclick="createnewmenu()" name="save_menu"
-                                                                   id="save_menu_header"
-                                                                   class="btn btn-primary menu-save">{{ __('strings.backend.menu_manager.create_menu') }}</a>
                                                             </div>
                                                         @elseif(request()->has("menu"))
                                                             <span class="delete-action"> <a
@@ -365,9 +322,6 @@ if (config('nav_menu') != 0) {
 
                                                         @else
                                                             <div class="publishing-action">
-                                                                <a onclick="createnewmenu()" name="save_menu"
-                                                                   id="save_menu_header"
-                                                                   class="btn btn-primary menu-save">{{ __('strings.backend.menu_manager.create_menu') }}</a>
                                                             </div>
                                                         @endif
                                                     </div>

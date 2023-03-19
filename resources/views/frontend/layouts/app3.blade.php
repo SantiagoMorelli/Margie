@@ -11,14 +11,7 @@
         <title>@yield('title', app_name())</title>
         <meta name="description" content="@yield('meta_description', '')">
         <meta name="keywords" content="@yield('meta_keywords', '')">
-
-
-    {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
     @stack('before-styles')
-
-    <!-- Check if the language is set to RTL, so apply the RTL layouts -->
-        <!-- Otherwise apply the normal LTR layouts -->
-
         <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
@@ -28,7 +21,6 @@
         <link rel="stylesheet" href="{{asset('assets/css/lightbox.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/progess.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
-        {{--<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">--}}
         <link rel="stylesheet" href="{{ asset('css/frontend.css') }}">
 
         <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
@@ -93,7 +85,6 @@
     @include('frontend.layouts.modals.loginModal')
 
 
-    {{--<div id="preloader"></div>--}}
 
     <!-- Start of Header section
     ============================================= -->
@@ -214,8 +205,6 @@
                                                 @if(!auth()->check())
                                                     <a id="openLoginModal" data-target="#myModal" href="#">@lang('navs.general.login')</a>
                                                     <!-- The Modal -->
-                                                    {{--@include('frontend.layouts.modals.loginModal')--}}
-
                                                 @endif
                                             </li>
                                         @endif
@@ -275,25 +264,6 @@
                                                 <!-- The Modal -->
                                             </li>
                                         @endif
-
-                                            {{-- @if(count($locales) > 1)
-                                                <li class="menu-item-has-children ul-li-block">
-                                                    <a href="#">
-                                                    <span class="d-md-down-none">@lang('menus.language-picker.language')
-                                                        ({{ strtoupper(app()->getLocale()) }})</span>
-                                                    </a>
-                                                    <ul class="">
-                                                        @foreach($locales as $lang)
-                                                            @if($lang != app()->getLocale())
-                                                                <li>
-                                                                    <a href="{{ '/lang/'.$lang }}"
-                                                                       class=""> @lang('menus.language-picker.langs.'.$lang)</a>
-                                                                </li>
-                                                            @endif
-                                                        @endforeach
-                                                    </ul>
-                                                </li>
-                                            @endif --}}
                                     </ul>
                                 </nav>
                             </div>

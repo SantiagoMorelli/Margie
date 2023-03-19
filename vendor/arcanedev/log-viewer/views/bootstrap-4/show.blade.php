@@ -15,7 +15,6 @@
 
     <div class="row">
         <div class="col-lg-2">
-            {{-- Log Menu --}}
             <div class="card mb-4">
                 <div class="card-header"><i class="fa fa-fw fa-flag"></i> @lang('Levels')</div>
                 <div class="list-group list-group-flush log-menu">
@@ -36,7 +35,6 @@
             </div>
         </div>
         <div class="col-lg-10">
-            {{-- Log Details --}}
             <div class="card mb-4">
                 <div class="card-header">
                     @lang('Log info') :
@@ -78,7 +76,6 @@
                     </table>
                 </div>
                 <div class="card-footer">
-                    {{-- Search --}}
                     <form action="{{ route('log-viewer::logs.search', [$log->date, $level]) }}" method="GET">
                         <div class="form-group">
                             <div class="input-group">
@@ -98,8 +95,6 @@
                     </form>
                 </div>
             </div>
-
-            {{-- Log Entries --}}
             <div class="card mb-4">
                 @if ($entries->hasPages())
                     <div class="card-header">
@@ -191,7 +186,6 @@
 @endsection
 
 @section('modals')
-    {{-- DELETE MODAL --}}
     <div id="delete-log-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <form id="delete-log-form" action="{{ route('log-viewer::logs.delete') }}" method="POST">

@@ -22,33 +22,6 @@ $footer_data = json_decode(config('footer_data'));
                                 @endif
                             </div>
                         </div>
-                        {{-- <div class="col-md-8">
-                        <div class="row">
-                            @if ($footer_data->section1->status == 1)
-                                @php
-                                    $section_data = section_filter($footer_data->section1)
-                                @endphp
-
-                                @include('frontend.layouts.partials.footer_section',['section_data' => $section_data])
-                            @endif
-
-                            @if ($footer_data->section2->status == 1)
-                                @php
-                                    $section_data = section_filter($footer_data->section2)
-                                @endphp
-
-                                @include('frontend.layouts.partials.footer_section',['section_data' => $section_data])
-                            @endif
-
-                            @if ($footer_data->section3->status == 1)
-                                @php
-                                    $section_data = section_filter($footer_data->section3)
-                                @endphp
-
-                                @include('frontend.layouts.partials.footer_section',['section_data' => $section_data])
-                            @endif
-                        </div>
-                    </div> --}}
                     </div>
                 </div>
                 <!-- /footer-widget-content -->
@@ -71,30 +44,6 @@ $footer_data = json_decode(config('footer_data'));
                         @endif
                     </div>
                 </div>
-
-
-                {{-- @if ($footer_data->newsletter_form->status == 1)
-                        <div class="col-md-8">
-                            <div class="subscribe-form ml-0 ">
-                                <h2 class="widget-title">@lang('labels.frontend.layouts.partials.subscribe_newsletter')</h2>
-
-                                <div class="subs-form relative-position">
-                                    <form action="{{route("subscribe")}}" method="post">
-                                        @csrf
-                                        <input class="email" required name="subs_email" type="email" placeholder="@lang('labels.frontend.layouts.partials.email_address').">
-                                        <div class="nws-button text-center  gradient-bg text-uppercase">
-                                            <button type="submit" value="Submit">@lang('labels.frontend.layouts.partials.subscribe_now')</button>
-                                        </div>
-                                        @if ($errors->has('email'))
-                                            <p class="text-danger text-left">{{$errors->first('email')}}</p>
-                                        @endif
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    @endif --}}
-
                 @if ($footer_data->bottom_footer->status == 1)
                     <div class="copy-right-menu">
                         <div class="row">
@@ -161,13 +110,7 @@ $footer_data = json_decode(config('footer_data'));
                                             @foreach ($footer_data->bottom_footer_links->links as $item)
                                                 <p><a href="{{ $item->link }}">{{ $item->label }}</a></p>
                                             @endforeach
-                                            {{-- @if (config('show_offers'))
-                                                <li><a
-                                                        href="{{ route('frontend.offers') }}">@lang('labels.frontend.layouts.partials.offers')</a>
-                                                </li>
-                                            @endif --}}
-                                            {{-- <li><a href="{{route('frontend.certificates.getVerificationForm')}}">@lang('labels.frontend.layouts.partials.certificate_verification')</a></li> --}}
-                                        </ul>
+                                            </ul>
                                     </div>
                                 </div>
                             @endif

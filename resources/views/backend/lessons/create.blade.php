@@ -105,20 +105,6 @@
 
                 </div>
             </div>
-
-            <!-- Add PDF option for the create lesson form -->
-            {{-- <div class="row">
-                <div class="col-12 form-group">
-                    {!! Form::label('pdf_files', trans('labels.backend.lessons.fields.add_pdf'), ['class' => 'control-label']) !!}
-                    {!! Form::file('add_pdf', [
-                        'class' => 'form-control file-upload',
-                         'id' => 'add_pdf',
-                        'accept' => "application/pdf"
-
-                        ]) !!}
-                </div>
-            </div> --}}
-
             <div class="row">
                 <div class="col-12 form-group">
                     {!! Form::label('audio_files', trans('labels.backend.lessons.fields.add_audio'), ['class' => 'control-label']) !!}
@@ -130,8 +116,6 @@
                         ]) !!}
                 </div>
             </div>
-
-
             <div class="row">
                 <div class="col-md-12 form-group">
                     {!! Form::label('add_video', trans('labels.backend.lessons.fields.add_video'), ['class' => 'control-label']) !!}

@@ -78,16 +78,6 @@
                                            class="btn mb-1 btn-success">
                                             @lang('labels.backend.invoices.fields.download')
                                         </a>
-
-                                        {{--<a target="_blank" href="{{asset('storage/invoices/'.$item->url)}}"--}}
-                                           {{--class="btn mb-1 btn-danger">--}}
-                                            {{--@lang('labels.backend.invoices.fields.view')--}}
-                                        {{--</a>--}}
-
-                                        {{--<a href="{{route('admin.invoice.download',['order'=>$item->order_id])}}"--}}
-                                           {{--class="btn mb-1 btn-success">--}}
-                                            {{--@lang('labels.backend.invoices.fields.download')--}}
-                                        {{--</a>--}}
                                     </td>
                                 </tr>
                             @endforeach

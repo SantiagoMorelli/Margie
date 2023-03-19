@@ -16,13 +16,7 @@
     <title>@yield('title', app_name())</title>
     <meta name="description" content="@yield('meta_description', '')">
     <meta name="keywords" content="@yield('meta_keywords', '')">
-
-    {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
     @stack('before-styles')
-
-    <!-- Check if the language is set to RTL, so apply the RTL layouts -->
-    <!-- Otherwise apply the normal LTR layouts -->
-
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/meanmenu.css') }}">
@@ -31,7 +25,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/progess.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
-    {{-- <link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> --}}
     <link rel="stylesheet" href="{{ asset('css/frontend.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.css') }}">
 
@@ -97,7 +90,6 @@
 <body class="{{ config('layout_type') }}">
 
     <div id="app">
-        {{-- <div id="preloader"></div> --}}
         @include('frontend.layouts.modals.loginModal')
 
 
@@ -110,7 +102,6 @@
                         <div class="navbar-default">
                             <div class="navbar-header float-left">
                                 <a class="navbar-brand text-uppercase" href="{{ url('/') }}">
-                                    {{-- <img src="{{asset("storage/logos/".config('logo_w_image'))}}" alt="logo"> --}}
                                     <img src="{{ asset('storage/logos/' . config('logo_w_image')) }}" alt="logo">
                                 </a>
                             </div><!-- /.navbar-header -->
@@ -135,8 +126,6 @@
                                     <ul>
                                         @if (count($custom_menus) > 0)
                                             @foreach ($custom_menus as $menu)
-                                                {{-- @if (is_array($menu['id']) && $menu['id'] == $menu['parent']) --}}
-                                                {{-- @if ($menu->subs && count($menu->subs) > 0) --}}
                                                 @if ($menu['id'] == $menu['parent'])
                                                     @if (count($menu->subs) == 0)
                                                         <li class="">
@@ -167,7 +156,6 @@
                                                 <li>
                                                     <a
                                                         href="{{ route('admin.dashboard') }}">@lang('My Dashboard')</a>
-                                                        {{-- @lang('navs.frontend.dashboard') --}}
                                                 </li>
                                                 <li>
                                                     <a href="{{ route('frontend.auth.logout') }}"><i
@@ -196,29 +184,10 @@
                                                 <div class="log-in mt-0">
                                                     <a id="openLoginModal" data-target="#myModal"
                                                         href="#">@lang('navs.general.login')</a>
-                                                    {{-- @include('frontend.layouts.modals.loginModal') --}}
-
                                                 </div>
                                             </li>
                                         @endif
-                                        {{-- @if (count($locales) > 1)
-                                            <li class="menu-item-has-children ul-li-block">
-                                                <a href="#">
-                                                    <span class="d-md-down-none">@lang('menus.language-picker.language')
-                                                        ({{ strtoupper(app()->getLocale()) }})</span>
-                                                </a>
-                                                <ul class="sub-menu">
-                                                    @foreach ($locales as $lang)
-                                                        @if ($lang != app()->getLocale())
-                                                            <li>
-                                                                <a href="{{ '/lang/'.$lang }}"
-                                                                   class=""> @lang('menus.language-picker.langs.'.$lang)</a>
-                                                            </li>
-                                                        @endif
-                                                    @endforeach
-                                                </ul>
-                                            </li>
-                                        @endif --}}
+                                      
                                     </ul>
                                 </div>
                             </nav>
@@ -284,24 +253,6 @@
                                                 </div>
                                             </li>
                                         @endif
-                                        {{-- @if (count($locales) > 1)
-                                                <li class="menu-item-has-children ul-li-block">
-                                                    <a href="#">
-                                                    <span class="d-md-down-none">@lang('menus.language-picker.language')
-                                                        ({{ strtoupper(app()->getLocale()) }})</span>
-                                                    </a>
-                                                    <ul class="">
-                                                        @foreach ($locales as $lang)
-                                                            @if ($lang != app()->getLocale())
-                                                                <li>
-                                                                    <a href="{{ '/lang/'.$lang }}"
-                                                                       class=""> @lang('menus.language-picker.langs.'.$lang)</a>
-                                                                </li>
-                                                            @endif
-                                                        @endforeach
-                                                    </ul>
-                                                </li>
-                                            @endif --}}
                                     </ul>
                                 </nav>
 

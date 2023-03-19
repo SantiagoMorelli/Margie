@@ -6,10 +6,6 @@
         <html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 
         <?php endif; ?>
-        
-        
-        
-        
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,9 +29,6 @@
                   href="https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css"/>
             <link rel="stylesheet"
                   href="//cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css"/>
-            
-            
-            
 
 
 
@@ -72,26 +65,19 @@
 
             <main class="main">
                 <?php echo $__env->make('includes.partials.logged-in-as', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-                
 
                 <div class="container-fluid" style="padding-top: 30px">
                     <div class="animated fadeIn">
                         <div class="content-header">
                             <?php echo $__env->yieldContent('page-header'); ?>
-                        </div><!--content-header-->
+                        </div>
 
                         <?php echo $__env->make('includes.partials.messages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         <?php echo $__env->yieldContent('content'); ?>
-                    </div><!--animated-->
-                </div><!--container-fluid-->
-            </main><!--main-->
-
-            
-        </div><!--app-body-->
-
-        
-
-        <!-- Scripts -->
+                    </div>
+                </div>
+            </main>    
+        </div>
         <?php echo $__env->yieldPushContent('before-scripts'); ?>
         <?php echo script(mix('js/manifest.js')); ?>
 
@@ -100,7 +86,6 @@
         <?php echo script(mix('js/backend.js')); ?>
 
         <script>
-            //Route for message notification
             var messageNotificationRoute = '<?php echo e(route('admin.messages.unread')); ?>'
         </script>
         <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>

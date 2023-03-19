@@ -6,10 +6,6 @@
         <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
         @endif
-        {{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">--}}
-        {{--@else--}}
-        {{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
-        {{--@endlangrtl--}}
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,9 +29,6 @@
                   href="https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css"/>
             <link rel="stylesheet"
                   href="//cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css"/>
-            {{--<link rel="stylesheet"--}}
-            {{--href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css"/>--}}
-            {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
 
 
 
@@ -71,32 +64,24 @@
 
             <main class="main">
                 @include('includes.partials.logged-in-as')
-                {{--{!! Breadcrumbs::render() !!}--}}
 
                 <div class="container-fluid" style="padding-top: 30px">
                     <div class="animated fadeIn">
                         <div class="content-header">
                             @yield('page-header')
-                        </div><!--content-header-->
+                        </div>
 
                         @include('includes.partials.messages')
                         @yield('content')
-                    </div><!--animated-->
-                </div><!--container-fluid-->
-            </main><!--main-->
-
-            {{--@include('backend.includes.aside')--}}
-        </div><!--app-body-->
-
-        {{-- @include('backend.includes.footer') --}}
-
-        <!-- Scripts -->
+                    </div>
+                </div>
+            </main>    
+        </div>
         @stack('before-scripts')
         {!! script(mix('js/manifest.js')) !!}
         {!! script(mix('js/vendor.js')) !!}
         {!! script(mix('js/backend.js')) !!}
         <script>
-            //Route for message notification
             var messageNotificationRoute = '{{route('admin.messages.unread')}}'
         </script>
         <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>

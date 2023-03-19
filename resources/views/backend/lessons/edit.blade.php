@@ -129,34 +129,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Add PDF option for the edit lesson form -->
-            {{-- <div class="row">
-                <div class="col-12 form-group">
-                    {!! Form::label('pdf_files', trans('labels.backend.lessons.fields.add_pdf'), ['class' => 'control-label']) !!}
-                    {!! Form::file('add_pdf', [
-                        'class' => 'form-control file-upload',
-                         'id' => 'add_pdf',
-                        'accept' => "application/pdf"
-                        ]) !!}
-                    <div class="photo-block mt-3">
-                        <div class="files-list">
-                            @if($lesson->mediaPDF)
-                                <p class="form-group">
-                                    <a href="{{ asset('storage/uploads/'.$lesson->mediaPDF->name) }}"
-                                       target="_blank">{{ $lesson->mediaPDF->name }}
-                                        ({{ $lesson->mediaPDF->size }} KB)</a>
-                                    <a href="#" data-media-id="{{$lesson->mediaPDF->id}}"
-                                       class="btn btn-xs btn-danger delete remove-file">@lang('labels.backend.lessons.remove')</a>
-                                    <iframe src="{{asset('storage/uploads/'.$lesson->mediaPDF->name)}}" width="100%" height="500px">
-                                    </iframe>
-                                </p>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-
             <div class="row">
                 <div class="col-12 form-group">
                     {!! Form::label('pdf_files', trans('labels.backend.lessons.fields.add_audio'), ['class' => 'control-label']) !!}

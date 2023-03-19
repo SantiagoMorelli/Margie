@@ -127,8 +127,6 @@
                                   action="#"
                                   method="post">
                                 {!! csrf_field() !!}
-                                {{-- <a href="#"
-                                   class="go-login float-right text-info pr-0">@lang('labels.frontend.modal.already_user_note')</a> --}}
                                 <div class="contact-info mb-2">
 
                                     {{ html()->text('first_name')
@@ -219,12 +217,6 @@
 
                                 <a href="#"
                                 class="go-login float-right text-info pr-0">@lang('labels.frontend.modal.already_user_note')</a>
-
-
-                                {{-- <a href="{{ route('frontend.auth.teacher.register') }}"
-                                   class="fgo-register float-left text-info mt-2">
-                                    @lang('labels.teacher.teacher_register')
-                                </a> --}}
                             </form>
                         </div>
                     </div>

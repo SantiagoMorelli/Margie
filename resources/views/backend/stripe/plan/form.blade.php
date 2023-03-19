@@ -47,13 +47,6 @@
         {!! Form::select('interval',trans('labels.backend.stripe.plan.interval_type'), old('interval'), ['class' => 'form-control','required' => true, 'readonly' => $plan->id? true: false]) !!}
     </div>
 </div>
-{{--<div class="row">--}}
-{{--    <div class="col-12 form-group">--}}
-{{--        {!! Form::label('recurring', 'Recurring', ['class' => 'control-label']) !!}--}}
-{{--        {!! Form::number('recurring', old('recurring'), ['class' => 'form-control ', 'placeholder' => 'Enter Recurring']) !!}--}}
-{{--        <small class="help-text font-italic"><strong>Please enter expiry ex: 1=days, 1=month, 1=week, 1=year</strong></small>--}}
-{{--    </div>--}}
-{{--</div>--}}
 <div class="row">
     <div class="col-12 form-group">
         {!! Form::label('description', trans('labels.backend.stripe.plan.fields.description'), ['class' => 'control-label']) !!}

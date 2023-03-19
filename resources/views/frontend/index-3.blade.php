@@ -151,9 +151,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        {{--<div class="teacher-category float-right">--}}
-                                        {{--<span class="st-name">Mobile Apps </span>--}}
-                                        {{--</div>--}}
                                     </div>
                                 </div>
                         @endforeach
@@ -161,54 +158,31 @@
                 @endif
             </div>
         </section>
-        <!-- End of genius teacher v2
-            ============================================= -->
     @endif
 
     @if($sections->faq->status == 1)
-        <!-- Start FAQ section
-        ============================================= -->
         @include('frontend.layouts.partials.faq-with-bg')
-        <!-- End FAQ section
-            ============================================= -->
     @endif
 
     @if($sections->testimonial->status == 1)
-        <!-- Start of testimonial secound section
-        ============================================= -->
         @include('frontend.layouts.partials.testimonial')
-
-        <!-- End  of testimonial secound section
-            ============================================= -->
     @endif
 
 
     @if($sections->sponsors->status == 1)
         @if(count($sponsors) > 0 )
-            <!-- Start of sponsor section
-        ============================================= -->
             @include('frontend.layouts.partials.sponsors')
-            <!-- End of sponsor section
-       ============================================= -->
         @endif
     @endif
 
 
     @if($sections->course_by_category->status == 1)
-        <!-- Start Course category
-        ============================================= -->
         @include('frontend.layouts.partials.course_by_category')
-        <!-- End Course category
-            ============================================= -->
     @endif
 
 
     @if($sections->contact_us->status == 1)
-        <!-- Start of contact area
-        ============================================= -->
         @include('frontend.layouts.partials.contact_area')
-        <!-- End of contact area
-            ============================================= -->
     @endif
 
 

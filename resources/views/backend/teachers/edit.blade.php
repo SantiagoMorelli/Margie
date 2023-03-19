@@ -64,13 +64,7 @@
                         </div><!--col-->
                     </div><!--form-group-->
 
-                    <div class="form-group row">
-                        {{ html()->label(__('labels.backend.teachers.fields.image'))->class('col-md-2 form-control-label')->for('image') }}
 
-                        <div class="col-md-10">
-                            {!! Form::file('image', ['class' => 'form-control d-inline-block', 'placeholder' => '']) !!}
-                        </div><!--col-->
-                    </div>
                     <div class="form-group row">
                         {{ html()->label(__('labels.backend.general_settings.user_registration_settings.fields.gender'))->class('col-md-2 form-control-label')->for('gender') }}
                         <div class="col-md-10">

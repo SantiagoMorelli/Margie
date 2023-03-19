@@ -164,60 +164,16 @@
                                                         </div>
                                                     </div>
                                             @endforeach
-
-                                            <!-- /course -->
-
-                                            </div>
-                                        </div>
-                                    </div><!-- /tab-1 -->
-                                </div>
-                            </div>
-
-                         @endif
-                    <!-- /course-details -->
-
-
-                    </div>
-                    <!-- /market guide -->
-
-                    {{-- <div class="course-review">
-                        <div class="section-title-2 mb20 headline text-left">
-                            <h2>@lang('labels.frontend.course.bundle_reviews')</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="ratting-preview">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="avrg-rating ul-li">
-                                                <b>@lang('labels.frontend.course.average_rating')</b>
-                                                <span class="avrg-rate">{{$bundle_rating}}</span>
-                                                <ul>
-                                                    @for($r=1; $r<=$bundle_rating; $r++)
-                                                        <li><i class="fas fa-star"></i></li>
-                                                    @endfor
-                                                </ul>
-                                                <b>{{$total_ratings}} @lang('labels.frontend.course.ratings')</b>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="avrg-rating ul-li">
-                                                <span><b>@lang('labels.frontend.course.details')</b></span>
-                                                @for($r=5; $r>=1; $r--)
-                                                    <div class="rating-overview">
-                                                        <span class="start-item">{{$r}} @lang('labels.frontend.course.stars')</span>
-                                                        <span class="start-bar"></span>
-                                                        <span class="start-count">{{$bundle->reviews()->where('rating','=',$r)->get()->count()}}</span>
-                                                    </div>
-                                                @endfor
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> --}}
-                    <!-- /review overview -->
+
+                         @endif
+
+
+                    </div>
 
                     <div class="couse-comment">
                         <div class="blog-comment-area ul-li about-teacher-2">
@@ -414,21 +370,6 @@
                                         <a class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"
                                            href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>
                                     @endif
-
-{{--                                        @if(auth()->user()->subscription('default'))--}}
-{{--                                            <form action="{{ route('subscription.course_subscribe') }}" method="POST">--}}
-{{--                                                @csrf--}}
-{{--                                                <input type="hidden" name="bundle_id" value="{{ $bundle->id }}"/>--}}
-{{--                                                <input type="hidden" name="amount" value="{{($bundle->free == 1) ? 0 : $bundle->price}}"/>--}}
-{{--                                                <button type="submit"--}}
-{{--                                                        class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font">--}}
-{{--                                                    @lang('labels.frontend.course.subscribe')</button>--}}
-{{--                                            </form>--}}
-{{--                                        @else--}}
-{{--                                            <a class="genius-btn btn-block text-white  gradient-bg text-center text-uppercase  bold-font"--}}
-{{--                                               href="{{ route('subscription.plans') }}">@lang('labels.frontend.course.subscribe')</a>--}}
-{{--                                        @endif--}}
-
                                     @endif
                                 @else
                                     <h6 class="alert alert-danger"> @lang('labels.frontend.course.buy_note')</h6>

@@ -16,8 +16,6 @@
                 </li>
 
             @else
-
-                {{-- Using .active to give it the right colour (grey by default) --}}
                 <li class="active">
                     {{ $breadcrumb->title }}
                     <span class="divider">/</span>

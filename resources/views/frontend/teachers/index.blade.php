@@ -68,9 +68,6 @@
                                                         <li><a href="{{route('admin.messages',['teacher_id'=>$item->id])}}"><i class="fa fa-comments"></i></a></li>
 													</ul>
 												</div>
-												{{--<div class="teacher-text">--}}
-													{{--Lorem ipsum dolor  consectuer adipiscing elit, nonummy nibh euismod tincidunt.--}}
-												{{--</div>--}}
 											</div>
 											<div class="teacher-next text-center">
 												<a href="{{route('teachers.show',['id'=>$item->id])}}"><i class="text-gradiant fas fa-arrow-right"></i></a>
@@ -78,7 +75,6 @@
 										</div>
 										<div class="teacher-name-designation">
 											<span class="teacher-name">{{$item->full_name}}</span>
-											{{--<span class="teacher-designation">Mobile Apps</span>--}}
 										</div>
 									</div>
 								</div>

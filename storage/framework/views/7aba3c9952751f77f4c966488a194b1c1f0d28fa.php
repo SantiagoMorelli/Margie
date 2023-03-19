@@ -22,7 +22,6 @@ $footer_data = json_decode(config('footer_data'));
                                 <?php endif; ?>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 <!-- /footer-widget-content -->
@@ -45,10 +44,6 @@ $footer_data = json_decode(config('footer_data'));
                         <?php endif; ?>
                     </div>
                 </div>
-
-
-                
-
                 <?php if($footer_data->bottom_footer->status == 1): ?>
                     <div class="copy-right-menu">
                         <div class="row">
@@ -115,9 +110,7 @@ $footer_data = json_decode(config('footer_data'));
                                             <?php $__currentLoopData = $footer_data->bottom_footer_links->links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <p><a href="<?php echo e($item->link); ?>"><?php echo e($item->label); ?></a></p>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                            
-                                            
-                                        </ul>
+                                            </ul>
                                     </div>
                                 </div>
                             <?php endif; ?>
